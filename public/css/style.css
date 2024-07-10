@@ -147,7 +147,7 @@ body {
 }
 
 .header_top {
-  background-color:white;
+  background-color:#f5c400;
   padding: 15px 0;
 }
 
@@ -158,6 +158,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+
 }
 
 .header_top .contact_link-container a {
@@ -167,13 +168,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: blue;
+  color: white;
   font-size: 20px;
+
 }
 
 .header_top .contact_link-container a i {
   font-size: 20px;
-  color: #f1db25;
+  color: #ffffff;
   margin-right: 5px;
 }
 
@@ -181,11 +183,18 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+
+}
+
+.header_bottom{
+    background-color: #ffffff;
+
 }
 
 .custom_nav-container {
   z-index: 99999;
   padding: 0;
+
 }
 
 .custom_nav-container .navbar-nav {
@@ -194,21 +203,25 @@ body {
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
   padding: 0;
-  padding: 35px 15px 10px 15px;
-  color: #ffffff;
+  padding: 16px 24px;
+  color: #333;
   text-align: center;
   text-transform: uppercase;
   -webkit-transition: all .2s;
   transition: all .2s;
+  font-weight: 500;
+
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
-  background-color: #1c1c1c;
+  background-color: #f5c400;
 }
 
 a,
 a:hover,
-a:focus {
+a:fo
+cus
+{
   text-decoration: none;
 }
 
@@ -378,7 +391,7 @@ a:focus {
 .slider_section .detail-box .btn-box .btn-2 {
   display: inline-block;
   padding: 10px 35px;
-  background-color: #f1db25;
+  background-color: darkblue;
   color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -387,8 +400,8 @@ a:focus {
 
 .slider_section .detail-box .btn-box .btn-2:hover {
   background-color: transparent;
-  border-color: #f1db25;
-  color: #f1db25;
+  border-color: darkblue;
+  color: darkblue;
 }
 
 .slider_section .img-box {
@@ -401,7 +414,8 @@ a:focus {
   width: 100%;
 }
 
-.slider_section .idicator_container {
+.slider_section .idicator_c
+ontainer {
   position: relative;
 }
 
@@ -454,7 +468,7 @@ a:focus {
 .about_section .detail-box a {
   display: inline-block;
   padding: 10px 35px;
-  background-color: #f1db25;
+  background-color: darkblue;
   color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -596,197 +610,7 @@ a:focus {
   border-radius: 100%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  font-size: 18px;
-}
 
-.client_section .carousel-control-prev:hover,
-.client_section .carousel-control-next:hover {
-  background-color: #f1db25;
-}
-
-.client_section .carousel-control-prev {
-  left: 0;
-}
-
-.client_section .carousel-control-next {
-  left: initial;
-  right: 0;
-}
-
-/* contact section */
-.contact_section {
-  position: relative;
-  color: #ffffff;
-}
-
-.contact_section .row {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.contact_section .contact_form-container {
-  margin-top: 35px;
-}
-
-.contact_section .contact_form-container input {
-  border: none;
-  outline: none;
-  color: #000000;
-  height: 45px;
-  width: 100%;
-  margin: 15px 0;
-  padding-left: 15px;
-  background-color: #ffffff;
-}
-
-.contact_section .contact_form-container input::-webkit-input-placeholder {
-  color: #000000;
-  text-transform: uppercase;
-}
-
-.contact_section .contact_form-container input:-ms-input-placeholder {
-  color: #000000;
-  text-transform: uppercase;
-}
-
-.contact_section .contact_form-container input::-ms-input-placeholder {
-  color: #000000;
-  text-transform: uppercase;
-}
-
-.contact_section .contact_form-container input::placeholder {
-  color: #000000;
-  text-transform: uppercase;
-}
-
-.contact_section .contact_form-container input.message_input {
-  height: 120px;
-}
-
-.contact_section .contact_form-container .btn-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 25px;
-}
-
-.contact_section .contact_form-container button {
-  display: inline-block;
-  padding: 10px 60px;
-  background-color: #f1db25;
-  color: #ffffff;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  border: 1px solid transparent;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.contact_section .contact_form-container button:hover {
-  background-color: transparent;
-  border-color: #f1db25;
-  color: #f1db25;
-}
-
-.contact_bg_box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.contact_bg_box .img-box {
-  width: 100%;
-}
-
-.contact_bg_box .img-box img {
-  min-width: 100%;
-  min-height: 100%;
-}
-
-.contact_bg_box::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.35)));
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.35));
-}
-
-/* end contact section */
-.team_section .box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  overflow: hidden;
-  margin-top: 45px;
-  position: relative;
-}
-
-.team_section .box .img-box {
-  width: 100%;
-}
-
-.team_section .box .img-box img {
-  width: 100%;
-}
-
-.team_section .box .detail-box {
-  position: absolute;
-  width: 100%;
-  color: #ffffff;
-  padding: 25px 15px;
-  text-align: center;
-  bottom: 0;
-  background-color: rgba(28, 28, 28, 0.75);
-}
-
-.team_section .btn-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 45px;
-}
-
-.team_section .btn-box a {
-  display: inline-block;
-  padding: 10px 45px;
-  background-color: #f1db25;
-  color: #ffffff;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  border: 1px solid transparent;
-}
-
-.team_section .btn-box a:hover {
-  background-color: transparent;
-  border-color: #f1db25;
-  color: #f1db25;
 }
 
 .info_section {
@@ -917,3 +741,17 @@ a:focus {
 
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
+
+
+.social-buttons-container ul{
+    list-style: none;
+    display: flex;
+    float: right;
+
+}
+
+.social-buttons-container ul li{
+    padding: 16px;
+}
+
+

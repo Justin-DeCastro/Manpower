@@ -1,73 +1,121 @@
 <!DOCTYPE html>
 <html>
 
+<style>
+  body {
+    background-color: #E3F2FD;
+}
+
+.heading{
+    font-size:20px;
+    font-weight:600;
+    color:#3D5AFE;
+
+}
+
+  .line1{
+    color:#000;
+    font-size:12px;
+
+  }
+   .line2{
+    color:#000;
+    font-size:12px;
+
+  }
+   .line3{
+    color:#000;
+    font-size:12px;
+
+  }
+
+  .cards{
+
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+
+  }
+
+
+
+.cards:hover{
+
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    transform: scale(1.1);
+}
+</style>
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
-  <title>ABIC MANPOWER</title>
+    <title>Manpower</title>
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
 
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-</head>
-
-<body class="sub_page">
-  <div class="hero_area">
-    <!-- header section strats -->
-    <div class="hero_bg_box">
-      <div class="img-box">
-        <img src="images/hero-bg.jpg" alt="">
-      </div>
-    </div>
-
-    <header class="header_section">
-      <div class="header_top">
-        <div class="container-fluid">
-          <div class="contact_link-container">
-            <a href="" class="contact_link1">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span>
-                Lorem ipsum dolor sit amet,
-              </span>
-            </a>
-            <a href="" class="contact_link2">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                Call : +01 1234567890
-              </span>
-            </a>
-            <a href="" class="contact_link3">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                demo@gmail.com
-              </span>
-            </a>
-          </div>
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="hero_area">
+        <!-- header section strats -->
+        <div class="hero_bg_box">
+            <div class="img-box">
+                <img src="images/manbackground3.jpg" alt="">
+            </div>
         </div>
-      </div>
-      <div class="header_bottom">
+  <header class="header_section">
+    <div class="header_top">
+
+        <div class="container-fluid">
+            <div class="contact_link-container">
+                {{-- <li> <div id="google_translate_element"></div></li> --}}
+                <a href="https://www.google.com/maps/place/Unit+403,+Campos+Rueda+Building,+101+Urban+Ave,+Makati,+1206+Metro+Manila" class="contact_link1">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+
+                    <span>
+                        Unit 403, Campos Rueda Building, 101 Urban Ave, Makati, 1206 Metro Manila
+
+                    </span>
+                </a>
+
+                <a href="" class="contact_link2">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <span>
+                        Call : +01 1234567890
+                    </span>
+                </a>
+                <a href="mailto:abic.talentteams@gmail.com" class="contact_link3">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>
+                        abic.talentteams@gmail.com
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header_bottom">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg custom_nav-container">
                 <a class="navbar-brand" href="/">
                     <img src="images/logo-removebg-preview.png" alt="Logo" style="height: 100px; margin-right: 10px;">
-                    <span>Abic Manpower</span>
+                    <span>Abic Manpower Service Corp</span>
                   </a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class=""></span>
                 </button>
@@ -83,11 +131,29 @@
                     <li class="nav-item">
                         <a class="nav-link" href="service"> Services </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="careers"> Careers </a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Job Seekers
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="careers">Careers</a>
+                            {{-- <a class="dropdown-item" href="#">Manpower Requisition</a>
+                            <a class="dropdown-item" href="#">Labor Standard Checklist</a> --}}
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Corporate Partners
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="requisition">Manpower Requisition</a>
+                            <a class="dropdown-item" href="#">Labor Standard Checklist</a>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="guard"> Awards & Achievements </a>
+                        <a class="nav-link" href="award"> Awards & Achievements </a>
                     </li>
                     {{-- <li class="nav-item">
                         <a class="nav-link" href="contact">Contact us</a>
@@ -96,10 +162,9 @@
                 </div>
               </nav>
         </div>
-      </div>
-    </header>
-    <!-- end header section -->
-  </div>
+    </div>
+</header>
+
 
   <section class="service_section layout_padding ">
     <div class="container">
@@ -112,13 +177,16 @@
         <div class="col-md-4">
           <div class="box ">
             <div class="img-box">
-              <svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
+              <svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512"
+                xmlns="http://www.w3.org/2000/svg">
                 <g>
                   <g>
                     <circle cx="256" cy="125" r="15" />
-                    <path d="m356 262c-18.955 0-35.996-10.532-44.472-27.484l-2.111-4.223c-2.541-5.083-7.735-8.293-13.417-8.293h-80c-5.682 0-10.876 3.21-13.417 8.292l-2.111 4.222c-8.476 16.954-25.517 27.486-44.472 27.486-8.284 0-15 6.716-15 15v85.597c0 33.654 10.619 65.715 30.708 92.716 20.089 27 47.747 46.384 79.982 56.054 1.406.422 2.858.633 4.31.633s2.904-.211 4.31-.633c32.235-9.67 59.893-29.054 79.982-56.054 20.089-27.001 30.708-59.062 30.708-92.716v-85.597c0-8.284-6.716-15-15-15zm-46.967 87.322-56.568 56.568c-2.929 2.929-6.768 4.394-10.606 4.394s-7.678-1.464-10.606-4.394l-28.284-28.284c-5.858-5.858-5.858-15.355 0-21.213 5.857-5.858 15.355-5.858 21.213 0l17.678 17.677 45.962-45.961c5.857-5.858 15.355-5.858 21.213 0 5.856 5.858 5.856 15.355-.002 21.213z" />
+                    <path
+                      d="m356 262c-18.955 0-35.996-10.532-44.472-27.484l-2.111-4.223c-2.541-5.083-7.735-8.293-13.417-8.293h-80c-5.682 0-10.876 3.21-13.417 8.292l-2.111 4.222c-8.476 16.954-25.517 27.486-44.472 27.486-8.284 0-15 6.716-15 15v85.597c0 33.654 10.619 65.715 30.708 92.716 20.089 27 47.747 46.384 79.982 56.054 1.406.422 2.858.633 4.31.633s2.904-.211 4.31-.633c32.235-9.67 59.893-29.054 79.982-56.054 20.089-27.001 30.708-59.062 30.708-92.716v-85.597c0-8.284-6.716-15-15-15zm-46.967 87.322-56.568 56.568c-2.929 2.929-6.768 4.394-10.606 4.394s-7.678-1.464-10.606-4.394l-28.284-28.284c-5.858-5.858-5.858-15.355 0-21.213 5.857-5.858 15.355-5.858 21.213 0l17.678 17.677 45.962-45.961c5.857-5.858 15.355-5.858 21.213 0 5.856 5.858 5.856 15.355-.002 21.213z" />
                     <g>
-                      <path d="m485.371 179.287-220-176c-5.479-4.383-13.263-4.383-18.741 0l-220 176c-6.469 5.175-7.518 14.614-2.342 21.083 5.175 6.468 14.614 7.517 21.083 2.342l30.629-24.503v232.791c0 8.284 6.716 15 15 15h31.119c-7.333-20.12-11.119-41.476-11.119-63.403v-85.597c0-24.813 20.187-45 45-45 7.632 0 14.226-4.075 17.639-10.901l2.112-4.224c7.67-15.342 23.093-24.875 40.249-24.875h80c17.156 0 32.579 9.533 40.25 24.878l2.111 4.223c3.412 6.824 10.007 10.899 17.639 10.899 24.813 0 45 20.187 45 45v85.597c0 21.927-3.786 43.283-11.119 63.403h31.119c8.284 0 15-6.716 15-15v-232.791l30.629 24.503c2.766 2.213 6.075 3.288 9.361 3.288 4.4 0 8.76-1.927 11.722-5.63 5.176-6.469 4.127-15.908-2.341-21.083zm-229.371-9.287c-24.813 0-45-20.187-45-45s20.187-45 45-45 45 20.187 45 45-20.187 45-45 45z" />
+                      <path
+                        d="m485.371 179.287-220-176c-5.479-4.383-13.263-4.383-18.741 0l-220 176c-6.469 5.175-7.518 14.614-2.342 21.083 5.175 6.468 14.614 7.517 21.083 2.342l30.629-24.503v232.791c0 8.284 6.716 15 15 15h31.119c-7.333-20.12-11.119-41.476-11.119-63.403v-85.597c0-24.813 20.187-45 45-45 7.632 0 14.226-4.075 17.639-10.901l2.112-4.224c7.67-15.342 23.093-24.875 40.249-24.875h80c17.156 0 32.579 9.533 40.25 24.878l2.111 4.223c3.412 6.824 10.007 10.899 17.639 10.899 24.813 0 45 20.187 45 45v85.597c0 21.927-3.786 43.283-11.119 63.403h31.119c8.284 0 15-6.716 15-15v-232.791l30.629 24.503c2.766 2.213 6.075 3.288 9.361 3.288 4.4 0 8.76-1.927 11.722-5.63 5.176-6.469 4.127-15.908-2.341-21.083zm-229.371-9.287c-24.813 0-45-20.187-45-45s20.187-45 45-45 45 20.187 45 45-20.187 45-45 45z" />
                     </g>
                   </g>
                   <g>
@@ -129,10 +197,10 @@
             </div>
             <div class="detail-box">
               <h6>
-               Vision
+                Vision
               </h6>
               <p>
-                Minima consequatur architecto eaque assumenda ipsam itaque quia eum in doloribus debitis impedit ut minus tenetur corrupti excepturi ullam.
+                To be the corporate manpower provider choice.
               </p>
               <a href="">
                 Read More
@@ -143,7 +211,11 @@
         <div class="col-md-4">
           <div class="box ">
             <div class="img-box">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+xml:space="
+preser
+reserve">
                 <g>
                   <g>
                     <g>
@@ -153,7 +225,8 @@
           c0,5.049-4.093,9.143-9.143,9.143c-5.049,0-9.143-4.093-9.143-9.143v-19.584c-17.831-4.604-29.458-21.749-27.137-40.018
           c2.32-18.269,17.864-31.963,36.28-31.963c18.416,0,33.959,13.694,36.28,31.963C258.029,406.667,246.403,423.812,228.571,428.416z
           " />
-                      <path d="M402.286,274.286v-36.571c-0.01-10.095-8.191-18.276-18.286-18.286H215.772c-12.18-0.01-23.558-6.08-30.348-16.192
+                      <path
+                        d="M402.286,274.286v-36.571c-0.01-10.095-8.191-18.276-18.286-18.286H215.772c-12.18-0.01-23.558-6.08-30.348-16.192
           l-20.321-30.487c-3.392-5.109-9.117-8.179-15.25-8.179H54.857c-10.095,0.01-18.276,8.191-18.286,18.286v310.857
           c0.01,10.095,8.191,18.276,18.286,18.286h352.516c-3.294-5.533-5.051-11.846-5.088-18.286V274.286z M304.069,436.92
           c-14.047,34.375-47.506,56.826-84.64,56.795c-37.135,0.031-70.593-22.419-84.64-56.795c-14.047-34.375-5.888-73.833,20.64-99.818
@@ -212,8 +285,8 @@
                 Mission
               </h6>
               <p>
-                Minima consequatur architecto eaque assumenda ipsam itaque quia eum in doloribus debitis impedit ut minus tenetur corrupti excepturi ullam.
-              </p>
+                Effectively connecting Talents with Best Opportunities in the market.
+</p>
               <a href="">
                 Read More
               </a>
@@ -223,7 +296,8 @@
         <div class="col-md-4">
           <div class="box ">
             <div class="img-box">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                 <g>
                   <g>
                     <path d="M332,423.518V512h60v-15C392,460.784,366.197,430.487,332,423.518z" />
@@ -283,10 +357,10 @@
             </div>
             <div class="detail-box">
               <h6>
-                Goal
+                VALUES
               </h6>
               <p>
-                Minima consequatur architecto eaque assumenda ipsam itaque quia eum in doloribus debitis impedit ut minus tenetur corrupti excepturi ullam.
+                Accountability – We are committed in taking accountability professionally to our clients and candidates
               </p>
               <a href="">
                 Read More
@@ -302,7 +376,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 px-0">
-          <div class="img_container">
+<div class="img_container">
             <div class="img-box">
               <img src="images/logo.jpg" alt="" style="width: 90%; height: auto;" />
             </div>
@@ -316,12 +390,15 @@
               </h2>
             </div>
             <p>
-                ABIC Manpower specializes in providing tailored staffing solutions that meet the unique needs of businesses across various industries. With a commitment to quality and efficiency, ABIC Manpower excels in sourcing skilled professionals, ensuring optimal workforce management, and fostering long-term partnerships. Their dedication to excellence and customer satisfaction makes them a trusted partner in the realm of manpower services.
+                A licensee of Department of Labor and Employment (DOLE) Manpower, ABIC MANPOWER SERVICE CORP is committed in linking exemptional talents with boundless career opportunities across the Philippines.
+                With our determination to implement compulsory labor standards in the Philippines, our team ensure that the proper, updated and accurate information from Department of Labor and Employment (DOLE) were discussed, explained and communicated well to our clients. Ensuring that our exemptional talents will receive correct labor due and campaigning competitive package in the market.
+                We are driven by our core ethics of accountability, beyond boundaries, integrity and customized client oriented. Through these principles, our inimitable execution of recruitment and selection has been producing client’s satisfactory and advancement of viability given the career choices.
+
             </p>
             <div class="btn-box">
-                <a href="https://maps.app.goo.gl/bTTnNxiMSqZHaS6EA" target="_blank">
-                    403 Campos Rueda Bldg. Urban Avenue Brgy. Pio Del Pilar, Makati, Philippines, 1224
-                </a>
+              <a href="https://maps.app.goo.gl/bTTnNxiMSqZHaS6EA" target="_blank">
+                403 Campos Rueda Bldg. Urban Avenue Brgy. Pio Del Pilar, Makati, Philippines, 1224
+              </a>
 
 
             </div>
@@ -330,36 +407,98 @@
       </div>
     </div>
   </section>
-<!-- Additional content -->
-
-    <div class="row justify-content-center text-center">
-        <div class="col-lg-10">
-            <h2 class="title">Our Accredited Company</h2>
-            <p class="sub-title">We address the complex workforce challenges organizations face today, from contingent
-                and permanent staffing to talent management, outsourcing, and talent development. We deliver the
-                solutions that drive your business forward.</p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row justify-content-center">
-            @foreach($companies as $key => $company)
-                <div class="col-lg-3 col-md-3 col-sm-6 mb-4">
-                    <div class="card">
-                        <img alt="{{ $company->name }}" class="card-img-top" src="{{ asset($company->image) }}">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $company->name }}</h5>
-                            <p class="card-text">{{ $company->description }}</p>
-                            {{-- Add more details or buttons as needed --}}
-                        </div>
+  <section style="background-color: darkblue; padding: 50px 0;">
+    <div class="main text-center mt-5"></div>
+    <div class="container mt-4 d-flex justify-content-center">
+        <div class="row g-0">
+            <div class="col-md-4 border-right">
+                <div class="cards">
+                    <div class="first bg-white p-4 text-center">
+                        <img src="https://img.icons8.com/clouds/100/000000/box.png" />
+                        <h5>1000+ Ready Applicants</h5>
+                        <p class="line1">No limitation - Its got everything that you 'll need as you grow</p>
                     </div>
                 </div>
-                @if (($key + 1) % 4 == 0)
-                    </div><div class="row justify-content-center">
-                @endif
-            @endforeach
+            </div>
+
+            <div class="col-md-4 border-right">
+                <div class="cards">
+                    <div class="second bg-white p-4 text-center">
+                        <img src="https://img.icons8.com/clouds/100/000000/groups.png"/>
+                        <h5>100 Accredited Company</h5>
+                        <p class="line2">$50/month gets you 10 users, and you can add more $10 per user</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="cards">
+                    <div class="third bg-white p-4 text-center">
+                        <img src="https://img.icons8.com/fluent/100/000000/trophy.png"/>
+                        <h5>8000+ Successful Applicants</h5>
+                        <p class="line3">We'll help you get started and be there when you have questions</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</section>
 
+  <!-- Additional content -->
+
+
+
+  <div class="row justify-content-center text-center" style="color: white; background-color: #343a40; padding: 50px 0;">
+    <div class="col-lg-10">
+        <h2 class="title">Our Accredited Companies</h2>
+        <p class="sub-title">We address the complex workforce challenges organizations face today, from contingent and permanent staffing to talent management, outsourcing, and talent development. We deliver the solutions that drive your business forward.</p>
+    </div>
+</div>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        @foreach($companies as $key => $company)
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card h-100">
+                <img alt="{{ $company->name }}" class="card-img-top" src="{{ asset($company->image) }}">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ $company->name }}</h5>
+                    <p class="card-text">{{ $company->description }}</p>
+                    {{-- Add more details or buttons as needed --}}
+                </div>
+            </div>
+        </div>
+        @if (($key + 1) % 4 == 0)
+    </div>
+    <div class="row justify-content-center">
+        @endif
+        @endforeach
+    </div>
+</div>
+<div class="row justify-content-center text-center" style="color: white; background-color: #343a40; padding: 50px 0;">
+    <div class="col-lg-10">
+        <h2 class="title">Our JOB FAIRS</h2>
+
+    </div>
+</div>
+        <div class="text-box-one">
+            <div class="row">
+                @foreach ($Jobs as $company)
+                <div class="col-lg-4 col-md-6">
+                    <div class="p-4 text-center hover-bg-white hover-shadow rounded mb-4 transation-3s">
+                        <a href="{{ asset($company->companyimage) }}" data-lightbox="{{ $company->companyname }}" data-title="{{ $company->companyname }}">
+                            <img src="{{ asset($company->companyimage) }}" alt="{{ $company->companyname }}" class="img-fluid">
+                            <h5 class="text-secondary hover-text-success py-3 m-0" style="background-color: white">
+                                {{ $company->companyname }}
+                            </h5>
+                        </a>
+                        <!-- Add other sale details here -->
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</div>
 
 
   <!-- info section -->
@@ -480,6 +619,8 @@
   <!-- footer section -->
 
   <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/custom.js"></script>
 </body>

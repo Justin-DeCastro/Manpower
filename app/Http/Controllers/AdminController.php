@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 Use App\Models\Application;
+Use App\Models\Job;
 Use App\Models\Company;
 class AdminController extends Controller
 {
@@ -14,6 +15,10 @@ class AdminController extends Controller
     $companies = Company::all();
     return view('admin.acredited', compact('companies'));
  }
+ public function jobfair(){
+   $Jobs = Job::all();
+   return view('admin.jobfair',compact('Jobs'));
+}
  public function calendar(){
     $interviews = Application::all();
     return view('admin.calendar',compact('interviews'));

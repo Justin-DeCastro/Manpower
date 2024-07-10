@@ -7,6 +7,7 @@ use App\Http\Controllers\HiringController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\BotManController;
+use App\Http\Controllers\JobController;
 use App\Http\Controllers\ContactMessageController;
 /*
 |--------------------------------------------------------------------------
@@ -56,6 +57,11 @@ Route::post('/send-email', [EmailController::class, 'sendEmail'])->name('send.em
 Route::get('/acredited-company', [AdminController::class, 'acreditedcompany'])->name('acredited-company');
 
 Route::post('/companies/store', [CompanyController::class, 'store'])->name('companies.store');
+Route::post('/job/store', [JobController::class, 'store'])->name('job.store');
+Route::get('/job-fair', [AdminController::class, 'jobfair'])->name('job-fair');
+Route::get('/requisition', [HomeController::class, 'requisition'])->name('requisition');
+Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
+Route::get('/labor', [HomeController::class, 'labor'])->name('labor');
 // Route::post('/send-approval-email', [AppointmentController::class, 'sendApprovalEmail'])->name('send-approval-email');
 
 //botman

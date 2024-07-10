@@ -102,10 +102,7 @@ class BotManController extends Controller
         $bot->reply('You\'re welcome! If you have any more questions, feel free to ask.');
     });
 
-    $botman->hears('what can you do', function (BotMan $bot) {
-        $bot->typesAndWaits(1);
-        $bot->reply('I can help you with buying, selling, or leasing properties. Feel free to ask me anything related to real estate!');
-    });
+
     $botman->hears('What types of manpower services we offer', function (BotMan $bot) {
         $bot->typesAndWaits(1);
         $bot->reply('We provide a comprehensive range of manpower services, including temporary staffing, permanent recruitment, and specialized talent acquisition for various industries. Whether you need short-term project support or long-term staffing solutions, we have you covered.');
@@ -137,10 +134,43 @@ class BotManController extends Controller
         $bot->typesAndWaits(1);
         $bot->reply('Training Programs: We offer continuous training and development programs to keep our personnel updated with the latest industry practices and skills.');
     });
-    $botman->hears('what does your company do', function (BotMan $bot) {
+    $botman->hears('Do you have an agency fee or any charge for processing', function (BotMan $bot) {
         $bot->typesAndWaits(1);
-        $bot->reply('Our company is dedicated to providing top-notch real estate services. If you have any specific questions, feel free to ask.');
+        $bot->reply('No, we are not charging any fees for the process during employment.');
     });
+    $botman->hears('Age limit requirement', function (BotMan $bot) {
+        $bot->typesAndWaits(1);
+        $bot->reply('20 to 45 years old Male or Female (older than 45 are subject to screening depending on the experience and positions needed).');
+    });
+    $botman->hears('Is the medical expense covered by the company', function (BotMan $bot) {
+        $bot->typesAndWaits(1);
+        $bot->reply('No, the applicant will shoulder the medical expenses. The applicant can conduct his or her medicals at any clinic.');
+    });
+    $botman->hears('What are the pre-employment requirements', function (BotMan $bot) {
+        $bot->typesAndWaits(1);
+        $bot->reply('Here are the requirements needed!');
+        $bot->typesAndWaits(1);
+        $bot->reply("SSS E-1 Form and UMID ID<br>"
+                  . "-Philhealth Number and ID<br>"
+                  . "-Pag-Ibig Number and ID<br>"
+                  . "-TIN Number and ID<br>"
+                  . "-Latest 2X2 picture and 1x1 picture<br>"
+                  . "-COE or Clearance Certificate<br>"
+                  . "-School TOR or Diploma<br>"
+                  . "-NBI (original)<br>"
+                  . "-PSA or NSO <br>");
+         $bot->typesAndWaits(1);
+         $bot->reply('Pre-Employment Medical (original)');
+         $bot->reply("-(Examination includes Urinalysis, Fecalysis, Physical Exam, X-Ray, CBC, Drug Test)<br>"
+                  . "-Vaccination Card<br>");
+
+        $bot->typesAndWaits(1);
+        $bot->reply('For Makati based employees!');
+        $bot->reply("-Sanitary/Health Permit
+(Makati)<br>");
+
+    });
+
 
 
     // Respond to expressions of interest in specific properties
@@ -212,16 +242,17 @@ class BotManController extends Controller
     $bot->typesAndWaits(1);
 
     $question = Question::create('Frequently Ask Questions')
-        ->addButton(Button::create('How can your manpower company assist with my hiring needs?')->value('How can your manpower company assist with my hiring needs'))
-        ->addButton(Button::create('How do you ensure the quality of your manpower services?')->value('How do you ensure the quality of your manpower services'))
-        ->addButton(Button::create('What types of manpower services we offer?')->value('What types of manpower services we offer'))
-        ->addButton(Button::create(' How do you ensure the quality of your candidates?')->value('How do you ensure the quality of your candidates'));
-
-
-
-
-
-    $bot->reply($question);
+        ->addButton(Button::create('What are the pre-employment requirements?')->value('What are the pre-employment requirements'))
+        ->addButton(Button::create('Age limit requirement?')->value('Age limit requirement'))
+        ->addButton(Button::create('The work location of the jobs?')->value('The work location of the jobs'))
+        ->addButton(Button::create('Do you accept part-time employees?')->value('Do you accept part-time employees'))
+        ->addButton(Button::create('Do you accept PWD?')->value('Do you accept PWD'))
+        ->addButton(Button::create('Do you accept applicants with tattoo?')->value('Do you accept applicants with tattoo'))
+        ->addButton(Button::create('Do you accept walk-ins?')->value('Do you accept walk-ins'))
+        ->addButton(Button::create('Office Hours?')->value('Office Hours'))
+        ->addButton(Button::create('Is the medical expense covered by the company?')->value('Is the medical expense covered by the company'))
+        ->addButton(Button::create('Do you have an agency fee or any charge for processing?')->value('Do you have an agency fee or any charge for processing'));
+$bot->reply($question);
 
 });
 $botman->hears('go back', function (BotMan $bot) {

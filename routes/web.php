@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HiringController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\BotManController;
 use App\Http\Controllers\ContactMessageController;
 /*
 |--------------------------------------------------------------------------
@@ -56,3 +57,6 @@ Route::get('/acredited-company', [AdminController::class, 'acreditedcompany'])->
 
 Route::post('/companies/store', [CompanyController::class, 'store'])->name('companies.store');
 // Route::post('/send-approval-email', [AppointmentController::class, 'sendApprovalEmail'])->name('send-approval-email');
+
+//botman
+Route::match(['get', 'post'], '/botman', [BotmanController::class, 'handle']);

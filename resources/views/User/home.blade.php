@@ -14,21 +14,26 @@
 
         <header class="header_section">
             <div class="header_top">
+
                 <div class="container-fluid">
                     <div class="contact_link-container">
-                        <a href="" class="contact_link1">
+                        {{-- <li> <div id="google_translate_element"></div></li> --}}
+                        <a href="https://www.google.com/maps/place/Unit+403,+Campos+Rueda+Building,+101+Urban+Ave,+Makati,+1206+Metro+Manila" class="contact_link1">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
+
                             <span>
-                                Unit 403 campos rueda building
+                                Unit 403, Campos Rueda Building, 101 Urban Ave, Makati, 1206 Metro Manila
+
                             </span>
                         </a>
+
                         <a href="" class="contact_link2">
                             <i class="fa fa-phone" aria-hidden="true"></i>
                             <span>
                                 Call : +01 1234567890
                             </span>
                         </a>
-                        <a href="" class="contact_link3">
+                        <a href="mailto:abic.talentteams@gmail.com" class="contact_link3">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                             <span>
                                 abic.talentteams@gmail.com
@@ -42,7 +47,7 @@
                     <nav class="navbar navbar-expand-lg custom_nav-container">
                         <a class="navbar-brand" href="/">
                             <img src="images/logo-removebg-preview.png" alt="Logo" style="height: 100px; margin-right: 10px;">
-                            <span>Abic Manpower</span>
+                            <span>Abic Manpower Service Corp</span>
                           </a>
 
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -100,8 +100,46 @@
     </div>
 </section>
 <footer class="container-fluid footer_section">
-    <p>
+    {{-- <p>
         &copy; <span id="currentYear"></span> All Rights Reserved. Design by
         <a href="https://html.design/">Free Html Templates</a>
-    </p>
+    </p> --}}
 </footer>
+<script>
+    var botman = botmanInit();
+    function botmanInit() {
+        return BotMan.create({
+            baseUrl: '/botman',
+            introMessage: 'Hello! How can I assist you?',
+            chatServer: '/botman',
+            title: 'ChatBot',
+            mainColor: '#408EAF',
+        });
+    }
+</script>
+<script src='/js/widget.js'></script>
+<script>
+    var botmanWidget = {
+        aboutText: "You're currently engaging with an AI",
+        introMessage: "Hello, how can I help you?",
+        title: "ABIC MANPOWER SERVICE CORP!",
+        mainColor: "#575757",
+        bubbleAvatarUrl: "{{ asset('chatQA2.png') }}",
+        headerTextColor: "#ffffff"
+    };
+</script>
+{{-- <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script> --}}
+<script src="js/element.js"></script>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'en', // Change this to your website's primary language code
+      includedLanguages: 'af,sq,am,ar,hy,az,eu,be,bn,bs,bg,ca,ceb,ny,zh-CN,zh-TW,co,hr,cs,da,nl,en,eo,et,tl,fi,fr,fy,gl,ka,de,el,gu,ht,ha,haw,iw,hi,hmn,hu,is,ig,id,ga,it,ja,jw,kn,kk,km,ko,ku,ky,lo,la,lv,lt,lb,mk,mg,ms,ml,mt,mi,mr,mn,my,ne,no,or,ps,fa,pl,pt,pa,ro,ru,sm,gd,sr,st,sn,sd,si,sk,sl,so,es,su,sw,sv,tg,ta,tt,te,th,tr,tk,uk,ur,ug,uz,vi,cy,xh,yi,yo,zu', // List of languages to include
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE, // Layout style
+      autoDisplay: false, // Prevent auto-display of the widget
+    },
+    'google_translate_element' // ID of the HTML element to attach the widget to
+  );
+}
+</script>

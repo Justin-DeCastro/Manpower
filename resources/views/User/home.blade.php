@@ -105,20 +105,20 @@
                     </div>
                 </div>
                 <div class="col-md-6 px-0">
-                    <div class="detail-box">
+                    <div class="details-box">
                         <div class="heading_container ">
                             <h2>
                                 Who Are We?
                             </h2>
                         </div>
                         <p>
-                            A licensee of Department of Labor and Employment (DOLE) Manpower, ABIC MANPOWER SERVICE CORP is committed in linking exemptional talents with boundless career opportunities across the Philippines.
+                            A licensee of Department of Labor and Employment <a href="https://clients.ncr.dole.gov.ph/clientsearch/search/pages/consubcon.php">(DOLE)</a> Manpower, ABIC MANPOWER SERVICE CORP is committed in linking exemptional talents with boundless career opportunities across the Philippines.
                             With our determination to implement compulsory labor standards in the Philippines, our team ensure that the proper, updated and accurate information from Department of Labor and Employment (DOLE) were discussed, explained and communicated well to our clients. Ensuring that our exemptional talents will receive correct labor due and campaigning competitive package in the market.
                             We are driven by our core ethics of accountability, beyond boundaries, integrity and customized client oriented. Through these principles, our inimitable execution of recruitment and selection has been producing client’s satisfactory and advancement of viability given the career choices.
 
 
                         </p>
-                        <div class="btn-box">
+                        <div class="detail-box">
                             <a href="https://maps.app.goo.gl/bTTnNxiMSqZHaS6EA" target="_blank">
                                 403 Campos Rueda Bldg. Urban Avenue Brgy. Pio Del Pilar, Makati, Philippines, 1224
                             </a>

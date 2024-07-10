@@ -8,6 +8,7 @@ use App\Http\Controllers\EmailController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\BotManController;
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\OjtController;
 use App\Http\Controllers\ContactMessageController;
 /*
 |--------------------------------------------------------------------------
@@ -66,3 +67,6 @@ Route::get('/labor', [HomeController::class, 'labor'])->name('labor');
 
 //botman
 Route::match(['get', 'post'], '/botman', [BotmanController::class, 'handle']);
+
+//OJT
+Route::get('/ojtform', [OjtController::class, 'showForm'])->name('ojtform');

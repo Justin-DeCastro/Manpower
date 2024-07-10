@@ -1,125 +1,37 @@
-<head>
-    <!-- Basic -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Site Metas -->
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-
-    <title>Manpower</title>
-
-    <!-- bootstrap core css -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-    <!-- fonts style -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
-
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet" />
-    <!-- responsive style -->
-    <link href="css/responsive.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="hero_area">
-        <!-- header section strats -->
-        <div class="hero_bg_box">
-            <div class="img-box">
-                <img src="images/manbackground3.jpg" alt="">
-            </div>
-        </div>
-  <header class="header_section">
-    <div class="header_top">
-
-        <div class="container-fluid">
-            <div class="contact_link-container">
-                {{-- <li> <div id="google_translate_element"></div></li> --}}
-                <a href="https://www.google.com/maps/place/Unit+403,+Campos+Rueda+Building,+101+Urban+Ave,+Makati,+1206+Metro+Manila" class="contact_link1">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-
-                    <span>
-                        Unit 403, Campos Rueda Building, 101 Urban Ave, Makati, 1206 Metro Manila
-
-                    </span>
-                </a>
-
-                <a href="" class="contact_link2">
-                    <i class="fa fa-phone" aria-hidden="true"></i>
-                    <span>
-                        Call : +01 1234567890
-                    </span>
-                </a>
-                <a href="mailto:abic.talentteams@gmail.com" class="contact_link3">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <span>
-                        abic.talentteams@gmail.com
-                    </span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="header_bottom">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg custom_nav-container">
-                <a class="navbar-brand" href="/">
-                    <img src="images/logo-removebg-preview.png" alt="Logo" style="height: 100px; margin-right: 10px;">
-                    <span>Abic Manpower Service Corp</span>
-                  </a>
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class=""></span>
-                </button>
-
-                <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
-                  <ul class="navbar-nav  ">
-                    <li class="nav-item ">
-                      <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about"> About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="service"> Services </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Job Seekers
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="careers">Careers</a>
-                            {{-- <a class="dropdown-item" href="#">Manpower Requisition</a>
-                            <a class="dropdown-item" href="#">Labor Standard Checklist</a> --}}
-                        </div>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Corporate
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Profile</a>
-                            <a class="dropdown-item" href="requisition">Manpower Requisition</a>
-                            <a class="dropdown-item" href="#">Labor Standard Checklist</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="award"> Awards & Achievements </a>
-                    </li>
-                    {{-- <li class="nav-item">
-                        <a class="nav-link" href="contact">Contact us</a>
-                    </li> --}}
-                  </ul>
-                </div>
-              </nav>
-        </div>
-    </div>
-</header>
+@include('Components.header')
 <br>
 <br>
     <style>
+        /* styles.css */
+        .form-group-three {
+        margin-bottom: 20px;
+    }
+    .form-group-three label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .form-group-three .checkbox-group {
+        display: flex;
+        justify-content: space-between;
+    }
+    .form-group-three .checkbox-group label {
+        flex: 1; /* Distribute labels evenly */
+    }
+    .form-group-three input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+.custom-side-by-side {
+    display: flex;
+    gap: 10px; /* Adjust the gap between inputs as needed */
+}
+
+.custom-side-by-side input {
+    flex: 1; /* Allow inputs to grow and take up equal space */
+}
+
         /* Container styles */
         .form-container {
             max-width: 100%;
@@ -276,8 +188,15 @@
 
                 <div class="form-group-three">
                     <label for="job_category">Job Category:</label>
-                    <input type="text" id="job_category" name="job_category" class="form-control form-control-lg" placeholder="Job Category" required>
+                    <select id="job_category" name="job_category" class="form-control form-control-lg" required>
+                        <option value="">Select Job Category</option>
+                        <option value="category1">Category 1</option>
+                        <option value="category2">Category 2</option>
+                        <option value="category3">Category 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
                 </div>
+
             </div>
 
             <!-- Second row -->
@@ -311,8 +230,8 @@
                 <div class="form-group-three">
                     <label for="payout">Payout:</label>
                     <div class="side-by-side">
-                        <input type="text" id="payout_hours" name="payout_hours" class="form-control" placeholder="Hours">
-                        <input type="text" id="payout_days" name="payout_days" class="form-control" placeholder="Days">
+                        <input type="text" id="payout_hours" name="payout_date1" class="form-control" placeholder="First Cut off">
+                        <input type="text" id="payout_days" name="payout_date2" class="form-control" placeholder="Second Cut off">
                     </div>
                 </div>
 
@@ -334,9 +253,22 @@
                 </div>
 
                 <div class="form-group-three">
-                    <label for="qualifications">Qualifications:</label>
-                    <textarea id="qualifications" name="qualifications" class="form-control" rows="4" placeholder="Qualifications"></textarea>
+                    <label>Qualifications:</label>
+                    <div class="checkbox-row">
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="qualifications[]" value="qualification1"> Qualification 1</label>
+                            <label><input type="checkbox" name="qualifications[]" value="qualification2"> Qualification 2</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="qualifications[]" value="qualification3"> Qualification 3</label>
+                                <label><input type="checkbox" name="qualifications[]" value="qualification3"> Qualification 4</label>
+                        </div>
+                            <label>Others: <input type="text" name="others_qualification"></label>
+
+                    </div>
                 </div>
+
+
 
                 <div class="form-group-three">
                     <label for="other_requirements">Other Requirements:</label>
@@ -344,6 +276,14 @@
                 </div>
             </div>
 
+            <div class="form-group-three">
+                <label for="salary_from">Salary Range:</label>
+                <div class="custom-side-by-side">
+                    <input type="text" id="salary_from" name="salary_from" class="form-control" placeholder="From">
+                    <input type="text" id="salary_to" name="salary_to" class="form-control" placeholder="To">
+                    <input type="text" id="salary_allowance" name="salary_allowance" class="form-control" placeholder="Allowance">
+                </div>
+            </div>
             <!-- Fifth row: Target date of deployment, screening method, and job description -->
             <div class="form-row-three">
                 <div class="form-group-three">

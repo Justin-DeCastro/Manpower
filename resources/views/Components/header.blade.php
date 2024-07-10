@@ -113,6 +113,7 @@
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="careers">Careers</a>
+                                        <a class="dropdown-item" href="ojtform">OJT</a>
                                         {{-- <a class="dropdown-item" href="#">Manpower Requisition</a>
                             <a class="dropdown-item" href="#">Labor Standard Checklist</a> --}}
                                     </div>
@@ -127,7 +128,7 @@
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="profile">Profile</a>
                                         <a class="dropdown-item" href="requisition">Manpower Requisition</a>
-                                        <a class="dropdown-item" href="#">Labor Standard Checklist</a>
+                                        <a class="dropdown-item" href="labor">Labor Standard Checklist</a>
                                     </div>
                                 </li>
                                 <li class="nav-item">

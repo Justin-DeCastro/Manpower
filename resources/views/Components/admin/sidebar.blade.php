@@ -76,6 +76,10 @@
                 <i class="fas fa-user-alt"></i>
                 <p>Company Profile</p>
             </a>
+            <a href="{{ route('manpower.index') }}">
+                <i class="fas fa-user-alt"></i>
+                <p>Manpower Requisition</p>
+            </a>
             <a href="{{ route('acredited-company') }}">
                 <i class="fas fa-building"></i>
 

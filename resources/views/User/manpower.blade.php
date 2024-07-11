@@ -167,8 +167,8 @@
 <body>
 
     <div class="form-container">
-        <form action="/submit_job_form" method="post">
-
+        <form action="{{ route('submit.store') }}" method="POST" enctype="multipart/form-data">
+            @csrf
             <!-- First row -->
             <div class="form-row-three">
                 <div class="form-group-three">
@@ -190,9 +190,13 @@
                     <label for="job_category">Job Category:</label>
                     <select id="job_category" name="job_category" class="form-control form-control-lg" required>
                         <option value="">Select Job Category</option>
-                        <option value="category1">Category 1</option>
-                        <option value="category2">Category 2</option>
-                        <option value="category3">Category 3</option>
+                        <option value="Human Resources">Human Resources</option>
+                        <option value="Electrical Engineer">Electrical Engineer</option>
+                        <option value="Machine Operators">Machine Operators</option>
+                        <option value="Office Support">Office Support</option>
+                        <option value="Customer Service Representative">Customer Service Representative</option>
+                        <option value="Executive Assistant">Executive Assistant</option>
+                        <option value="Driver Riders">Driver Riders</option>
                         <!-- Add more options as needed -->
                     </select>
                 </div>
@@ -230,8 +234,8 @@
                 <div class="form-group-three">
                     <label for="payout">Payout:</label>
                     <div class="side-by-side">
-                        <input type="text" id="payout_hours" name="payout_date1" class="form-control" placeholder="First Cut off">
-                        <input type="text" id="payout_days" name="payout_date2" class="form-control" placeholder="Second Cut off">
+                        <input type="text" id="payout_hours" name="payout_firstdate" class="form-control" placeholder="First Cut off">
+                        <input type="text" id="payout_days" name="payout_seconddate" class="form-control" placeholder="Second Cut off">
                     </div>
                 </div>
 
@@ -253,17 +257,18 @@
                 </div>
 
                 <div class="form-group-three">
-                    <label>Qualifications:</label>
                     <div class="checkbox-row">
                         <div class="checkbox-group">
-                            <label><input type="checkbox" name="qualifications[]" value="qualification1"> Qualification 1</label>
-                            <label><input type="checkbox" name="qualifications[]" value="qualification2"> Qualification 2</label>
+                            <label><input type="checkbox" name="qualifications[]" value="CPA License"> CPA LICENSE </label>
+                            <label><input type="checkbox" name="qualifications[]" value="National Certificate"> National Certificate</label>
+                            <label><input type="checkbox" name="qualifications[]" value="Licensed Professional"> Licensed Professional</label>
                         </div>
-                        <div class="checkbox-group">
-                            <label><input type="checkbox" name="qualifications[]" value="qualification3"> Qualification 3</label>
-                                <label><input type="checkbox" name="qualifications[]" value="qualification3"> Qualification 4</label>
-                        </div>
-                            <label>Others: <input type="text" name="others_qualification"></label>
+
+
+
+
+
+                            <label>Others: <input type="text" name="other_qualification"></label>
 
                     </div>
                 </div>
@@ -281,7 +286,7 @@
                 <div class="custom-side-by-side">
                     <input type="text" id="salary_from" name="salary_from" class="form-control" placeholder="From">
                     <input type="text" id="salary_to" name="salary_to" class="form-control" placeholder="To">
-                    <input type="text" id="salary_allowance" name="salary_allowance" class="form-control" placeholder="Allowance">
+
                 </div>
             </div>
             <!-- Fifth row: Target date of deployment, screening method, and job description -->

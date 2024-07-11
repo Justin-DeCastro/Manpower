@@ -13,6 +13,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminJobController;
 use App\Http\Controllers\JobfairsController;
 use App\Http\Controllers\ContactMessageController;
+use App\Http\Controllers\ManpowerReqController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -95,3 +96,8 @@ Route::post('/jobfairs', [JobfairsController::class, 'store'])->name('jobfairs.s
 Route::post('/hiring/send-email', [HiringController::class, 'sendEmail'])->name('hiring.send-email');
 
 Route::get('/hiring/applications/{id}/attend', [HiringController::class, 'attendInterview'])->name('hiring.applications.attend');
+
+//manpower
+// Route::get('/submit_job_form', [ManpowerReqController::class, 'create']);
+Route::post('/submit_job_form', [ManpowerReqController::class, 'store'])->name('submit.store');
+Route::get('/manindex', [ManpowerReqController::class, 'index'])->name('manpower.index');

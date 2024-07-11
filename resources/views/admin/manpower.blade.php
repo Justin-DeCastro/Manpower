@@ -172,30 +172,49 @@
 												<table id="myDataTable" class="table table-striped">
 													<thead>
 														<tr>
-															<th>Full Name</th>
-															<th>Email</th>
-															<th>School/University</th>
-															<th>Course/Program</th>
-															<th>Phone Number</th>
-															<th>OJT Hours</th>
-															<th>Resume</th>
-															<th>Message</th>
+															<th>Employment Type</th>
+															<th>Vacant Position</th>
+															<th>Job Category</th>
+															<th>Number of Vacancies</th>
+															<th>Years of Experience Required</th>
+															<th>Working Location</th>
+															<th>Working Schedule Days</th>
+                                                            <th>Working Schedule Hours</th>
+                                                            <th>Payout First Cut off</th>
+                                                            <th>Payout Second Cut off</th>
+															<th>Gender</th>
+                                                            <th>Job Requirements</th>
+                                                            <th>Other Requirements</th>
+                                                            <th>Qualifications</th>
+                                                            <th>Salary Range from</th>
+                                                            <th>Salary Range To</th>
+                                                            <th>Screening Method</th>
+                                                            <th>Job Description</th>
 														</tr>
 													</thead>
 													<tbody>
-														@foreach($ojt as $ojts)
-															<tr>
-																<td>{{ $ojts->fullname }}</td>
-																<td>{{ $ojts->email }}</td>
-																<td>{{ $ojts->school }}</td>
-																<td>{{ $ojts->course }}</td>
-																<td>{{ $ojts->phone }}</td>
-																<td>{{ $ojts->ojt_hours }}</td>
-																<td><a href="{{ asset('storage/' . $ojts->resume) }}">Download
-																		Resume</a></td>
-																<td>{{ $ojts->message }}</td>
-															</tr>
-														@endforeach
+                                                        @foreach ($manpower as $job)
+                                                        <tr>
+                                                            <td>{{ $job->employment_type }}</td>
+                                                            <td>{{ $job->vacant_position }}</td>
+                                                            <td>{{ $job->job_category }}</td>
+                                                            <td>{{ $job->no_of_vacancy }}</td>
+                                                            <td>{{ $job->years_experience }}</td>
+                                                            <td>{{ $job->working_location }}</td>
+                                                            <td>{{ $job->working_schedule_days }}</td>
+                                                            <td>{{ $job->working_schedule_hours }}</td>
+                                                            <td>{{ $job->payout_firstdate }}</td>
+                                                            <td>{{ $job->payout_seconddate }}</td>
+                                                            <td>{{ $job->preferred_gender }}</td>
+                                                            <td>{{ $job->job_requirements }}</td>
+                                                            <td>{{ $job->other_requirements }}</td>
+                                                            <td>{{ $job->qualifications }}</td>
+                                                            <td>{{ $job->salary_from }}</td>
+                                                            <td>{{ $job->salary_to }}</td>
+                                                            <td>{{ $job->screening_method }}</td>
+                                                            <td>{{ $job->job_description }}</td>
+                                                        </tr>
+                                                    @endforeach
 													</tbody>
 												</table>
 											</div>

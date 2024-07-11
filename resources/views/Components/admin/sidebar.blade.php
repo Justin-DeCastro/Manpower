@@ -60,6 +60,10 @@
                 <i class="fas fa-briefcase"></i>
                 <p>Job Application</p>
             </a>
+            <a href="{{ route('job-fair') }}">
+                <i class="fas fa-briefcase"></i>
+                <p>Job Fair</p>
+            </a>
             <a href="{{ route('calendars') }}">
                 <i class="fas fa-calendar-alt"></i>
                 <p>Calendar</p>

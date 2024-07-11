@@ -31,7 +31,7 @@
         <!-- header section strats -->
         <div class="hero_bg_box">
             <div class="img-box">
-                <img src="manpower.png" alt="">
+                <img src="front.jpg" alt="">
             </div>
         </div>
         <header class="header_section">
@@ -109,7 +109,7 @@
                                     <a class="nav-link dropdown-toggle" href="" id="navbarDropdown"
                                         role="button" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
-                                        Job Seekers
+                                        For Job Seekers
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="careers">Careers</a>
@@ -123,7 +123,7 @@
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                                         role="button" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
-                                        Corporate Partners
+                                       For Corporate Partners
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="profile">Profile</a>
@@ -295,7 +295,7 @@
     </thead>
     <tbody>
     <!-- Existing static row -->
-   
+
 
     <!-- Dynamic rows from $joboffer -->
     @foreach($joboffer as $job)
@@ -369,7 +369,7 @@
     </div>
 </div>
 
-  
+
 </section>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>

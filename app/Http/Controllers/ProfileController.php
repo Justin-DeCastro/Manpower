@@ -34,7 +34,7 @@ class ProfileController extends Controller
     //     $secCertificateFile->move(public_path('certificates'), $secCertificateFile->getClientOriginalName());
     // }
     $request->file('sec_certificate')->move('public/certificates', $request->file('sec_certificate')->getClientOriginalName());
-    $request->file('sec_certificate')->move('public/permits', $request->file('business_permit')->getClientOriginalName());
+    $request->file('business_permit')->move('public/permits', $request->file('business_permit')->getClientOriginalName());
 
 
     // Store form data in database

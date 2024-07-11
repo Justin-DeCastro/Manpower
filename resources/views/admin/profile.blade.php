@@ -151,10 +151,10 @@
 											</ul>
 										</div>
 										<div class="dropdown">
-											
+
 
 										</div>
-									 
+
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -180,8 +180,10 @@
                                         <td>{{ $prof->person }}</td>
                                         <td>{{ $prof->phone }}</td>
                                         <td>{{ $prof->position }}</td>
-										<td><a href="{{ asset('../certificates/' .$prof->sec_certificate )}}">Download SEC Certificate</a></td>
-										<td><a href="{{ asset('../permits/' . basename($prof->business_permit)) }}">Download Business Permit</a></td>
+                                        <td><a href="{{ asset('public/certificates/' . $prof->sec_certificate) }}" download>Download SEC Certificate</a></td>
+                                        <td><a href="{{ asset('public/permits/' . basename($prof->business_permit)) }}" download>Download Business Permit</a></td>
+
+
 
                                     </tr>
                                     @endforeach

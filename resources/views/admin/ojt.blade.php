@@ -161,13 +161,8 @@
 											</ul>
 										</div>
 										<div class="dropdown">
-<<<<<<< HEAD
 
-=======
-											
->>>>>>> e0db8be1000730be95ea658b62105d5390992fc9
-
-										</div>
+</div>
 									 </div>
 
 										<div class="card-body">
@@ -195,8 +190,9 @@
 																<td>{{ $ojts->course }}</td>
 																<td>{{ $ojts->phone }}</td>
 																<td>{{ $ojts->ojt_hours }}</td>
-																<td><a href="{{ asset('storage/' . $ojts->resume) }}">Download
-																		Resume</a></td>
+																<td><a href="{{ $ojts->resume }}"download>Download Resume</a></td>
+
+
 																<td>{{ $ojts->message }}</td>
 															</tr>
 														@endforeach

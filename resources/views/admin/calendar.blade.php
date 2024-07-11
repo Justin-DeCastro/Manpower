@@ -234,12 +234,14 @@
                                                         <p><strong>Phone Number:</strong> <span id="eventPhone"></span></p>
                                                     </div>
 
-            <form method="POST" action="{{ route('send.email') }}">
-                @csrf
-                <input type="hidden" name="name" id="hiddenEventName">
-                <input type="hidden" name="phone" id="hiddenEventPhone">
-                <button type="submit" class="btn btn-success btn-block"> Send Email</button>
-            </form>
+                                                    <form method="POST" action="{{ route('hiring.send-email') }}">
+    @csrf
+    <input type="hidden" name="name" id="hiddenEventName" value="0">
+    <input type="hidden" name="phone" id="hiddenEventPhone" value="0">
+    <input type="hidden" name="email" id="hiddenEventEmail" value="0">
+    <button type="submit" class="btn btn-success btn-block">Send Email</button>
+</form>
+
         </div>
 
 
@@ -312,14 +314,15 @@
 
                         var events = interviews.map(function(interview) {
                             return {
-                                title: interview.full_name,
+                                title: interview.name,
                                 start: interview.date,
                                 job_name: interview.job_name,
                                 job_category: interview.job_category,
                                 extendedProps: {
                                     id: interview.id,
-                                    name: interview.full_name,
-                                    phone: interview.phone, // Add phone number if available in the future
+                                    name: interview.name,
+                                    phone: interview.phone,
+                                    email: interview.email, // Add phone number if available in the future
                                 }
                             };
                         });
@@ -337,6 +340,12 @@
                                 $('#eventModal #eventStart').text(event.start.toLocaleString());
                                 $('#eventModal #eventName').text(event.extendedProps.name || '');
                                 $('#eventModal #eventPhone').text(event.extendedProps.phone || '');
+                                $('#eventModal #eventEmail').text(event.extendedProps.email || '');
+
+                                $('#hiddenEventName').val(event.extendedProps.name);
+                                $('#hiddenEventPhone').val(event.extendedProps.phone);
+                                $('#hiddenEventEmail').val(event.extendedProps.email);
+
                                 $('#eventModal').modal('show');
                             }
                         });

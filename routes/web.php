@@ -9,6 +9,8 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\BotManController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\OjtController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AdminJobController;
 use App\Http\Controllers\ContactMessageController;
 /*
 |--------------------------------------------------------------------------
@@ -61,7 +63,7 @@ Route::post('/companies/store', [CompanyController::class, 'store'])->name('comp
 Route::post('/job/store', [JobController::class, 'store'])->name('job.store');
 Route::get('/job-fair', [AdminController::class, 'jobfair'])->name('job-fair');
 Route::get('/requisition', [HomeController::class, 'requisition'])->name('requisition');
-Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
+
 Route::get('/labor', [HomeController::class, 'labor'])->name('labor');
 // Route::post('/send-approval-email', [AppointmentController::class, 'sendApprovalEmail'])->name('send-approval-email');
 
@@ -70,3 +72,21 @@ Route::match(['get', 'post'], '/botman', [BotmanController::class, 'handle']);
 
 //OJT
 Route::get('/ojtform', [OjtController::class, 'showForm'])->name('ojtform');
+Route::get('/ojtindex', [OjtController::class, 'index'])->name('ojt.index');
+Route::post('/ojt', [OjtController::class, 'store'])->name('ojt.store');
+
+//company profile
+Route::post('/submit-profile', [ProfileController::class, 'store'])->name('profile.store');
+Route::get('/profileindex', [ProfileController::class, 'index'])->name('profile.index');
+Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
+
+//admin job edit and addd
+Route::post('/joboffer', [AdminJobController::class, 'store'])->name('adminjob.store');
+Route::get('/jobindex', [AdminJobController::class, 'index'])->name('joboffer.index');
+// Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
+// Route::post('/hiring/applications/{id}/assign-date', [HiringController::class, 'assignDate'])->name('hiring.applications.assign-date');
+// Route::get('/hiring/applications/{id}/attend', [HiringController::class, 'attendInterview'])->name('hiring.applications.attend');
+
+Route::post('/hiring/send-email', [HiringController::class, 'sendEmail'])->name('hiring.send-email');
+
+Route::get('/hiring/applications/{id}/attend', [HiringController::class, 'attendInterview'])->name('hiring.applications.attend');

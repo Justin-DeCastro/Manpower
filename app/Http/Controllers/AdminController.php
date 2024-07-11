@@ -9,6 +9,7 @@ Use App\Models\Company;
 class AdminController extends Controller
 {
  public function dashboard(){
+   
     return view('admin.dashboard');
  }
  public function acreditedcompany(){

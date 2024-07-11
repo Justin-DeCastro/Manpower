@@ -5,11 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Application extends Model
+class AdminJob extends Model
 {
     use HasFactory;
-
     protected $fillable = [
-        'name', 'email', 'address', 'phone', 'position', 'message', 'resume',
+        'title',
+        'location',
+        // Add other fields here as needed
     ];
 }

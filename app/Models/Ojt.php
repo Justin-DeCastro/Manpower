@@ -5,11 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Application extends Model
+class Ojt extends Model
 {
     use HasFactory;
-
     protected $fillable = [
-        'name', 'email', 'address', 'phone', 'position', 'message', 'resume',
+        'fullname', 'email', 'school', 'course', 'phone', 'ojt_hours', 'resume', 'message'
     ];
 }

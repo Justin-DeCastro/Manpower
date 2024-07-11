@@ -38,9 +38,9 @@
               <p>
                 Minima consequatur architecto eaque assumenda ipsam itaque quia eum in doloribus debitis impedit ut minus tenetur corrupti excepturi ullam.
               </p>
-              <a href="">
+              <!-- <a href="">
                APPLY
-              </a>
+              </a> -->
             </div>
           </div>
         </div>
@@ -118,9 +118,9 @@
               <p>
                 Minima consequatur architecto eaque assumenda ipsam itaque quia eum in doloribus debitis impedit ut minus tenetur corrupti excepturi ullam.
               </p>
-              <a href="">
+              <!-- <a href="">
                 APPLY
-              </a>
+              </a> -->
             </div>
           </div>
         </div>
@@ -192,9 +192,9 @@
               <p>
                 Minima consequatur architecto eaque assumenda ipsam itaque quia eum in doloribus debitis impedit ut minus tenetur corrupti excepturi ullam.
               </p>
-              <a href="">
+              <!-- <a href="">
                 APPLY
-              </a>
+              </a> -->
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 <section class="info_section ">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="info_logo">
                     <a class="navbar-brand" href="/">
                         <span>
@@ -13,46 +13,36 @@
                     </p>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="info_links">
                     <h5>
                         Useful Link
                     </h5>
                     <ul>
                         <li>
-                            <a href="">
-                                dolor sit amet, consectetur
+                            <a href="about">
+                               ABOUT THE COMPANY
                             </a>
                         </li>
                         <li>
-                            <a href="">
-                                magna aliqua. Ut enim ad
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                minim veniam,
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                quisdotempor incididunt r
+                            <a href="https://clients.ncr.dole.gov.ph/clientsearch/search/pages/consubcon.php">
+                              Department Of Labor and Employment
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="info_info">
                     <h5>
                         Contact Us
                     </h5>
                 </div>
                 <div class="info_contact">
-                    <a href="" class="">
+                    <a href="https://maps.app.goo.gl/bTTnNxiMSqZHaS6EA" class="">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                         <span>
-                            Lorem ipsum dolor sit amet,
+                        403 CAMPOS RUEDA BLDG. URBAN AVENUE BRGY. PIO DEL PILAR, MAKATI, PHILIPPINES, 1224
                         </span>
                     </a>
                     <a href="" class="">
@@ -69,7 +59,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-3">
+            <!-- <div class="col-md-3">
                 <div class="info_form ">
                    <h5>
                         Social Links
@@ -95,7 +85,7 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>

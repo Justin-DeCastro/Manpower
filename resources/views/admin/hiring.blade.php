@@ -138,25 +138,27 @@
                                         <table class="table">
                                             <thead>
                                                 <tr>
-                                                    <th>Category</th>
-                                                    <th>Name of Job</th>
-                                                    <th>Full Name</th>
+                                                    <th>Name</th>
+                                                    <th>Email</th>
                                                     <th>Address</th>
-
+                                                    <th>Phone</th>
+													<th>Position</th>
+													<th>Message</th>
                                                     <th>Resume</th>
                                                     <th>Assign the Date of Interview</th>
-
+													<th>Status</th>
 
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 @foreach($applications as $application)
                                                 <tr>
-                                                    <td>{{ $application->job_category }}</td>
-                                                    <td>{{ $application->job_name }}</td>
-                                                    <td>{{ $application->full_name }}</td>
-                                                    <td>{{ $application->address }}</td>
-
+                                                    <td>{{ $application->name}}</td>
+                                                    <td>{{ $application->email }}</td>
+													<td>{{ $application->address }}</td>
+                                                    <td>{{ $application->phone }}</td>
+                                                    <td>{{ $application->position}}</td>
+													<td>{{ $application->message }}</td>
                                                     <td><a href="{{ asset($application->resume) }}">Download Resume</a></td>
                                                     <td>
                                                         <form method="POST" action="{{ url('assign-date', $application->id) }}" id="assignDateForm">
@@ -169,6 +171,7 @@
                                                         </form>
 
                                                     </td>
+													<td>{{ $application->status }}</td>
                                                 </tr>
                                                 @endforeach
                                             </tbody>

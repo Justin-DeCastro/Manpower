@@ -31,7 +31,7 @@
         <!-- header section strats -->
         <div class="hero_bg_box">
             <div class="img-box">
-                <img src="manpower.png" alt="">
+                <img src='manpower.png' alt="">
             </div>
         </div>
         <header class="header_section">
@@ -68,7 +68,7 @@
                 <div class="social-buttons-container">
                     <div class="social-buttons">
                         <ul>
-                            <li><a href=""><i class="fa-brands fa-facebook-f fa-lg"></i></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100090318514723"><i class="fa-brands fa-facebook-f fa-lg"></i></a></li>
                             <li><a href=""><i class="fa-brands fa-instagram fa-lg"></i></a></li>
                             <li><a href=""><i class="fa-brands fa-telegram fa-lg"></i></a></li>
                             <li><a href=""><i class="fa-brands fa-twitter fa-lg"></i></a></li>
@@ -109,11 +109,11 @@
                                     <a class="nav-link dropdown-toggle" href="" id="navbarDropdown"
                                         role="button" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
-                                        Job Seekers
+                                        For Job Seekers
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="careers">Careers</a>
-                                        <a class="dropdown-item" href="ojtform">OJT</a>
+                                        <a class="dropdown-item" href="ojtform">Internship</a>
                                         {{-- <a class="dropdown-item" href="#">Manpower Requisition</a>
                             <a class="dropdown-item" href="#">Labor Standard Checklist</a> --}}
                                     </div>
@@ -123,7 +123,7 @@
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                                         role="button" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
-                                        Corporate Partners
+                                       For Corporate Partners
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="profile">Profile</a>

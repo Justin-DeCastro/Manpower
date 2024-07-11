@@ -10,27 +10,27 @@
 	<script src="Admin/assets/js/plugin/webfont/webfont.min.js"></script>
 	<script>
 		WebFont.load({
-			google: {"families"🙁"Public Sans:300,400,500,600,700"},
-			custom: {"families"🙁"Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['Admin/assets/css/fonts.min.css']},
+			google: {"families":["Public Sans:300,400,500,600,700"]},
+			custom: {"families":["Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['Admin/assets/css/fonts.min.css']},
 			active: function() {
 				sessionStorage.fonts = true;
 			}
 		});
 	</script>
 
-
+	<!-- CSS Files -->
 	<link rel="stylesheet" href="Admin/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="Admin/assets/css/plugins.min.css">
 	<link rel="stylesheet" href="Admin/assets/css/kaiadmin.min.css">
 
-
+	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link rel="stylesheet" href="Admin/assets/css/demo.css">
 </head>
 <body>
 	<div class="wrapper">
-
+		<!-- Sidebar -->
 	@include('Components.admin.sidebar')
-
+		<!-- End Sidebar -->
 
 		<div class="main-panel">
 			<div class="main-header">
@@ -119,51 +119,52 @@
 				<!-- End Navbar -->
 			</div>
 
-			<div class="container">
-                <div class="page-inner">
-                    <div class="page-header d-flex justify-content-between align-items-center">
-                        <ul class="breadcrumbs mb-3">
-                            <!-- Breadcrumb items can be added here if needed -->
-                        </ul>
-                        <div>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadModal">
-                                Upload Company Details
-                            </button>
+            <div class="container">
+    <div class="page-inner">
+        <div class="page-header">
+            <h3 class="fw-bold mb-3">Company Profile Applications</h3>
+            <ul class="breadcrumbs mb-3">
+                <!-- Breadcrumbs can be added here if needed -->
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Company Profile Application Details</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Full Name</th>
+                                        <th>Email</th>
+                                        <th>Website</th> <!-- Example addition based on your fields -->
+                                        <th>Person</th> <!-- Example addition based on your fields -->
+                                        <th>Phone Number</th>
+                                        <th>Position</th> <!-- Example addition based on your fields -->
+                                        <th>SEC Certificate</th> <!-- Example addition based on your fields -->
+                                        <th>Business Permit</th> <!-- Example addition based on your fields -->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($profile as $prof)
+                                    <tr>
+                                        <td>{{ $prof->name }}</td>
+                                        <td>{{ $prof->email }}</td>
+                                        <td>{{ $prof->website }}</td>
+                                        <td>{{ $prof->person }}</td>
+                                        <td>{{ $prof->phone }}</td>
+                                        <td>{{ $prof->position }}</td>
+                                        <td><a href="{{ asset('storage/' . $prof->sec_certificate) }}">Download SEC Certificate</a></td>
+                                        <td><a href="{{ asset('storage/' . $prof->business_permit) }}">Download Business Permit</a></td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <div class="row">
-    <div class="col-md-10">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title">Job Fair Details</h4>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-striped table-bordered datatable">
-                        <thead>
-                            <tr>
-                                <th>Company Name</th>
-                                <th>Company Image</th>
-                            </tr>
-                        </thead>
-						<tbody>
-						@foreach($Jobs as $company)
-    <tr>
-        <td>{{ $company->companyname }}</td>
-        <td>
-            @if ($company->companyimage)
-                <img src="{{ asset('storage/' . $company->companyimage) }}" alt="{{ $company->companyname }}" width="220" height="120">
-            @else
-                <p>No image available</p>
-            @endif
-        </td>
-    </tr>
-@endforeach
-
-</tbody>
-
-
-                    </table>
                 </div>
             </div>
         </div>
@@ -172,67 +173,36 @@
 
 
 
-<!-- Add this code inside the <body> tag, preferably after the main panel div -->
-    <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="uploadModalLabel">Upload Company Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form method="POST" action="{{ route('job.store') }}" enctype="multipart/form-data">
-                        @csrf
-                        <div class="mb-3">
-                            <label for="companyName" class="form-label">Description Name</label>
-                            <input type="text" class="form-control" id="companyName" name="companyname" placeholder="Enter company name">
-                        </div>
-                        <div class="mb-3">
-                            <label for="companyImage" class="form-label">Company Files</label>
-                            <input type="file" class="form-control" id="companyImage" name="companyimage">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Save Company Details</button>
-                    </form>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-
-
 
 	<script src="Admin/assets/js/core/jquery-3.7.1.min.js"></script>
 	<script src="Admin/assets/js/core/popper.min.js"></script>
 	<script src="Admin/assets/js/core/bootstrap.min.js"></script>
 
-
+	<!-- jQuery Scrollbar -->
 	<script src="Admin/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-
+	<!-- Moment JS -->
 	<script src="Admin/assets/js/plugin/moment/moment.min.js"></script>
-
+	<!-- Chart JS -->
 	<script src="Admin/assets/js/plugin/chart.js/chart.min.js"></script>
-
+	<!-- jQuery Sparkline -->
 	<script src="Admin/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
-
+	<!-- Chart Circle -->
 	<script src="Admin/assets/js/plugin/chart-circle/circles.min.js"></script>
-
+	<!-- Datatables -->
 	<script src="Admin/assets/js/plugin/datatables/datatables.min.js"></script>
-
+	<!-- Bootstrap Notify -->
 	<script src="Admin/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
-
+	<!-- jQuery Vector Maps -->
 	<script src="Admin/assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
 	<script src="Admin/assets/js/plugin/jsvectormap/world.js"></script>
-
+	<!-- Sweet Alert -->
 	<script src="Admin/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
-
+	<!-- Kaiadmin JS -->
 	<script src="Admin/assets/js/kaiadmin.min.js"></script>
 
-
+	<!-- Kaiadmin DEMO methods, don't include it in your project! -->
 	<script src="Admin/assets/js/setting-demo2.js"></script>
 </body>
 </html>

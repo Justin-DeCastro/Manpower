@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 Use App\Models\Company;
 Use App\Models\Job;
+Use App\Models\AdminJob;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,7 +12,8 @@ class HomeController extends Controller
     return view('User.home');
   }
   public function hiring(){
-    return view('User.hiring');
+    $joboffer = AdminJob::all();
+    return view('User.hiring',compact('joboffer'));
   }
   public function about(){
     $Jobs = Job::all();

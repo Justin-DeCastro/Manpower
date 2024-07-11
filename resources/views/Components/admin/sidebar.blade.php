@@ -64,9 +64,23 @@
                 <i class="fas fa-calendar-alt"></i>
                 <p>Calendar</p>
             </a>
+            <a href="{{ route('ojt.index') }}">
+                <i class="fas fa-user-alt"></i>
+                <p>OJT</p>
+            </a>
+            <a href="{{ route('profile.index') }}">
+                <i class="fas fa-user-alt"></i>
+                <p>Company Profile</p>
+            </a>
             <a href="{{ route('acredited-company') }}">
-                <i class="fas fa-calendar-alt"></i>
+                <i class="fas fa-building"></i>
+
                 <p>Acredited Company</p>
+            </a>
+            <a href="{{ route('joboffer.index') }}">
+            <i class="fas fa-briefcase"></i>
+
+                <p>Add Job Offer</p>
             </a>
         </li>
 

@@ -195,7 +195,7 @@
 													<tbody>
                                                         @foreach ($manpower as $job)
                                                         <tr>
-                                                            <td>{{ $job->employment_type }}</td>
+                                                            <td>{{ $job->work_type }}</td>
                                                             <td>{{ $job->vacant_position }}</td>
                                                             <td>{{ $job->job_category }}</td>
                                                             <td>{{ $job->no_of_vacancy }}</td>

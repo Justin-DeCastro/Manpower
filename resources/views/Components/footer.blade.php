@@ -9,7 +9,7 @@
                         </span>
                     </a>
                     <p>
-                        dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quisdotempor incididunt r
+
                     </p>
                 </div>
             </div>
@@ -48,7 +48,9 @@
                     <a href="" class="">
                         <i class="fa fa-phone" aria-hidden="true"></i>
                         <span>
-                            Call : 09456754591
+                            Call: 0906-938-1261
+                            <br>
+                            (02)8240 5150
                         </span>
                     </a>
                     <a href="" class="">

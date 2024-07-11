@@ -151,10 +151,10 @@
 											</ul>
 										</div>
 										<div class="dropdown">
-											
+
 
 										</div>
-									
+
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
@@ -244,43 +244,65 @@
 					<script src="js/dd/datatables.js"></script>
 
 					<script>
-						$(document).ready(function () {
+                       $(document).ready(function () {
+    var dataTable = $('#myDataTable').DataTable({
+        responsive: true, // Enable Responsive extension
+        inlineEditing: true,
+        buttons: [
+            'print', 'copy', 'csv', 'pdf',
+            {
+                extend: 'excelHtml5',
+                text: '<i class="bx bx-file"></i> Excel',
+                className: 'btn btn-primary dropdown-item',
+                exportOptions: {
+                    format: {
+                        body: function (data, row, column, node) {
+                            // If column is resume, return the URL
+                            if (column === 6) { // Adjust column index based on your data
+                                return data;
+                            } else {
+                                return node.innerText;
+                            }
+                        }
+                    }
+                },
+                customize: function(xlsx) {
+                    var sheet = xlsx.xl.worksheets['sheet1.xml'];
+                    $('row c[r^="G"]', sheet).each(function() {
+                        var $cell = $(this);
+                        var href = $cell.text();
+                        $cell.empty().append('<a href="' + href + '">' + href + '</a>');
+                    });
+                }
+            }
+        ],
+        "language": {
+            "search": "Search: ",
+            "searchPlaceholder": "Search here..."
+        }
+    });
 
-							var dataTable = $('#myDataTable').DataTable({
+    // Button click events
+    $('#printBtn').on('click', function () {
+        dataTable.button('.buttons-print').trigger();
+    });
+    $('#copyBtn').on('click', function () {
+        dataTable.button('.buttons-copy').trigger();
+    });
+    $('#excelBtn').on('click', function () {
+        dataTable.button('.buttons-excelHtml5').trigger();
+    });
+    $('#pdfBtn').on('click', function () {
+        dataTable.button('.buttons-pdf').trigger();
+    });
+});
 
-								responsive: true, // Enable Responsive extension
-								inlineEditing: true,
+                    </script>
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
+<script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
 
-								buttons: [
-									'print', 'copy', 'csv', 'pdf'
-								],
-
-								"language": {
-									"search": "Search: ",
-									"searchPlaceholder": "Search here..."
-								}
-							});
-							// responsive: true
-							// autoFill: true
-
-							// Button click events
-							$('#printBtn').on('click', function () {
-								dataTable.button('.buttons-print').trigger();
-							});
-							$('#copyBtn').on('click', function () {
-								dataTable.button('.buttons-copy').trigger();
-							});
-
-							$('#excelBtn').on('click', function () {
-								dataTable.button('.buttons-csv').trigger();
-							});
-
-							$('#pdfBtn').on('click', function () {
-								dataTable.button('.buttons-pdf').trigger();
-							});
-
-
-						});
-					</script>
 </body>
 </html>

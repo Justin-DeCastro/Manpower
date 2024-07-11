@@ -39,7 +39,7 @@
 
                 <div class="container-fluid">
                     <div class="contact_link-container">
-                        {{-- <li> <div id="google_translate_element"></div></li> --}}
+                        <div id="google_translate_element"></div>
                         <a href="https://www.google.com/maps/place/Unit+403,+Campos+Rueda+Building,+101+Urban+Ave,+Makati,+1206+Metro+Manila"
                             class="contact_link1">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -50,18 +50,22 @@
                             </span>
                         </a>
 
-                        {{-- <a href="" class="contact_link2">
+                        <a href="" class="contact_link2">
                             <i class="fa fa-phone" aria-hidden="true"></i>
                             <span>
-                                Call : +01 1234567890
+                                Call: 0906-938-1261
+                                <br>
+                                (02)8240 5150
+
+
                             </span>
-                        </a> --}}
-                        {{-- <a href="mailto:abic.talentteams@gmail.com" class="contact_link3">
+                        </a>
+                         <a href="mailto:abic.talentteams@gmail.com" class="contact_link3">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                             <span>
                                 abic.talentteams@gmail.com
                             </span>
-                        </a> --}}
+                        </a>
 
                     </div>
                 </div>

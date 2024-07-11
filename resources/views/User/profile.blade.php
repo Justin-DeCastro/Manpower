@@ -61,12 +61,17 @@
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <label for="form_sec_certificate" class="form-label">Copy of SEC/DTI CERTIFICATE
-                                        *</label>
-                                    <input id="form_sec_certificate" type="file" name="sec_certificate"
-                                        class="form-control" required>
-                                </div>
+                            <div class="col-md-6">
+    <label for="form_sec_certificate" class="form-label">Copy of SEC/DTI CERTIFICATE *</label>
+    <input id="form_sec_certificate" type="file" name="sec_certificate" class="form-control" required>
+    @if ($errors->has('sec_certificate'))
+        <span class="text-danger">{{ $errors->first('sec_certificate') }}</span>
+    @endif
+    @if (request()->hasFile('sec_certificate'))
+        <p>Uploaded Filename: {{ request()->file('sec_certificate')->getClientOriginalName() }}</p>
+    @endif
+</div>
+
                                 <div class="col-md-6">
                                     <label for="form_business_permit" class="form-label">Copy of Business Permit
                                         *</label>

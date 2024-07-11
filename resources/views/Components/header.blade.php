@@ -31,7 +31,7 @@
         <!-- header section strats -->
         <div class="hero_bg_box">
             <div class="img-box">
-                <img src='manpower.png' alt="">
+                <img src='front.jpg' alt="">
             </div>
         </div>
         <header class="header_section">

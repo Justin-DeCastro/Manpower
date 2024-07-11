@@ -116,18 +116,24 @@
         @foreach ($Jobs as $job)
         <div class="col-lg-4 col-md-6">
             <div class="p-4 text-center hover-bg-white hover-shadow rounded mb-4 transation-3s">
-                <a href="{{ asset($job->companyimage) }}" data-lightbox="{{ $job->companyname }}" data-title="{{ $job->companyname }}">
-                    <img src="{{ asset($job->companyimage) }}" alt="{{ $job->companyname }}" class="img-fluid">
+                @if ($job->companyimage)
+                <a href="{{ $job->link }}" data-lightbox="{{ $job->companyname }}" data-title="{{ $job->companyname }}">
+                    <img src="{{ asset('images/' . $job->companyimage) }}" alt="{{ $job->companyname }}" class="img-fluid">
                     <h5 class="text-secondary hover-text-success py-3 m-0" style="background-color: white;">
                         {{ $job->companyname }}
                     </h5>
                 </a>
-                <!-- Add other job details here -->
+                @else
+                <p>No image available</p>
+                @endif
+                <!-- Additional job details here -->
             </div>
         </div>
         @endforeach
     </div>
 </div>
+
+
 
 
 

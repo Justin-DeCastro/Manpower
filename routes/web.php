@@ -11,6 +11,7 @@ use App\Http\Controllers\JobController;
 use App\Http\Controllers\OjtController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminJobController;
+use App\Http\Controllers\JobfairsController;
 use App\Http\Controllers\ContactMessageController;
 /*
 |--------------------------------------------------------------------------
@@ -83,6 +84,10 @@ Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
 //admin job edit and addd
 Route::post('/joboffer', [AdminJobController::class, 'store'])->name('adminjob.store');
 Route::get('/jobindex', [AdminJobController::class, 'index'])->name('joboffer.index');
+
+//jobfair
+
+Route::post('/jobfairs', [JobfairsController::class, 'store'])->name('jobfairs.store');
 // Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
 // Route::post('/hiring/applications/{id}/assign-date', [HiringController::class, 'assignDate'])->name('hiring.applications.assign-date');
 // Route::get('/hiring/applications/{id}/attend', [HiringController::class, 'attendInterview'])->name('hiring.applications.attend');

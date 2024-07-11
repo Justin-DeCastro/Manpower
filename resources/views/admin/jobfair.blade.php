@@ -142,7 +142,8 @@
                     <table class="table table-striped table-bordered datatable">
                         <thead>
                             <tr>
-                                <th>Company Name</th>
+                                <th>Event Name</th>
+								<th>Event Link  </th>
                                 <th>Company Image</th>
                             </tr>
                         </thead>
@@ -150,15 +151,17 @@
 						@foreach($Jobs as $company)
     <tr>
         <td>{{ $company->companyname }}</td>
+		<td>{{ $company->link }}</td>
         <td>
             @if ($company->companyimage)
-                <img src="{{ asset('storage/' . $company->companyimage) }}" alt="{{ $company->companyname }}" width="220" height="120">
+                <img src="{{ asset('images/' . $company->companyimage) }}" alt="{{ $company->companyname }}" width="220" height="120">
             @else
                 <p>No image available</p>
             @endif
         </td>
     </tr>
 @endforeach
+
 
 </tbody>
 
@@ -181,11 +184,15 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form method="POST" action="{{ route('job.store') }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('jobfairs.store') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                             <label for="companyName" class="form-label">Description Name</label>
-                            <input type="text" class="form-control" id="companyName" name="companyname" placeholder="Enter company name">
+                            <input type="text" class="form-control" id="companyName" name="companyname" placeholder="Enter description name">
+                        </div>
+						<div class="mb-3">
+                            <label for="companyName" class="form-label">Link</label>
+                            <input type="text" class="form-control" id="companyName" name="link" placeholder="Enter the link">
                         </div>
                         <div class="mb-3">
                             <label for="companyImage" class="form-label">Company Files</label>

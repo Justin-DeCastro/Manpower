@@ -1,5 +1,7 @@
 <?php
 
+
+
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
@@ -15,10 +17,9 @@ class ApplicantNotification extends Mailable
     /**
      * Create a new message instance.
      *
-     * @param  array  $data
-     * @return void
+     * @param array $data
      */
-    public function __construct($data)
+    public function __construct(array $data)
     {
         $this->data = $data;
     }
@@ -30,8 +31,8 @@ class ApplicantNotification extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.applicant_notification')
-                    ->subject('Notification') // Subject of the email
-                    ->with($this->data); // Pass data to the view
+        return $this->subject('Applicant Notification')
+                    ->view('emails.applicant_notification')
+                    ->with('data', $this->data);
     }
 }

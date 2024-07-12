@@ -101,3 +101,4 @@ Route::get('/hiring/applications/{id}/attend', [HiringController::class, 'attend
 // Route::get('/submit_job_form', [ManpowerReqController::class, 'create']);
 Route::post('/submit_job_form', [ManpowerReqController::class, 'store'])->name('submit.store');
 Route::get('/manindex', [ManpowerReqController::class, 'index'])->name('manpower.index');
+Route::post('change-status/{id}', [HiringController::class,'changeStatus'])->name('change-status');

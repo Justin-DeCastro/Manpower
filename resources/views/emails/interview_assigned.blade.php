@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interview Invitation</title>
+</head>
+<body>
+    <h2>Dear {{ $name }},</h2>
+    <p>We are pleased to invite you for an interview for the position of {{ $position }}.</p>
+    <p>The details of the interview are as follows:</p>
+    <ul>
+        <li><strong>Date:</strong> {{ $application->date }}</li>
+       
+        <li><strong>Location:</strong> [We Will insert the location]</li>
+    </ul>
+    <p>Please confirm your availability for this interview by responding to this email or contacting us at [Contact Information].</p>
+    <p>We look forward to meeting with you and discussing your qualifications further.</p>
+    <p>Best regards,</p>
+    <p>ABIC Manpower Service Corp</p>
+</body>
+</html>

@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\Application;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ApplicantNotification;
+
+use App\Mail\InterviewAssigned;
+use App\Mail\FailedAssigned;
+use App\Mail\NoShowAssigned;
+use App\Mail\NotQualifiedAssigned;
+use App\Mail\PoolingAssigned;
 class HiringController extends Controller
 {
 
@@ -51,36 +57,36 @@ class HiringController extends Controller
     return redirect()->back()->with('success', 'Your application has been submitted successfully!');
 }
 public function sendEmail(Request $request)
-{
-    // Validate request inputs
-    $request->validate([
-        'name' => 'required|string',
-        'phone' => 'required|string',
-        'email' => 'required|email',
-    ]);
+    {
+        // Validate request inputs
+        $request->validate([
+            'name' => 'required|string',
+            'phone' => 'required|string',
+            'email' => 'required|email',
+        ]);
 
-    // Retrieve inputs from the validated request
-    $name = $request->input('name');
-    $phone = $request->input('phone');
-    $email = $request->input('email');
-    
-    // Example email content
-    $data = [
-        'name' => $name,
-        'phone' => $phone,
-        'email' => $email,
-    ];
-    
-    // Ensure at least one recipient is specified
-    $recipient = $email;
+        // Retrieve inputs from the validated request
+        $name = $request->input('name');
+        $phone = $request->input('phone');
+        $email = $request->input('email');
+        
+        // Prepare email content
+        $data = [
+            'name' => $name,
+            'phone' => $phone,
+            'email' => $email,
+        ];
+        
+        // CC and BCC recipients
+        $ccRecipients = ['inorganicdrake@gmail.com', 'inordrake@gmail.com']; // Update with actual CC emails
+        
 
-    // dd($email);
-
-    // Check if $recipient is not empty
-    if (!empty($recipient)) {
         try {
-            // Send email using Mailable class
-            Mail::to($recipient)->send(new ApplicantNotification($data));
+            // Send the email with CC and BCC
+            Mail::to($email)
+                ->cc($ccRecipients)  // CC recipients
+              
+                ->send(new ApplicantNotification($data));
 
             // Return success response
             return redirect()->back()->with('success', 'Form submitted successfully!');
@@ -88,11 +94,8 @@ public function sendEmail(Request $request)
             // Handle exception if email sending fails
             return response()->json(['message' => 'Failed to send email', 'error' => $e->getMessage()], 500);
         }
-    } else {
-        // Handle case where $recipient is empty (should ideally be caught by validation)
-        return response()->json(['message' => 'No recipient specified'], 400);
     }
-}
+
 public function assignDate(Request $request, $id)
 {
     $request->validate([
@@ -109,6 +112,52 @@ public function assignDate(Request $request, $id)
     $application->save();
 
     return redirect()->back()->with('success', 'Interview date assigned successfully!');
+}
+// public function changeStatus(Request $request, $id)
+// {
+//     $application = Application::findOrFail($id);
+//     $application->status = $request->status;
+//     $application->save();
+
+//     return redirect()->back()->with('success', 'Status assigned successfully!');
+// }
+
+public function changeStatus(Request $request, $id)
+{
+    $request->validate([
+        'status' => 'required|in:For Interview,For Pooling,Not Qualified,No Show,Failed'
+    ]);
+
+    $application = Application::findOrFail($id);
+    $oldStatus = $application->status;
+    $application->status = $request->status;
+    $application->save();
+
+    // Determine which Mailable to send based on the new status
+    switch ($request->status) {
+        case 'For Interview':
+            Mail::to($application->email)->send(new InterviewAssigned($application));
+            break;
+        case 'For Pooling':
+            Mail::to($application->email)->send(new PoolingAssigned($application));
+            break;
+        case 'Not Qualified':
+            Mail::to($application->email)->send(new NotQualifiedAssigned($application));
+            break;
+        case 'No Show':
+            Mail::to($application->email)->send(new NoShowAssigned($application));
+            break;
+        case 'Failed':
+            Mail::to($application->email)->send(new FailedAssigned($application));
+            break;
+        // Add additional cases as needed
+
+        default:
+            // Handle unexpected status
+            break;
+    }
+
+    return redirect()->back()->with('success', 'Status assigned successfully!');
 }
 
 public function attendInterview($id)

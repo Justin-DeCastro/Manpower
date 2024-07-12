@@ -70,15 +70,15 @@
                     </div>
                 </div>
                 <div class="social-buttons-container">
-                    <div class="social-buttons">
-                        <ul>
-                            <li><a href="https://www.facebook.com/profile.php?id=100090318514723"><i class="fa-brands fa-facebook-f fa-lg"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-instagram fa-lg"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-telegram fa-lg"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-twitter fa-lg"></i></a></li>
+                <div class="social-buttons">
+    <ul>
+        <li><a href="https://www.facebook.com/profile.php?id=100090318514723"><i class="fa-brands fa-facebook-f fa-2x"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-telegram fa-2x"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-twitter fa-2x"></i></a></li>
+    </ul>
+</div>
 
-                        </ul>
-                    </div>
                 </div>
 
             </div>

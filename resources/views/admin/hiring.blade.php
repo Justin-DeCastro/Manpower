@@ -156,58 +156,95 @@
 										</div>
 
                                 </div>
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="table" id="myDataTable">
-                                            <thead>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Email</th>
-                                                    <th>Address</th>
-                                                    <th>Phone</th>
-													<th>Position</th>
-													<th>Message</th>
-                                                    <th>Resume</th>
-                                                    <th>Assign the Date of Interview</th>
-													<th>Status</th>
-
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                @foreach($applications as $application)
-                                                <tr>
-                                                    <td>{{ $application->name}}</td>
-                                                    <td>{{ $application->email }}</td>
-													<td>{{ $application->address }}</td>
-                                                    <td>{{ $application->phone }}</td>
-                                                    <td>{{ $application->position}}</td>
-													<td>{{ $application->message }}</td>
-                                                    <td><a href="{{ asset($application->resume) }}">Download Resume</a></td>
-                                                    <td>
-                                                        <form method="POST" action="{{ url('assign-date', $application->id) }}" id="assignDateForm">
-                                                            @csrf
-                                                            <div class="form-group">
-                                                                <label for="date">Choose Interview Date and Time:</label>
-                                                                <input type="datetime-local" id="date" name="date" class="form-control" required>
-                                                            </div>
-                                                            <button type="submit" class="btn btn-primary">Assign Date</button>
-                                                        </form>
-
-                                                    </td>
-													<td>{{ $application->status }}</td>
-                                                </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
+								
+<div class="card-body">
+    <div class="table-responsive">
+        <table class="table" id="myDataTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Position</th>
+                    <th>Message</th>
+                    <th>Resume</th>
+                    <th>Assign the Date of Interview</th>
+                    <th>For Processing</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($applications as $application)
+                <tr data-id="{{ $application->id }}"> <!-- Ensure each <tr> has data-id attribute -->
+                    <td>{{ $application->name }}</td>
+                    <td>{{ $application->email }}</td>
+                    <td>{{ $application->address }}</td>
+                    <td>{{ $application->phone }}</td>
+                    <td>{{ $application->position }}</td>
+                    <td>{{ $application->message }}</td>
+                    <td><a href="{{ asset($application->resume) }}">Download Resume</a></td>
+                    <td>
+                        <form method="POST" action="{{ url('assign-date', $application->id) }}" id="assignDateForm">
+                            @csrf
+                            <div class="form-group">
+                                <label for="date">Choose Interview Date and Time:</label>
+                                <input type="datetime-local" id="date" name="date" class="form-control" required>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            <button type="submit" class="btn btn-primary">Assign Date</button>
+                        </form>
+                    </td>
+					<td>
+    <form method="POST" action="{{ route('change-status', $application->id) }}">
+        @csrf
+        <select class="form-select" name="status">
+            <option value="For Interview" {{ $application->status == 'For Interview' ? 'selected' : '' }}>For Interview</option>
+            <option value="For Pooling" {{ $application->status == 'For Pooling' ? 'selected' : '' }}>For Pooling</option>
+            <option value="Not Qualified" {{ $application->status == 'Not Qualified' ? 'selected' : '' }}>Not Qualified</option>
+            <option value="No Show" {{ $application->status == 'No Show' ? 'selected' : '' }}>No Show</option>
+            <option value="Failed" {{ $application->status == 'Failed' ? 'selected' : '' }}>Failed</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-primary btn-sm">Change Status</button>
+    </form>
+</td>
+
+                    <td class="status">{{ $application->status }}</td> <!-- Ensure this cell has 'status' class -->
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
 
 
+<script>
+    $(document).ready(function() {
+        // Handle click on "Change Status" button
+        $('#myDataTable').on('click', '.btn-change-status', function() {
+            var applicationId = $(this).closest('tr').find('.statusSelect').data('application-id');
+            var newStatus = $(this).closest('tr').find('.statusSelect').val();
+
+            // AJAX request to update status
+            $.ajax({
+                url: '/change-status/' + applicationId, // Replace with your actual route
+                method: 'POST',
+                data: {
+                    _token: '{{ csrf_token() }}',
+                    status: newStatus
+                },
+                success: function(response) {
+                    // Update status in the UI if needed
+                    console.log('Status updated successfully');
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error updating status:', error);
+                }
+            });
+        });
+    });
+</script>
 
 
 	<script src="Admin/assets/js/core/jquery-3.7.1.min.js"></script>

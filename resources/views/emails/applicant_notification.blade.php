@@ -39,13 +39,13 @@
     <div class="container">
         <h2>Hello, {{ $data['name'] }}</h2>
         <div class="message">
-            <p>Thank you for your application. Here what we received:</p>
+            <p>Thank you for your application. Here is what we received:</p>
             <ul>
                 <li><strong>Name:</strong> {{ $data['name'] }}</li>
                 <li><strong>Phone:</strong> {{ $data['phone'] }}</li>
                 <li><strong>Email:</strong> {{ $data['email'] }}</li>
             </ul>
-            <p>We will review your application and will get back to you shortly.</p>
+            <p>We will review your application and get back to you shortly.</p>
         </div>
     </div>
 </body>

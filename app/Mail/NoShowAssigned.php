@@ -21,7 +21,7 @@ class NoShowAssigned extends Mailable
     public function build()
     {
         return $this->view('emails.no_show_assigned')
-                    ->subject('Applicant Did Not Show Up')
+                    ->subject('No Show')
                     ->with([
                         'name' => $this->application->name,
                         'position' => $this->application->position,

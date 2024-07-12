@@ -1,8 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\Models\ContactMessage;
+use App\Mail\ProfileMail;
+use Illuminate\Support\Facades\Mail;
+
+
 use App\Models\Profile;
 class ProfileController extends Controller
 {
@@ -51,7 +55,7 @@ class ProfileController extends Controller
     $contactForm->save();
 
     session()->flash('message', 'Your application was successfully submitted!');
-
+    Mail::to('decastrojustin321@gmail.com')->send(new ProfileMail());
     // Redirect or respond as needed after successful submission
     return redirect()->back()->with('success', 'Form submitted successfully!');
 }

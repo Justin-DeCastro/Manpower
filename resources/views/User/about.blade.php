@@ -112,37 +112,6 @@
         @endforeach
     </div>
 </div>
-<div class="row justify-content-center text-center" style="color: white; background-color: #343a40; padding: 50px 0;">
-    <div class="col-lg-10">
-        <h2 class="title">Our JOB FAIRS</h2>
-    </div>
-</div>
-
-<div class="text-box-one">
-    <div class="row">
-        @foreach ($Jobs as $index => $job)
-            @if ($index % 3 == 0 && $index != 0)
-                </div><div class="row">
-            @endif
-            <div class="col-lg-4 col-md-6">
-                <div class="p-4 text-center hover-bg-white hover-shadow rounded mb-4 transation-3s">
-                    @if ($job->companyimage)
-                    <a href="{{ $job->link }}" data-lightbox="{{ $job->companyname }}" data-title="{{ $job->companyname }}">
-                        <img src="{{ asset('images/' . $job->companyimage) }}" alt="{{ $job->companyname }}" class="img-fluid uniform-image">
-                        <h5 class="text-secondary hover-text-success py-3 m-0" style="background-color: white;">
-                            {{ $job->companyname }}
-                        </h5>
-                    </a>
-                    @else
-                    <p>No image available</p>
-                    @endif
-                    <!-- Additional job details here -->
-                </div>
-            </div>
-        @endforeach
-    </div>
-</div>
-
 
 
 

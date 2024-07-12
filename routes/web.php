@@ -15,6 +15,7 @@ use App\Http\Controllers\JobfairsController;
 use App\Http\Controllers\ContactMessageController;
 use App\Http\Controllers\ManpowerReqController;
 use App\Http\Controllers\AwardController;
+use App\Http\Controllers\ExecutiveController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -108,3 +109,7 @@ Route::post('change-status/{id}', [HiringController::class,'changeStatus'])->nam
 //award
 Route::get('/award', [AwardController::class, 'index'])->name('award.index');
 Route::post('/award-store', [AwardController::class, 'store'])->name('award.store');
+
+//
+Route::get('/executive', [ExecutiveController::class, 'index'])->name('award.index');
+Route::post('/executive-store', [ExecutiveController::class, 'store'])->name('executive.store');

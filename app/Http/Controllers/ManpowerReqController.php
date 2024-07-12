@@ -10,7 +10,8 @@ class ManpowerReqController extends Controller
     public function index()
     {
         $manpower = ManpowerReq::all();
-        return view('admin.manpower', compact('manpower')); // Ensure you have this view file
+        $totalApplies = ManpowerReq::count();
+        return view('admin.manpower', compact('manpower','totalApplies')); // Ensure you have this view file
     }
 
     public function create()

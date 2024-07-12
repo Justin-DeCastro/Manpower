@@ -38,7 +38,8 @@ class HomeController extends Controller
     return view('User.contact');
   }
   public function award(){
+    $Jobs = Jobfair::all();
     $awards = Award::all();
-    return view('User.award',compact('awards'));
+    return view('User.award',compact('awards','Jobs'));
   }
 }

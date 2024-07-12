@@ -69,23 +69,23 @@ public function sendEmail(Request $request)
         $name = $request->input('name');
         $phone = $request->input('phone');
         $email = $request->input('email');
-        
+
         // Prepare email content
         $data = [
             'name' => $name,
             'phone' => $phone,
             'email' => $email,
         ];
-        
+
         // CC and BCC recipients
         $ccRecipients = ['inorganicdrake@gmail.com', 'inordrake@gmail.com']; // Update with actual CC emails
-        
+
 
         try {
             // Send the email with CC and BCC
             Mail::to($email)
                 ->cc($ccRecipients)  // CC recipients
-              
+
                 ->send(new ApplicantNotification($data));
 
             // Return success response
@@ -107,7 +107,7 @@ public function assignDate(Request $request, $id)
     $application->status = 'On Process'; // Initial status
 
     // Assume the applicant has not yet attended
-    $application->attended = false; // Set attended flag to false
+    // $application->attended = false; // Set attended flag to false
 
     $application->save();
 

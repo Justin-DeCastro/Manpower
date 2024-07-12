@@ -156,7 +156,7 @@
 										</div>
 
                                 </div>
-								
+
 <div class="card-body">
     <div class="table-responsive">
         <table class="table" id="myDataTable">
@@ -165,13 +165,14 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Address</th>
-                    <th>Phone</th>
+
+                    <th>Status</th>
                     <th>Position</th>
                     <th>Message</th>
                     <th>Resume</th>
                     <th>Assign the Date of Interview</th>
                     <th>For Processing</th>
-                    <th>Status</th>
+                    <th>Phone</th>
                 </tr>
             </thead>
             <tbody>
@@ -180,7 +181,7 @@
                     <td>{{ $application->name }}</td>
                     <td>{{ $application->email }}</td>
                     <td>{{ $application->address }}</td>
-                    <td>{{ $application->phone }}</td>
+                   <td class="status">{{ $application->status }}</td>
                     <td>{{ $application->position }}</td>
                     <td>{{ $application->message }}</td>
                     <td><a href="{{ asset($application->resume) }}">Download Resume</a></td>
@@ -209,8 +210,8 @@
         <button type="submit" class="btn btn-primary btn-sm">Change Status</button>
     </form>
 </td>
-
-                    <td class="status">{{ $application->status }}</td> <!-- Ensure this cell has 'status' class -->
+<td>{{ $application->phone }}</td>
+                     <!-- Ensure this cell has 'status' class -->
                 </tr>
                 @endforeach
             </tbody>

@@ -106,9 +106,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="about"> About</a>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link" href="service"> Services </a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="" id="navbarDropdown"
                                         role="button" data-toggle="dropdown" aria-haspopup="true"

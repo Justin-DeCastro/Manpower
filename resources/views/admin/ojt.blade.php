@@ -244,46 +244,49 @@
 					<!-- Include DataTables CSS and JS -->
 					<script src="js/dd/datatables.min.js"></script>
 					<script src="js/dd/datatables.js"></script>
-
 					<script>
-						$(document).ready(function () {
+$(document).ready(function () {
+    var dataTable = $('#myDataTable').DataTable({
+        responsive: true,
+        buttons: [
+            'print', 'copy', 'csv', 'pdf'
+        ],
+        "language": {
+            "search": "Search: ",
+            "searchPlaceholder": "Search here..."
+        }
+    });
 
-							var dataTable = $('#myDataTable').DataTable({
+    $('#printBtn').on('click', function () {
+        dataTable.button('.buttons-print').trigger();
+    });
+    $('#copyBtn').on('click', function () {
+        dataTable.button('.buttons-copy').trigger();
+    });
+    $('#excelBtn').on('click', function () {
+        exportToExcel();
+    });
+    $('#pdfBtn').on('click', function () {
+        dataTable.button('.buttons-pdf').trigger();
+    });
 
-								responsive: true, // Enable Responsive extension
-								inlineEditing: true,
+    function exportToExcel() {
+        var ws = XLSX.utils.table_to_sheet(document.querySelector("#myDataTable"));
+        // Add resume links to the sheet
+        var links = document.querySelectorAll("#myDataTable tbody a[href]");
+        links.forEach(function(link, index) {
+            var cell = ws['G' + (index + 2)]; // Assuming 'Resume' is the 7th column (G)
+            if (cell) {
+                cell.l = { Target: link.href, Tooltip: 'Download Resume' };
+            }
+        });
+        var wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+        XLSX.writeFile(wb, "Job_Application_Details.xlsx");
+    }
+});
+</script>
 
-								buttons: [
-									'print', 'copy', 'csv', 'pdf'
-								],
-
-								"language": {
-									"search": "Search: ",
-									"searchPlaceholder": "Search here..."
-								}
-							});
-							// responsive: true
-							// autoFill: true
-
-							// Button click events
-							$('#printBtn').on('click', function () {
-								dataTable.button('.buttons-print').trigger();
-							});
-							$('#copyBtn').on('click', function () {
-								dataTable.button('.buttons-copy').trigger();
-							});
-
-							$('#excelBtn').on('click', function () {
-								dataTable.button('.buttons-csv').trigger();
-							});
-
-							$('#pdfBtn').on('click', function () {
-								dataTable.button('.buttons-pdf').trigger();
-							});
-
-
-						});
-					</script>
 
 </body>
 

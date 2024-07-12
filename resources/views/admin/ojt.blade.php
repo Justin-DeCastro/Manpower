@@ -244,7 +244,9 @@
 					<!-- Include DataTables CSS and JS -->
 					<script src="js/dd/datatables.min.js"></script>
 					<script src="js/dd/datatables.js"></script>
-					<script>
+
+					<script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
+<script>
 $(document).ready(function () {
     var dataTable = $('#myDataTable').DataTable({
         responsive: true,
@@ -276,9 +278,11 @@ $(document).ready(function () {
         var links = document.querySelectorAll("#myDataTable tbody a[href]");
         links.forEach(function(link, index) {
             var cell = ws['G' + (index + 2)]; // Assuming 'Resume' is the 7th column (G)
+			console.log(cell)
             if (cell) {
                 cell.l = { Target: link.href, Tooltip: 'Download Resume' };
             }
+			ws['G' + (index + 2)] = cell
         });
         var wb = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(wb, ws, "Sheet1");

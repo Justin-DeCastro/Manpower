@@ -76,6 +76,10 @@
                 <i class="fas fa-user-alt"></i>
                 <p>Company Profile</p>
             </a>
+            <a href="{{ route('award') }}">
+                <i class="fas fa-briefcase"></i>
+                <p>Award</p>
+            </a>
             <a href="{{ route('manpower.index') }}">
                 <i class="fas fa-user-alt"></i>
                 <p>Manpower Requisition</p>

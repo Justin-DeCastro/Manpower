@@ -14,6 +14,7 @@ use App\Http\Controllers\AdminJobController;
 use App\Http\Controllers\JobfairsController;
 use App\Http\Controllers\ContactMessageController;
 use App\Http\Controllers\ManpowerReqController;
+use App\Http\Controllers\AwardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,7 +34,7 @@ Route::get('/careers', [HomeController::class, 'hiring'])->name('careers');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/service', [HomeController::class, 'service'])->name('service');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::get('/award', [HomeController::class, 'award'])->name('award');
+Route::get('/awards', [HomeController::class, 'award'])->name('award');
 
 //admin dashboard
 Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
@@ -102,3 +103,8 @@ Route::get('/hiring/applications/{id}/attend', [HiringController::class, 'attend
 Route::post('/submit_job_form', [ManpowerReqController::class, 'store'])->name('submit.store');
 Route::get('/manindex', [ManpowerReqController::class, 'index'])->name('manpower.index');
 Route::post('change-status/{id}', [HiringController::class,'changeStatus'])->name('change-status');
+
+
+//award
+Route::get('/award', [AwardController::class, 'index'])->name('award.index');
+Route::post('/award-store', [AwardController::class, 'store'])->name('award.store');

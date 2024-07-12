@@ -136,7 +136,7 @@
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="award"> Awards & Achievements </a>
+                                    <a class="nav-link" href="awards"> Awards & Achievements </a>
                                 </li>
                                 {{-- <li class="nav-item">
                         <a class="nav-link" href="contact">Contact us</a>

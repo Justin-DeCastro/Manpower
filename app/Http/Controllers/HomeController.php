@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 Use App\Models\Company;
 Use App\Models\Job;
+Use App\Models\Award;
 Use App\Models\Jobfair;
 Use App\Models\AdminJob;
 use Illuminate\Http\Request;
@@ -37,6 +38,7 @@ class HomeController extends Controller
     return view('User.contact');
   }
   public function award(){
-    return view('User.award');
+    $awards = Award::all();
+    return view('User.award',compact('awards'));
   }
 }

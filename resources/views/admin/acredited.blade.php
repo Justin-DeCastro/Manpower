@@ -5,7 +5,8 @@
 	<title>Avatars - Kaiadmin Bootstrap 5 Admin Dashboard</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="Admin/assets/img/kaiadmin/favicon.ico" type="image/x-icon"/>
-
+	<link rel="stylesheet" href="js/dd/datatables.css">
+	<link rel="stylesheet" href="js/dd/datatables.min.css">
 	<!-- Fonts and icons -->
 	<script src="Admin/assets/js/plugin/webfont/webfont.min.js"></script>
 	<script>
@@ -136,10 +137,33 @@
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title">Job Application Details</h4>
+									<div class="dt-buttons btn-group d-flex justify-content-end gap-2 ">
+										<div class="dropdown">
+											<button type="button" class="btn btn-primary dropdown-toggle"
+												data-bs-toggle="dropdown" aria-expanded="false">
+												<i class='bx bx-export'></i> Export
+											</button>
+											<ul class="dropdown-menu">
+												<li><button type="button" id="copyBtn" class="btn dropdown-item"><i
+															class='bx bx-copy'></i> Copy</button></li>
+												<li><button type="button" id="printBtn" class="btn dropdown-item"><i
+															class='bx bx-printer'></i> Print</button></li>
+												<li><button type="button" id="excelBtn" class="btn dropdown-item"><i
+															class='bx bx-file'></i>Excel</button></li>
+												<li><button type="button" id="pdfBtn" class="btn dropdown-item"><i
+															class='bx bxs-file-pdf'></i> Pdf</button></li>
+											</ul>
+										</div>
+										<div class="dropdown">
+											
+
+										</div>
+									
+                               
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <table class="table">
+                                        <table class="table" id="myDataTable">
                                             <thead>
                                                 <tr>
                                                     <th>Company Name</th>
@@ -231,5 +255,47 @@
 
 	<!-- Kaiadmin DEMO methods, don't include it in your project! -->
 	<script src="Admin/assets/js/setting-demo2.js"></script>
+	<script src="js/dd/datatables.min.js"></script>
+					<script src="js/dd/datatables.js"></script>
+
+					<script>
+						$(document).ready(function () {
+
+							var dataTable = $('#myDataTable').DataTable({
+
+								responsive: true, // Enable Responsive extension
+								inlineEditing: true,
+
+								buttons: [
+									'print', 'copy', 'csv', 'pdf'
+								],
+
+								"language": {
+									"search": "Search: ",
+									"searchPlaceholder": "Search here..."
+								}
+							});
+							// responsive: true
+							// autoFill: true
+
+							// Button click events
+							$('#printBtn').on('click', function () {
+								dataTable.button('.buttons-print').trigger();
+							});
+							$('#copyBtn').on('click', function () {
+								dataTable.button('.buttons-copy').trigger();
+							});
+
+							$('#excelBtn').on('click', function () {
+								dataTable.button('.buttons-csv').trigger();
+							});
+
+							$('#pdfBtn').on('click', function () {
+								dataTable.button('.buttons-pdf').trigger();
+							});
+
+
+						});
+					</script>
 </body>
 </html>

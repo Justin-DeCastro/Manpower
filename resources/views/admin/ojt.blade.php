@@ -161,10 +161,7 @@
 											</ul>
 										</div>
 										<div class="dropdown">
-											<a href="/Naujan-Development-Cooperrative/Add-Member" type="button"
-												class="btn btn-success">
-												<i class='bx bx-plus-circle'></i> Add Member
-											</a>
+											
 
 										</div>
 									 </div>

@@ -96,7 +96,7 @@ Route::post('/jobfairs', [JobfairsController::class, 'store'])->name('jobfairs.s
 // Route::get('/hiring/applications/{id}/attend', [HiringController::class, 'attendInterview'])->name('hiring.applications.attend');
 
 Route::post('/hiring/send-email', [HiringController::class, 'sendEmail'])->name('hiring.send-email');
-
+Route::get('/applications/search', [HiringController::class, 'searchApplications'])->name('search.applications');
 Route::get('/hiring/applications/{id}/attend', [HiringController::class, 'attendInterview'])->name('hiring.applications.attend');
 
 //manpower

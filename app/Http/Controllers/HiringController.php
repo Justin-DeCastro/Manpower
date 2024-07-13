@@ -14,6 +14,23 @@ use App\Mail\NotQualifiedAssigned;
 use App\Mail\PoolingAssigned;
 class HiringController extends Controller
 {
+    public function searchApplications(Request $request)
+    {
+        $query = $request->input('query');
+
+        $applications = Application::query()
+            ->where('id', 'like', "%$query%")
+            ->orWhere('name', 'like', "%$query%")
+            ->orWhere('email', 'like', "%$query%")
+            ->orWhere('address', 'like', "%$query%")
+            ->orWhere('status', 'like', "%$query%")
+            ->orWhere('position', 'like', "%$query%")
+            ->orWhere('message', 'like', "%$query%")
+            ->orWhere('phone', 'like', "%$query%")
+            ->get();
+
+        return response()->json($applications);
+    }
 
     public function applications()
     {

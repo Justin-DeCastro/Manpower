@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Applicant Notification</title>
+    <title>Interview Notification</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,13 +21,6 @@
             color: #333333;
             text-align: center;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
         .message {
             background-color: #f0f0f0;
             padding: 15px;
@@ -39,13 +32,16 @@
     <div class="container">
         <h2>Hello, {{ $data['name'] }}</h2>
         <div class="message">
-            <p>Thank you for your application. Here is what we received:</p>
+            <p>Congratulations! We are pleased to inform you that you have been selected for an interview. Please find the details below:</p>
             <ul>
                 <li><strong>Name:</strong> {{ $data['name'] }}</li>
                 <li><strong>Phone:</strong> {{ $data['phone'] }}</li>
                 <li><strong>Email:</strong> {{ $data['email'] }}</li>
+                {{-- <li><strong>Interview Date:</strong> {{ $data['interview_date'] }}</li>
+                <li><strong>Interview Time:</strong> {{ $data['interview_time'] }}</li>
+                <li><strong>Interview Location:</strong> {{ $data['interview_location'] }}</li> --}}
             </ul>
-            <p>We will review your application and get back to you shortly.</p>
+            <p>We look forward to meeting you!</p>
         </div>
     </div>
 </body>

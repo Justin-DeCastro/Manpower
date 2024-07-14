@@ -229,18 +229,12 @@
                                                     <div class="modal-body">
                                                         <p><strong>Interview Date:</strong> <span id="eventStart"></span></p>
                                                         <p><strong>Name:</strong> <span id="eventName"></span></p>
-                                                        <p><strong>Job Category:</strong> <span id="eventJobCategory"></span></p>
+                                                        <p><strong>Address:</strong> <span id="eventJobCategory"></span></p>
                                                         <p><strong>Position Applied:</strong> <span id="eventJobName"></span></p>
                                                         <p><strong>Phone Number:</strong> <span id="eventPhone"></span></p>
                                                     </div>
 
-                                                    <form method="POST" action="{{ route('hiring.send-email') }}">
-    @csrf
-    <input type="hidden" name="name" id="hiddenEventName" value="0">
-    <input type="hidden" name="phone" id="hiddenEventPhone" value="0">
-    <input type="hidden" name="email" id="hiddenEventEmail" value="0">
-    <button type="submit" class="btn btn-success btn-block">Send Email</button>
-</form>
+                                                
 
         </div>
 
@@ -316,8 +310,8 @@
                             return {
                                 title: interview.name,
                                 start: interview.date,
-                                job_name: interview.job_name,
-                                job_category: interview.job_category,
+                                job_name: interview.position,
+                                job_category: interview.address,
                                 extendedProps: {
                                     id: interview.id,
                                     name: interview.name,

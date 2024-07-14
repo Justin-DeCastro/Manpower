@@ -20,6 +20,7 @@ class ApplicationInProcess extends Mailable
     public function build()
     {
         return $this->view('emails.application_in_process')
+        ->from('decastrojustin24@gmail.com', 'ABIC Manpower Service Corp') 
                     ->with([
                         'name' => $this->application->name,
                         'position' => $this->application->position,

@@ -30,9 +30,11 @@ class ApplicantNotification extends Mailable
      * @return $this
      */
     public function build()
-    {
-        return $this->subject('Applicant Notification')
-                    ->view('emails.applicant_notification')
-                    ->with('data', $this->data);
-    }
+{
+    return $this->subject('Applicant Notification')
+                ->from('infinitechjustin@gmail.com', 'ABIC Manpower Service Corp') 
+                ->view('emails.applicant_notification')
+                ->with('data', $this->data);
+}
+
 }

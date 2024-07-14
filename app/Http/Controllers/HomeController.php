@@ -6,12 +6,14 @@ Use App\Models\Job;
 Use App\Models\Award;
 Use App\Models\Jobfair;
 Use App\Models\AdminJob;
+Use App\Models\Feedback;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
   public function home(){
-    return view('User.home');
+    $feedback = Feedback::all();
+    return view('User.home',compact('feedback'));
   }
   public function hiring(){
     $joboffer = AdminJob::all();

@@ -7,20 +7,35 @@
         <!-- end header section -->
         <!-- slider section -->
         <section class="slider_section">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-5 pl-0">
-              <h1 style="font-size: 60px; font-family: Arial, sans-serif; color: white; text-shadow: 2px 2px 4px #ccc; text-align: left;"><b>ABIC Manpower Services Corp</b></h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <h1 class="custom-heading">ABIC</h1>
+  <h1 class="custom-heading">Manpower</h1>
+  <h3 class="custom-heading">Services Corp</h3>
 </section>
+
+<style>
+.slider_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: flex-start; /* Align content to the start (left) */
+  height: 100vh; /* Full viewport height */
+  padding-left: 20px; /* Optional: add some padding */
+}
+
+.custom-heading {
+  font-size: 130px;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-shadow: 2px 2px 4px #ccc;
+  margin: 0;
+}
+
+.custom-heading:not(:first-child) {
+  margin-top: 20px; /* Adjust spacing as needed */
+}
+</style>
+
+
         <!-- end slider section -->
     </div>
     <section class="service_section layout_padding">
@@ -335,63 +350,29 @@
         <div class="container ">
             <div class="heading_container heading_center">
                 <h2>
-                    Feedback
+                    Testimonials
                 </h2>
             </div>
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="images/client.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h4>
-                                    Minim Veniam
-                                </h4>
-                                <p>
-                                    We are extremely pleased with the staffing solutions provided by ABIC Manpower. Their team demonstrated a thorough understanding of our industry needs and delivered exceptional candidates who seamlessly integrated into our workforce. The recruitment process was efficient, and their attention to detail ensured that we found the right talent for our projects. Additionally, their proactive approach in managing HR administration and payroll services has significantly streamlined our operations. We highly recommend ABIC Manpower for their professionalism, reliability, and commitment to client satisfaction
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item ">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="images/client.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h4>
-                                    Minim Veniam
-                                </h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna
-                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item ">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="images/client.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h4>
-                                    Minim Veniam
-                                </h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna
-                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+    <div class="carousel-inner">
+        @foreach($feedback as $message)
+        <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+            <div class="box">
+                <div class="img-box">
+                    <img src="images/user.png" alt="">
+                </div>    
+                <div class="detail-box">
+                    <h4>
+                        {{ $message->name }}
+                    </h4>
+                    <p>
+                        {{ $message->message }}
+                    </p>
                 </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
                 <div class="carousel_btn-box">
                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
                         data-slide="prev">

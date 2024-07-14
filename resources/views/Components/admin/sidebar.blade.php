@@ -68,6 +68,10 @@
                 <i class="fas fa-user-alt"></i>
                 <p>Manpower Requisition</p>
             </a>
+            <a href="{{ route('feedback.form') }}">
+                <i class="fas fa-user-alt"></i>
+                <p>Testimonials</p>
+            </a>
             <a href="{{ route('acredited-company') }}">
                 <i class="fas fa-building"></i>
 

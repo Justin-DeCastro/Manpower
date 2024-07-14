@@ -16,6 +16,7 @@ use App\Http\Controllers\ContactMessageController;
 use App\Http\Controllers\ManpowerReqController;
 use App\Http\Controllers\AwardController;
 use App\Http\Controllers\ExecutiveController;
+use App\Http\Controllers\FeedbackController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,11 +28,12 @@ use App\Http\Controllers\ExecutiveController;
 |
 */
 
-Route::get('/', function () {
-    return view('User.home');
-});
+// Route::get('/', function () {
+//     return view('User.home');
+// });
 // Route::get('/properties', [HomeController::class, 'properties'])->name('properties');
 Route::get('/careers', [HomeController::class, 'hiring'])->name('careers');
+Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/service', [HomeController::class, 'service'])->name('service');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
@@ -115,3 +117,6 @@ Route::get('/executive', [ExecutiveController::class, 'index'])->name('award.ind
 Route::post('/executive-store', [ExecutiveController::class, 'store'])->name('executive.store');
 Route::post('/update-application/{id}', [HiringController::class, 'updateApplication'])->name('update-application');
 Route::post('/sendStatusEmail/{id}', [HiringController::class, 'sendStatusEmail'])->name('sendStatusEmail');
+//feedback
+Route::get('/feedback', [FeedbackController::class, 'testimonials'])->name('feedback.form');
+Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback.store');

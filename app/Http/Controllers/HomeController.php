@@ -28,6 +28,9 @@ class HomeController extends Controller
   public function requisition(){
     return view('User.manpower');
   }
+  public function bulletin(){
+    return view('User.bulletin');
+  }
   public function profile(){
     return view('User.profile');
   }

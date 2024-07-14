@@ -36,7 +36,7 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/service', [HomeController::class, 'service'])->name('service');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/awards', [HomeController::class, 'award'])->name('award');
-
+Route::get('/bulletin', [HomeController::class, 'bulletin'])->name('bulletin');
 //admin dashboard
 Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
 
@@ -113,3 +113,5 @@ Route::post('/award-store', [AwardController::class, 'store'])->name('award.stor
 //
 Route::get('/executive', [ExecutiveController::class, 'index'])->name('award.index');
 Route::post('/executive-store', [ExecutiveController::class, 'store'])->name('executive.store');
+Route::post('/update-application/{id}', [HiringController::class, 'updateApplication'])->name('update-application');
+Route::post('/sendStatusEmail/{id}', [HiringController::class, 'sendStatusEmail'])->name('sendStatusEmail');

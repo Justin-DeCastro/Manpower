@@ -61,11 +61,7 @@
                 <p>Company Profile</p>
             </a>
             <a href="{{ route('award') }}">
-<<<<<<< Updated upstream
-                <i class="fas fa-briefcase"></i>
-=======
                 <i class="fas fa-user-alt"></i>
->>>>>>> Stashed changes
                 <p>Award</p>
             </a>
             <a href="{{ route('manpower.index') }}">

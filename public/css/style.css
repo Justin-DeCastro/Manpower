@@ -240,7 +240,6 @@ a:focus {
 .navbar-brand {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -252,8 +251,9 @@ a:focus {
 
 .navbar-brand span {
   font-weight: bold;
-  color: #ffffff;
+  color: black;
   font-size: 24px;
+  position:flex;
 }
 
 .custom_nav-container .navbar-toggler {

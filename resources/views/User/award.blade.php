@@ -152,7 +152,7 @@
     </div>
     <div class="row justify-content-center text-center" style="color: white; background-color: #343a40; padding: 50px 0;">
         <div class="col-lg-10">
-            <h2 class="title">Our Executives</h2>
+            <h2 class="title">Our Team</h2>
         </div>
     </div>
     <!-- Modal -->

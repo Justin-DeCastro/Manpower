@@ -1,8 +1,9 @@
 <?php
 
+// In your InterviewAssigned Mailable class
+
 namespace App\Mail;
 
-use App\Models\Application;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -13,19 +14,32 @@ class InterviewAssigned extends Mailable
 
     public $application;
 
-    public function __construct(Application $application)
+    // Add a public property to hold the date
+    public $date;
+
+    /**
+     * Create a new message instance.
+     *
+     * @return void
+     */
+    public function __construct($application)
     {
         $this->application = $application;
+        // Assuming 'date' is a property of $application
+        $this->date = $application->date;
     }
 
+    /**
+     * Build the message.
+     *
+     * @return $this
+     */
     public function build()
     {
         return $this->view('emails.interview_assigned')
-                    ->subject('Interview Assigned')
                     ->with([
                         'name' => $this->application->name,
-                        'position' => $this->application->position,
-                        // Add other variables you need in the email view
+                        'date' => $this->date,
                     ]);
     }
 }

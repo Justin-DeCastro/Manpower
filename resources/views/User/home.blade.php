@@ -1,93 +1,26 @@
 @include('Components.header')
-
+<!-- <style>
+    .box {
+  height: 100%;
+}
+</style> -->
         <!-- end header section -->
         <!-- slider section -->
-        <section class=" slider_section ">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-7">
-                                    <div class="detail-box">
-                                        <h1>
-                                            Creating Future For Filipino People <br>
-                                            <span>
-                                                {{-- Our Responsibility --}}
-                                            </span>
-                                        </h1>
-                                        <p>
-                                            {{-- Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                            sed do eiusmod magna aliqua. Ut enim ad minim veniam --}}
-                                        </p>
-                                        <div class="btn-box">
-                                            <a href="about" class="btn-1"> About us </a>
-                                            <a href="careers" class="btn-2">Careers</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item ">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-7">
-                                    <div class="detail-box">
-                                        <h1>
-                                            <h1>Empowering Your Business with Expert Manpower Solutions</h1>
-<br>
-                                            <span>
-                                                {{-- Our Responsibility --}}
-                                            </span>
-                                        </h1>
-                                        <p>
-                                            {{-- Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                            sed do eiusmod magna aliqua. Ut enim ad minim veniam --}}
-                                        </p>
-                                        <div class="btn-box">
-                                            <a href="about" class="btn-1"> About Us </a>
-                                            <a href="careers" class="btn-2">Careers</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item ">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-7">
-                                    <div class="detail-box">
-                                        <h1>
-                                            Transform Your Workforce with Our Manpower Services<br>
-                                            <span>
-                                                {{-- Our Responsibility --}}
-                                            </span>
-                                        </h1>
-                                        <p>
-                                            {{-- Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                            sed do eiusmod magna aliqua. Ut enim ad minim veniam --}}
-                                        </p>
-                                        <div class="btn-box">
-                                            <a href="" class="btn-1"> About Us </a>
-                                            <a href="careers" class="btn-2">Careers</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container idicator_container">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                </div>
+        <section class="slider_section">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5 pl-0">
+              <h1 style="font-size: 60px; font-family: Arial, sans-serif; color: white; text-shadow: 2px 2px 4px #ccc; text-align: left;"><b>ABIC Manpower Services Corp</b></h1>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
         <!-- end slider section -->
     </div>
     <section class="service_section layout_padding">
@@ -97,7 +30,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="box">
+                    <div class="box" style="height: 400px;">
                         <div class="img-box">
                             <!-- Your SVG or image content -->
                         </div>
@@ -110,7 +43,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="box">
+                    <div class="box" style="height: 400px;">
                         <div class="img-box">
                             <!-- Your SVG or image content -->
                         </div>
@@ -123,19 +56,19 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="box">
+                    <div class="box" style="height: 400px;">
                         <div class="img-box">
                             <!-- Your SVG or image content -->
                         </div>
                         <div class="detail-box">
-                            <h6>Values</h6>
-                            <p>
-                                Accountability – We are committed in taking accountability professionally to our clients and
-                                Beyond – Dedicated to exert extra mile to cater client’s manpower specifications while ensuring to deploy competent talents.
-                                Integrity – Driven to uphold honesty, fairness and decency
-                                Customized Client Oriented – Always determined to tailored exemptional service to meet client’s need.
-                            </p>
-                        </div>
+  <h6>Values</h6>
+  <p style="line-height: 1.5;">
+    <b style="font-size: 20px;">A</b>ccountability – We are committed in taking accountability professionally to our clients and<br>
+    <b style="font-size: 20px;">B</b>eyond – Dedicated to exert extra mile to cater client’s manpower specifications while ensuring to deploy competent talents.<br>
+    <b style="font-size: 20px;">I</b>ntegrity – Driven to uphold honesty, fairness and decency<br>
+    <b style="font-size: 20px;">C</b>ustomized Client Oriented – Always determined to tailored exemptional service to meet client’s need.
+  </p>
+</div>
                     </div>
                 </div>
             </div>
@@ -150,7 +83,7 @@
                 <div class="col-md-6 px-0">
                     <div class="img_container">
                         <div class="img-box">
-                            <img src="images/logo.jpg" alt="" style="width: 90%; height: auto;" />
+                            <img src="images/logo_cleanup.jpg" alt="" style="width: 90%; height: auto;" />
                         </div>
 
                     </div>

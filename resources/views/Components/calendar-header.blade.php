@@ -27,13 +27,9 @@
 </head>
 
 <body>
-    <div class="hero_area">
+    
         <!-- header section strats -->
-        <div class="hero_bg_box">
-            <div class="img-box">
-                <img src='front.jpg' alt="">
-            </div>
-        </div>
+       
         <header class="header_section">
             <div class="header_top">
 
@@ -75,7 +71,7 @@
         <li><a href="https://www.facebook.com/profile.php?id=100090318514723"><i class="fa-brands fa-facebook-f fa-2x"></i></a></li>
         <li><a href=""><i class="fa-brands fa-instagram fa-2x"></i></a></li>
         <li><a href=""><i class="fa-brands fa-telegram fa-2x"></i></a></li>
-
+   
     </ul>
 </div>
 

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Job Applications - Admin Dashboard</title>
-    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
     <link rel="icon" href="Admin/assets/img/kaiadmin/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="Admin/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="Admin/assets/css/plugins.min.css">
     <link rel="stylesheet" href="Admin/assets/css/kaiadmin.min.css">
     <link rel="stylesheet" href="Admin/assets/css/demo.css">
-    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.4/css/buttons.dataTables.min.css">
 </head>
-
 <body>
     <div class="wrapper">
         <!-- Sidebar -->
@@ -25,8 +25,7 @@
                     <!-- Logo Header -->
                     <div class="logo-header" data-background-color="dark">
                         <a href="../index.html" class="logo">
-                            <img src="Admin/assets/img/kaiadmin/logo_light.svg" alt="navbar brand" class="navbar-brand"
-                                height="20">
+                            <img src="Admin/assets/img/kaiadmin/logo_light.svg" alt="navbar brand" class="navbar-brand" height="20">
                         </a>
                         <div class="nav-toggle">
                             <button class="btn btn-toggle toggle-sidebar">
@@ -47,11 +46,9 @@
                     <div class="container-fluid">
                         <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
                             <li class="nav-item topbar-user dropdown hidden-caret">
-                                <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#"
-                                    aria-expanded="false">
+                                <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#" aria-expanded="false">
                                     <div class="avatar-sm">
-                                        <img src="Admin/assets/img/profile.jpg" alt="..."
-                                            class="avatar-img rounded-circle">
+                                        <img src="Admin/assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
                                     </div>
                                     <span class="profile-username">
                                         <span class="op-7">Hi,</span> <span class="fw-bold">ABIC MANPOWER</span>
@@ -61,12 +58,11 @@
                                     <div class="dropdown-user-scroll scrollbar-outer">
                                         <li>
                                             <div class="user-box">
-                                                <div class="avatar-lg"><img src="Admin/assets/img/profile.jpg"
-                                                        alt="image profile" class="avatar-img rounded"></div>
+                                                <div class="avatar-lg"><img src="Admin/assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
                                                 <div class="u-text">
                                                     <h4>Hizrian</h4>
-                                                    <p class="text-muted">hello@example.com</p><a href="profile.html"
-                                                        class="btn btn-xs btn-secondary btn-sm">View Profile</a>
+                                                    <p class="text-muted">hello@example.com</p>
+                                                    <a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
                                                 </div>
                                             </div>
                                         </li>
@@ -101,21 +97,14 @@
                                     <h4 class="card-title">Job Application Details</h4>
                                     <div class="dt-buttons btn-group d-flex justify-content-end gap-2">
                                         <div class="dropdown">
-                                            <button type="button" class="btn btn-primary dropdown-toggle"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class='bx bx-export'></i> Export
                                             </button>
                                             <ul class="dropdown-menu">
-                                                <li><button type="button" id="copyBtn" class="btn dropdown-item"><i
-                                                            class='bx bx-copy'></i> Copy</button></li>
-                                                <li><button type="button" id="printBtn" class="btn dropdown-item"><i
-                                                            class='bx bx-printer'></i> Print</button></li>
-                                                <li><button type="button" id="excelBtn"
-                                                        class="btn dropdown-item"><i class='bx bx-file'></i>
-                                                        Excel</button></li>
-                                                <li><button type="button" id="pdfBtn"
-                                                        class="btn dropdown-item"><i class='bx bxs-file-pdf'></i>
-                                                        Pdf</button></li>
+                                                <li><button type="button" id="copyBtn" class="btn dropdown-item"><i class='bx bx-copy'></i> Copy</button></li>
+                                                <li><button type="button" id="printBtn" class="btn dropdown-item"><i class='bx bx-printer'></i> Print</button></li>
+                                                <li><button type="button" id="excelBtn" class="btn dropdown-item"><i class='bx bx-file'></i> Excel</button></li>
+                                                <li><button type="button" id="pdfBtn" class="btn dropdown-item"><i class='bx bxs-file-pdf'></i> Pdf</button></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -154,82 +143,45 @@
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.3.4/js/dataTables.buttons.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    {{-- <script src="https://cdn.datatables.net/buttons/2.3.4/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.3.4/js/buttons.print.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.3.4/js/buttons.colVis.min.js"></script> --}}
     <script src="Admin/assets/js/kaiadmin.min.js"></script>
     <script src="Admin/assets/js/setting-demo2.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
 
     <!-- DataTable Initialization -->
     <script>
         $(document).ready(function() {
             var table = $('#myDataTable').DataTable({
-                // DataTable initialization
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('get-job-applications') }}",
-
-                columns: [{
-                        data: 'name',
-                        name: 'name'
-                    },
-                    {
-                        data: 'email',
-                        name: 'email'
-                    },
-                    {
-                        data: 'address',
-                        name: 'address'
-                    },
-                    {
-                        data: 'status',
-                        name: 'status'
-                    },
-                    {
-                        data: 'position',
-                        name: 'position'
-                    },
-                    {
-                        data: 'message',
-                        name: 'message'
-                    },
-                    {
-                        data: 'resume',
-                        name: 'resume'
-                    },
-                    {
-                        data: 'action',
-                        name: 'action',
-                        orderable: false,
-                        searchable: false
-                    },
-                    {
-                        data: 'phone',
-                        name: 'phone'
-                    }
+                columns: [
+                    { data: 'name', name: 'name' },
+                    { data: 'email', name: 'email' },
+                    { data: 'address', name: 'address' },
+                    { data: 'status', name: 'status' },
+                    { data: 'position', name: 'position' },
+                    { data: 'message', name: 'message' },
+                    { data: 'resume', name: 'resume' },
+                    { data: 'action', name: 'action', orderable: false, searchable: false },
+                    { data: 'phone', name: 'phone' }
                 ],
                 responsive: true,
                 dom: 'Bfrtip',
-                buttons: [
-                    'print', 'copy', 'csv'
-                ],
+                buttons: ['print', 'copy', 'csv'],
             });
 
-            // Buttons click events
             $('#printBtn').on('click', function() {
                 table.button('.buttons-print').trigger();
             });
+
             $('#copyBtn').on('click', function() {
                 table.button('.buttons-copy').trigger();
             });
+
             $('#excelBtn').on('click', function() {
                 exportToExcel();
             });
-            // $('#pdfBtn').on('click', function () {
-            //     table.button('.buttons-pdf').trigger();
-            // });
 
-            // Handle resume download in table view
             $('#myDataTable tbody').on('click', 'td', function() {
                 var cell = table.cell(this);
                 var column = cell.index().column;
@@ -241,52 +193,32 @@
                 }
             });
 
-            // Function to export DataTable to Excel with resume links
             function exportToExcel() {
                 var wb = XLSX.utils.book_new();
-                var ws = XLSX.utils.table_to_sheet($('#myDataTable').get(0)); // Convert DataTable to XLSX sheet
+                var ws = XLSX.utils.table_to_sheet($('#myDataTable').get(0));
 
-                // Iterate through each row to add resume download links
                 table.rows().every(function(index, element) {
                     var data = this.data();
                     var resumeUrl = "{{ asset('hiring/') }}/" + data.resume;
-                    var rowIdx = index + 1; // Row index (1-based)
-                    var resumeCell = 'G' + rowIdx; // Assuming 'Resume' column is 7th (G)
+                    var rowIdx = index + 1;
+                    var resumeCell = 'G' + rowIdx;
 
-                    // Add link to Excel sheet
                     ws[resumeCell] = {
                         v: "Download Resume",
-                        t: 's', // Type: string
+                        t: 's',
                         l: {
                             Target: resumeUrl,
                             Tooltip: 'Download Resume'
-                        } // Hyperlink object
+                        }
                     };
                 });
 
-                XLSX.utils.book_append_sheet(wb, ws, "Sheet1"); // Append sheet to workbook
-                XLSX.writeFile(wb, "Job_Application_Details.xlsx"); // Save workbook as Excel file
+                XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+                XLSX.writeFile(wb, "Job_Application_Details.xlsx");
             }
         });
     </script>
 
-
-
-    {{-- <script src="js/dd/datatables.min.js"></script>
-					<script src="js/dd/datatables.js"></script> --}}
-    <!-- Required Stylesheets -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.4/css/buttons.dataTables.min.css">
-
-    <!-- Required JavaScript -->
-    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.3.4/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.3.4/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.3.4/js/buttons.print.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.3.4/js/buttons.colVis.min.js"></script>
-    <script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
-
+    
 </body>
-
 </html>

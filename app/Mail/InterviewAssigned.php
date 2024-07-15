@@ -42,4 +42,5 @@ class InterviewAssigned extends Mailable
                         'date' => $this->date,
                     ]);
     }
+    
 }

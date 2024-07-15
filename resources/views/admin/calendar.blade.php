@@ -254,14 +254,14 @@
                 </div>
 
 
-                <script>
+                <!-- <script>
                     $(document).ready(function() {
                         $('#sendEmailBtn').click(function() {
                             console.log('Send Email button clicked');
-                            // Add your sendEmail() function logic here
+                            
                         });
                     });
-                </script>
+                </script> -->
 
 
 

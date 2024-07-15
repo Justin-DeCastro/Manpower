@@ -120,3 +120,4 @@ Route::post('/sendStatusEmail/{id}', [HiringController::class, 'sendStatusEmail'
 //feedback
 Route::get('/feedback', [FeedbackController::class, 'testimonials'])->name('feedback.form');
 Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback.store');
+Route::get('get-job-applications', [HiringController::class, 'getJobApplications'])->name('get-job-applications');

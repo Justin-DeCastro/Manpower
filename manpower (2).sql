@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 14, 2024 at 02:08 AM
+-- Generation Time: Jul 15, 2024 at 10:44 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -74,17 +74,14 @@ CREATE TABLE `applications` (
 --
 
 INSERT INTO `applications` (`id`, `name`, `position`, `message`, `email`, `address`, `date`, `interview_date`, `date_of_interview`, `resume`, `status`, `attended`, `phone`, `created_at`, `updated_at`) VALUES
-(20, 'Justin', 'ADMIN', 'Defqweault Message', 'decastrojustin321@gmail.com', 'pola', '2024-07-20 08:40:00', NULL, NULL, 'hiring/1720666354_1720489237_1720429722_FOR HARD CODED.docx', 'For Interview', '0', '09456754591', '2024-07-11 09:52:34', '2024-07-12 23:04:21'),
-(21, 'Justin', 'ADMIN Staff', 'Default M124essage', 'decastrojustin24@gmail.com', 'pola', '2024-07-12 13:04:00', NULL, NULL, 'hiring/1720728239_1720489237_1720429722_FOR HARD CODED.docx', 'No Show', '0', '09456754591', '2024-07-12 03:03:59', '2024-07-12 22:40:46'),
-(22, 'moses', 'ADMIN', 'Defaultasd Message', 'decastrojustin321@gmail.com', 'pola', '2024-07-18 13:35:00', NULL, NULL, 'hiring/1720730147_1720489237_1720429722_FOR HARD CODED.docx', 'For Interview', '0', '09456754591', '2024-07-12 03:35:47', '2024-07-14 04:59:43'),
-(23, 'justin mangubat decastro', 'CEO', 'Default Message', 'decastrojustin321@gmail.com', 'looban tagbakin pola oriental mindoro', '2024-07-12 05:19:00', NULL, NULL, 'hiring/1720689567_Reviewer_2023_Handbook_on_Workers_Statutory_Monetary_Benefits_2.pdf', 'On Process', '0', '09456754591', '2024-07-11 01:19:27', '2024-07-11 01:19:58'),
-(24, 'Airies Asilo', 'ADMIN Staff', 'DefauHt Message', 'decastrojustin24@gmail.com', 'pola', '2024-07-27 14:40:00', NULL, NULL, 'hiring/1720802126_1720489237_1720429722_FOR HARD CODED.docx', 'For Pooling', '0', '09456754591', '2024-07-12 23:35:26', '2024-07-14 05:30:40'),
-(25, 'DeCastro Juso', 'Liaison', 'Default Message', 'decastrojustin24@gmail.com', 'pola', NULL, NULL, NULL, 'hiring/1720907579_1720489237_1720429722_FOR HARD CODED (2).docx', 'Pending', NULL, '09456754591', '2024-07-14 04:52:59', '2024-07-14 04:52:59'),
-(26, 'Mangubat Gayla De Castro', 'Liaison', 'Default Message', 'decastrojustin24@gmail.com', 'pola', NULL, NULL, NULL, 'hiring/1720907788_1720489237_1720429722_FOR HARD CODED (3).docx', 'Pending', NULL, '09456754591', '2024-07-14 04:56:28', '2024-07-14 04:56:28'),
-(27, 'Mangubat Gayla De Castro', 'Liaison', 'Default Message', 'decastrojustin24@gmail.com', 'pola', NULL, NULL, NULL, 'hiring/1720907847_1720489237_1720429722_FOR HARD CODED (3).docx', 'Pending', NULL, '09456754591', '2024-07-14 04:57:27', '2024-07-14 04:57:27'),
-(28, 'Mangubat Gayla De Castro', 'Liaison', 'Default Message', 'decastrojustin24@gmail.com', 'pola', '2024-07-20 14:58:00', NULL, NULL, 'hiring/1720907857_1720489237_1720429722_FOR HARD CODED (3).docx', 'For Interview', NULL, '09456754591', '2024-07-14 04:57:37', '2024-07-14 04:58:57'),
-(29, 'Mangubat Gayla De Castro', 'Liaison', 'Default Message', 'decastrojustin24@gmail.com', 'pola', '2024-07-14 14:58:00', NULL, NULL, 'hiring/1720907865_1720489237_1720429722_FOR HARD CODED (3).docx', 'For Interview', NULL, '09456754591', '2024-07-14 04:57:46', '2024-07-14 04:58:40'),
-(30, 'Prince', 'Engineering', 'Default Message', 'decastrojustin24@gmail.com', 'pola', NULL, NULL, NULL, 'hiring/1720908564_1720489237_1720429722_FOR HARD CODED (3).docx', 'Pending', NULL, '09456754591', '2024-07-14 05:09:24', '2024-07-14 05:09:24');
+(31, 'ABIC MANPOWER', 'Engineering', 'I would like to apply in any vacant position on engineering', 'decastrojustin321@gmail.com', 'Oriental Mindoro', '2024-07-18 15:41:00', NULL, NULL, 'hiring/1720923681_1720489237_1720429722_FOR HARD CODED (2).docx', 'No Show', NULL, '09456754591', '2024-07-14 09:21:21', '2024-07-16 05:43:19'),
+(32, 'Justin', 'Liaison', 'Default Message', 'decastrojustin321@gmail.com', 'Oriental Mindoro', NULL, NULL, NULL, 'hiring/1720923981_1720489237_1720429722_FOR HARD CODED (2).docx', 'Pending', NULL, '09456754591', '2024-07-14 09:26:21', '2024-07-14 09:26:21'),
+(33, 'Justin', 'ADMIN Staff', 'Default Message', 'decastrojustin321@gmail.com', 'pola', '2024-07-10 15:42:00', NULL, NULL, 'hiring/1720924570_1720489237_1720429722_FOR HARD CODED (3).docx', 'For Interview', NULL, '09456754591', '2024-07-14 09:36:10', '2024-07-16 05:42:45'),
+(34, 'ABIC MANPOWER', 'ADMIN', 'Default Message', 'decastrojustin321@gmail.com', 'pola', NULL, NULL, NULL, 'hiring/1720924743_1720489237_1720429722_FOR HARD CODED (3).docx', 'For Interview', NULL, '09456754591', '2024-07-14 09:39:03', '2024-07-16 05:35:07'),
+(35, 'ABIC MANPOWER', 'ADMIN', 'Default Message', 'decastrojustin321@gmail.com', 'pola', NULL, NULL, NULL, 'hiring/1720924758_1720489237_1720429722_FOR HARD CODED (3).docx', 'For Interview', NULL, '09456754591', '2024-07-14 09:39:18', '2024-07-16 05:22:26'),
+(36, 'ABIC MANPOWER111', 'ADMIN', 'Default Message', 'decastrojustin321@gmail.com', 'Oriental Mindoro', NULL, NULL, NULL, 'hiring/1720925002_1720489237_1720429722_FOR HARD CODED (3).docx', 'Pending', NULL, '09456754591', '2024-07-14 09:43:22', '2024-07-14 09:43:22'),
+(37, 'ABIC MANPOWER', 'ADMIN Staff', 'Default Message', 'inorganicdrake@gmail.com', 'Oriental Mindoro', NULL, NULL, NULL, 'hiring/1720925347_1720489237_1720429722_FOR HARD CODED (3).docx', 'Pending', NULL, '09456754591', '2024-07-14 09:49:07', '2024-07-14 09:49:07'),
+(38, 'Justin', 'Liaison', 'Default Message', 'inorganicdrake@gmail.com', 'Oriental Mindoro', NULL, NULL, NULL, 'hiring/1720925611_1720489237_1720429722_FOR HARD CODED (3).docx', 'For Interview', NULL, '09456754591', '2024-07-14 09:53:31', '2024-07-16 04:33:01');
 
 -- --------------------------------------------------------
 
@@ -189,6 +186,13 @@ CREATE TABLE `executives` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `executives`
+--
+
+INSERT INTO `executives` (`id`, `companyname`, `awards`, `companyimage`, `created_at`, `updated_at`) VALUES
+(2, 'ZHENRONG LI\r\n(Position)', 'Philippine Women`s University, Bachelor of Science in Nutrition and Dietetics, Asian Institute of Management (AIM), Rotary Club of Las Piñas - Caminol Real District 3830', '1721066868.jpg', '2024-07-16 01:07:48', '2024-07-16 01:07:48');
+
 -- --------------------------------------------------------
 
 --
@@ -225,7 +229,8 @@ CREATE TABLE `feedback` (
 
 INSERT INTO `feedback` (`id`, `name`, `message`, `created_at`, `updated_at`) VALUES
 (1, 'Justin', 'I recently interacted with Customer Service Representative\'s regarding some issue. I was impressed by their professionalism and quick response. They handled my concern efficiently and provided a clear solution.', '2024-07-14 08:26:43', '2024-07-14 08:26:43'),
-(2, 'Moses', 'I wanted to take a moment to express my gratitude for the outstanding service I received. My recent experience was exceptional, and I am genuinely impressed. I am very satisfied with my experience and will definitely recommend your company to friends and family. Keep up the excellent work!', '2024-07-14 08:29:53', '2024-07-14 08:29:53');
+(2, 'Moses', 'I wanted to take a moment to express my gratitude for the outstanding service I received. My recent experience was exceptional, and I am genuinely impressed. I am very satisfied with my experience and will definitely recommend your company to friends and family. Keep up the excellent work!', '2024-07-14 08:29:53', '2024-07-14 08:29:53'),
+(3, 'GIO', 'I can\'t say enough about the incredible service I received from Manpower. They truly went above and beyond to match me with a job that fits my skills and career goals perfectly. The entire process was smooth and efficient, and their team was so supportive throughout. I\'m grateful for their expertise and dedication in helping me land a position where I can thrive. Thank you, Manpower, for making my job search not just successful but also enjoyable!', '2024-07-15 23:24:19', '2024-07-15 23:24:19');
 
 -- --------------------------------------------------------
 
@@ -601,7 +606,7 @@ ALTER TABLE `admin_jobs`
 -- AUTO_INCREMENT for table `applications`
 --
 ALTER TABLE `applications`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `awards`
@@ -625,7 +630,7 @@ ALTER TABLE `contact_messages`
 -- AUTO_INCREMENT for table `executives`
 --
 ALTER TABLE `executives`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -637,7 +642,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `jobfairs`

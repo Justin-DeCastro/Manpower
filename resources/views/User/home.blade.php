@@ -27,7 +27,7 @@
   font-family: Arial, sans-serif;
   color: white;
   text-shadow: 2px 2px 4px #ccc;
-  margin: 0;
+  margin-left: 100px;
 }
 
 .custom-heading:not(:first-child) {

@@ -1,3 +1,4 @@
+
 <section class="info_section ">
     <div class="container">
         <div class="row">
@@ -7,6 +8,12 @@
                         <span>
                             Abic Manpower
                         </span>
+                        <a class="navbar-brand" href="/">
+                            <img src="images/logo-removebg-preview.png" alt="Logo"
+                                style="height: 100px; margin-right: 10px;">
+                            
+                        </a>
+
                     </a>
                     <p>
 

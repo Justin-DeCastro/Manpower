@@ -600,7 +600,7 @@ a:focus {
 .info_section {
   background-color: #101010;
   color: #ffffff;
-  padding: 75px 0 10px 0;
+  padding: 5px 0 10px 0;
 }
 
 .info_section .row > div {

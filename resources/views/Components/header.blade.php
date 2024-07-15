@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
     <title>ABIC MANPOWER SERVICE CORP</title>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
@@ -71,12 +71,12 @@
                 </div>
                 <div class="social-buttons-container">
                 <div class="social-buttons">
-    <ul>
+    <!-- <ul>
         <li><a href="https://www.facebook.com/profile.php?id=100090318514723"><i class="fa-brands fa-facebook-f fa-2x"></i></a></li>
         <li><a href=""><i class="fa-brands fa-instagram fa-2x"></i></a></li>
         <li><a href=""><i class="fa-brands fa-telegram fa-2x"></i></a></li>
 
-    </ul>
+    </ul> -->
 </div>
 
                 </div>
@@ -151,3 +151,89 @@
             </div>
         </header>
 
+        <div class="wrapper">
+    <a class="social" href="https://www.facebook.com/profile.php?id=100090318514723"><i class="fa-brands fa-facebook-f fa-2x"></i></a>
+    <a class="social" href="#"> <i class="fab fa-telegram fa-2x"></i></i></a>
+    <a class="close-button" href="#">  <i class="fab fa-instagram fa-2x"></i></i></a>
+    <a class="social" href="#"> <i class="fab fa-whatsapp fa-2x"> </i></a>
+</div>
+<style>
+    *{
+    margin:0;
+    padding:0;
+}
+
+body{
+    height:100vh;
+    background-color:#ccc;
+    position:relative;
+}
+
+
+.wrapper{ 
+    position:fixed;
+    top:500px;
+    right:20px;
+    z-index:1000;
+}
+
+.wrapper a:nth-child(1){
+    background-color:blue;
+}
+
+.wrapper a:nth-child(2){
+    background-color:#17BBFE;
+}
+.wrapper a:nth-child(4){
+    background-color:green;
+}
+  
+.wrapper a:nth-child(3) {
+        background: linear-gradient(to right, #ff8a00, #e52e71); /* Example gradient colors */
+        transition: all 0.3s;
+    }
+
+
+.wrapper a:hover:nth-child(3){
+    
+    background-color:yellow;
+}
+ 
+ 
+@keyframes FadeIn {
+    0% {
+     transform:rotate(0deg);
+    }
+    100% {
+      transform:rotate(360deg); 
+    }
+}
+
+
+.hide{
+    position:absolute;
+    bottom:0px !important;
+    z-index:-1;
+    transition:all 2s;
+    
+}
+
+.social{
+    
+}
+
+.wrapper a{ 
+    height:70px;
+    width:70px;
+    background:#000;
+    padding:10px;
+    display:flex;
+    flex-direction:row;
+    border-radius:50%;
+    justify-content:center;
+    align-items:center; 
+    text-decoration:none;
+    color:#fff;
+    margin:2px;
+}
+</style>

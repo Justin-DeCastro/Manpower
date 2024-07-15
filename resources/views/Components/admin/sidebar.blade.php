@@ -82,6 +82,11 @@
 
                 <p>Add Job Offer</p>
             </a>
+            <a href="{{ route('executive.index') }}">
+            <i class="fas fa-user"></i>
+
+                <p>OUR TEAM</p>
+            </a>
         </li>
 
 

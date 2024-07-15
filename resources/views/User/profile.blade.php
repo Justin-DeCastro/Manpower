@@ -86,6 +86,9 @@
             </div>
         </div>
     </div>
+
+</div>
+</body>
     @include('Components.footer')
 
     <script src="js/jquery-3.4.1.min.js"></script>
@@ -103,6 +106,5 @@
             @endif
         });
     </script>
-</body>
 
 </html>

@@ -45,6 +45,57 @@
       </div>
     </div>
   </section>
+  <section class="service_section layout_padding">
+        <div class="container">
+            <div class="heading_container heading_center">
+                <h2>Our Vision, Mission, and Values</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="box" style="height: 400px;">
+                        <div class="img-box">
+                            <!-- Your SVG or image content -->
+                        </div>
+                        <div class="detail-box">
+                            <h6>Vision</h6>
+                            <p>
+                                To be the leading manpower agency recognized for transforming the staffing industry by connecting top talent with best clients. Our vision is to build a future where every business can thrive with the support of a skilled and motivated workforce, and every professional can achieve their career aspirations through meaningful employment opportunities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box" style="height: 400px;">
+                        <div class="img-box">
+                            <!-- Your SVG or image content -->
+                        </div>
+                        <div class="detail-box">
+                            <h6>Mission</h6>
+                            <p>
+                                To empower businesses by providing exceptional staffing solutions that match the right talent with the right opportunities, ensuring growth and success for both employers and employees. We are committed to delivering excellence, fostering a culture of integrity, and creating value for our clients through innovative and customized workforce solutions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box" style="height: 400px;">
+                        <div class="img-box">
+                            <!-- Your SVG or image content -->
+                        </div>
+                        <div class="detail-box">
+  <h6>Values</h6>
+  <p style="line-height: 1.5;">
+    <b style="font-size: 20px;">A</b>ccountability – We are committed in taking accountability professionally to our clients and<br>
+    <b style="font-size: 20px;">B</b>eyond – Dedicated to exert extra mile to cater client’s manpower specifications while ensuring to deploy competent talents.<br>
+    <b style="font-size: 20px;">I</b>ntegrity – Driven to uphold honesty, fairness and decency<br>
+    <b style="font-size: 20px;">C</b>ustomized Client Oriented – Always determined to tailored exemptional service to meet client’s need.
+  </p>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
   <section style="background-color: #3259f3; padding: 50px 0;">
     <div class="main text-center mt-5"></div>
     <div class="container mt-4 d-flex justify-content-center">

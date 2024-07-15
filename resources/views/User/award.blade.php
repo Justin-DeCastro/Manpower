@@ -156,7 +156,45 @@
             <h2 class="title">Our Team</h2>
         </div>
     </div>
-  
+    @foreach($executives as $executive)
+    <div class="executive-card">
+        <img src="{{ asset('images/' . $executive->companyimage) }}" alt="{{ $executive->companyname }} Image" class="executive-image">
+        <h2>{{ $executive->companyname }}</h2>
+        <!-- Assuming awards are stored with commas -->
+        <div class="awards-popup">
+            Awards:<br>
+            @php
+                $awards = explode(',', $executive->awards);
+            @endphp
+            @foreach($awards as $award)
+                {{ $award }} <br>
+            @endforeach
+        </div>
+    </div>
+@endforeach
+
+
+
+<style>
+    .awards-popup {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    z-index: 1;
+}
+.executive-image {
+    max-width: 300px; /* Adjust this value as per your requirement */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.executive-card:hover .awards-popup {
+    display: block;
+}
+
+</style>
     
 <!-- 
     <div class="executive">

@@ -113,7 +113,7 @@ Route::get('/award', [AwardController::class, 'index'])->name('award.index');
 Route::post('/award-store', [AwardController::class, 'store'])->name('award.store');
 
 //
-Route::get('/executive', [ExecutiveController::class, 'index'])->name('award.index');
+Route::get('/executive', [ExecutiveController::class, 'index'])->name('executive.index');
 Route::post('/executive-store', [ExecutiveController::class, 'store'])->name('executive.store');
 Route::post('/update-application/{id}', [HiringController::class, 'updateApplication'])->name('update-application');
 Route::post('/sendStatusEmail/{id}', [HiringController::class, 'sendStatusEmail'])->name('sendStatusEmail');

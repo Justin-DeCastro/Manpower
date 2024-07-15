@@ -7,6 +7,7 @@ Use App\Models\Award;
 Use App\Models\Jobfair;
 Use App\Models\AdminJob;
 Use App\Models\Feedback;
+Use App\Models\Executives;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -43,8 +44,9 @@ class HomeController extends Controller
     return view('User.contact');
   }
   public function award(){
+    $executives = Executives::all();
     $Jobs = Jobfair::all();
     $awards = Award::all();
-    return view('User.award',compact('awards','Jobs'));
+    return view('User.award',compact('awards','Jobs','executives'));
   }
 }

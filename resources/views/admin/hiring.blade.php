@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="Admin/assets/css/plugins.min.css">
     <link rel="stylesheet" href="Admin/assets/css/kaiadmin.min.css">
     <link rel="stylesheet" href="Admin/assets/css/demo.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"> -->
 </head>
 
 <body>
@@ -168,6 +168,7 @@
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('get-job-applications') }}",
+
                 columns: [{
                         data: 'name',
                         name: 'name'

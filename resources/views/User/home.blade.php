@@ -171,9 +171,7 @@
                             <p>
                                 Providing temporary, permanent, or contract staff to meet short-term or long-term workforce needs of businesses
                             </p>
-                            <a href="">
-                                Read More
-                            </a>
+                           
                         </div>
                     </div>
                 </div>
@@ -255,9 +253,7 @@
                             <p>
                                 Conducting candidate sourcing, screening, and selection processes to match qualified individuals with job openings
                             </p>
-                            <a href="">
-                                Read More
-                            </a>
+                           
                         </div>
                     </div>
                 </div>
@@ -331,9 +327,7 @@
                             <p>
                                 Managing specific business functions or processes on behalf of clients, such as payroll administration or HR management.
                             </p>
-                            <a href="">
-                                Read More
-                            </a>
+                          
                         </div>
                     </div>
                 </div>

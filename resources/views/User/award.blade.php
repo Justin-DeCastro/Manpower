@@ -150,11 +150,36 @@
             @endfor
         </div>
     </div>
+    <section id="our-team">
     <div class="row justify-content-center text-center" style="color: white; background-color: #343a40; padding: 50px 0;">
         <div class="col-lg-10">
             <h2 class="title">Our Team</h2>
         </div>
     </div>
+  
+    
+<!-- 
+    <div class="executive">
+        <img src="john-doe-photo.jpg" alt="John Doe">
+        <div class="details">
+            <h3>John Doe</h3>
+            <p>CEO</p>
+            <p>John Doe is the Chief Executive Officer of our company...</p>
+        </div>
+    </div>
+
+    <div class="executive">
+        <img src="jane-smith-photo.jpg" alt="Jane Smith">
+        <div class="details">
+            <h3>Jane Smith</h3>
+            <p>CFO</p>
+            <p>Jane Smith serves as our Chief Financial Officer...</p>
+        </div>
+    </div>
+
+    Add more executives as needed -->
+
+</section>
     <!-- Modal -->
     <div id="myModal" class="modal">
         <div class="modal-content">

@@ -45,7 +45,7 @@
       </div>
     </div>
   </section>
-  <section style="background-color: darkblue; padding: 50px 0;">
+  <section style="background-color: #3259f3; padding: 50px 0;">
     <div class="main text-center mt-5"></div>
     <div class="container mt-4 d-flex justify-content-center">
         <div class="row g-0">

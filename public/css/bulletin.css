@@ -5,10 +5,10 @@
 .title h2 {
 	font-weight: 600;
 	font-size: 35px;
-	color: #232323;
+	color: whitesmoke;
 }
 .title p {
-	color: #848484;
+	color: whitesmoke;
 	margin: 0 auto;
 }
 .border {
@@ -41,19 +41,19 @@
 	color: #fff;
 }
 .services .service-block h3 {
-	color: #333;
+	color:whitesmoke;
 	font-size: 18px;
 	text-transform: uppercase;
 	font-weight: bold;
 }
 .services .service-block p {
 	font-size: 14px;
-	color: #666;
+	color: whitesmoke;
 }
 .services .service-block.color-bg i, .services .service-block.color-bg h3, .services .service-block.color-bg p {
-	color: #fff;
+	color: whitesmoke;
 }
 .services .service-block i {
 	font-size: 40px;
-	color: #28ABE3;
+	color: whitesmoke;
 }

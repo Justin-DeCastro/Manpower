@@ -1,4 +1,4 @@
-@include('Components.header')
+@include('Components.manpowerheader')
 <br>
 <br>
     <style>
@@ -36,6 +36,7 @@
         .form-container {
             max-width: 100%;
             margin: 0 auto;
+            margin-top:300px;
             padding: 15px;
             background-color: #f9f9f9;
             border: 1px solid #ccc;

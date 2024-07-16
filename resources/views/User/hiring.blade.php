@@ -264,5 +264,8 @@
         });
     </script>
 </body>
+<br>
+<br>
+<br>
 @include('Components.footer')
 </html>

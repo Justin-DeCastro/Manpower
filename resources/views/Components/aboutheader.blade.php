@@ -47,10 +47,10 @@
                         </a>
 
                         <div class="contact_links">
-                            <a href="tel:09069381261" class="contact_link2">
+                            <a href="tel:+639069381261" class="contact_link2">
                                 <i class="fa fa-mobile" aria-hidden="true"></i>
                                 <span>
-                                    Call: 0906-938-1261
+                                    Call: +63 906-938-1261
                                 </span>
                             </a>
                             <br>
@@ -160,3 +160,89 @@
             </div>
         </header>
 
+        <div class="wrapper">
+    <a class="social" href="https://www.facebook.com/profile.php?id=100090318514723"><i class="fa-brands fa-facebook-f fa-2x"></i></a>
+    <a class="social" href="#"> <i class="fab fa-telegram fa-2x"></i></i></a>
+    <a class="close-button" href="#">  <i class="fab fa-instagram fa-2x"></i></i></a>
+    <a class="social" href="#"> <i class="fab fa-viber fa-2x"> </i></a>
+</div>
+<style>
+    *{
+    margin:0;
+    padding:0;
+}
+
+body{
+    height:100vh;
+    background-color:#ccc;
+    position:relative;
+}
+
+
+.wrapper{
+    position:fixed;
+    top:500px;
+    right:20px;
+    z-index:1000;
+}
+
+.wrapper a:nth-child(1){
+    background-color:blue;
+}
+
+.wrapper a:nth-child(2){
+    background-color:#17BBFE;
+}
+.wrapper a:nth-child(4){
+    background-color:#8f5db7;
+}
+
+.wrapper a:nth-child(3) {
+        background: linear-gradient(to right, #ff8a00, #e52e71); /* Example gradient colors */
+        transition: all 0.3s;
+    }
+
+
+.wrapper a:hover:nth-child(3){
+
+    background-color:yellow;
+}
+
+
+@keyframes FadeIn {
+    0% {
+     transform:rotate(0deg);
+    }
+    100% {
+      transform:rotate(360deg);
+    }
+}
+
+
+.hide{
+    position:absolute;
+    bottom:0px !important;
+    z-index:-1;
+    transition:all 2s;
+
+}
+
+.social{
+
+}
+
+.wrapper a{
+    height:70px;
+    width:70px;
+    background:#000;
+    padding:10px;
+    display:flex;
+    flex-direction:row;
+    border-radius:50%;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    color:#fff;
+    margin:2px;
+}
+</style>

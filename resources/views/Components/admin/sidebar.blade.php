@@ -60,7 +60,7 @@
                 <i class="fas fa-user-alt"></i>
                 <p>Company Profile</p>
             </a>
-            <a href="{{ route('award') }}">
+            <a href="{{ route('award.index') }}">
                 <i class="fas fa-user-alt"></i>
                 <p>Award</p>
             </a>
@@ -81,6 +81,11 @@
             <i class="fas fa-briefcase"></i>
 
                 <p>Add Job Offer</p>
+            </a>
+            <a href="{{ route('bulletin.index') }}">
+            <i class="fas fa-briefcase"></i>
+
+                <p>Bulletin Board</p>
             </a>
             <a href="{{ route('executive.index') }}">
             <i class="fas fa-user"></i>

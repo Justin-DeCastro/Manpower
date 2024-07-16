@@ -1,4 +1,6 @@
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
     <!-- Basic -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,7 +13,7 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
     <title>ABIC MANPOWER SERVICE CORP</title>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
@@ -20,55 +22,71 @@
         rel="stylesheet" />
 
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/laborcss.css" rel="stylesheet" />
     <!-- responsive style -->
-    <link href="css/responsive.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
-
+    <!-- <div class="hero_area"> -->
+        <!-- header section strats -->
+        <!-- <div class="hero_bg_box">
+            <div class="img-box">
+                <img src='front.jpg' alt="">
+            </div>
+        </div> -->
         <header class="header_section">
+          
             <div class="header_top">
 
                 <div class="container-fluid">
                     <div class="contact_link-container">
-                        {{-- <li> <div id="google_translate_element"></div></li> --}}
+                        <div id="google_translate_element"></div>
                         <a href="https://www.google.com/maps/place/Unit+403,+Campos+Rueda+Building,+101+Urban+Ave,+Makati,+1206+Metro+Manila"
                             class="contact_link1">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
 
                             <span>
-                                Unit 403, Campos Rueda Building, 101 Urban Ave, Makati, 1206 Metro Manila
+                                Unit 403, Campos Rueda Building, 101 Urban Ave, Makati City, 1206, Metro Manila
 
                             </span>
                         </a>
 
-                        {{-- <a href="" class="contact_link2">
-                            <i class="fa fa-phone" aria-hidden="true"></i>
-                            <span>
-                                Call : +01 1234567890
-                            </span>
-                        </a> --}}
-                        {{-- <a href="mailto:abic.talentteams@gmail.com" class="contact_link3">
+                        <div class="contact_links">
+                            <a href="tel:09069381261" class="contact_link2">
+                                <i class="fa fa-mobile" aria-hidden="true"></i>
+                                <span>
+                                    Call: 0906-938-1261
+                                </span>
+                            </a>
+                            <br>
+                            <a href="tel:0282405150" class="contact_link2">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>
+                                    (02) 8240 5150
+                                </span>
+                            </a>
+                        </div>
+                         <a href="mailto:abic.talentteams@gmail.com" class="contact_link3">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                             <span>
                                 abic.talentteams@gmail.com
                             </span>
-                        </a> --}}
+                        </a>
 
                     </div>
                 </div>
                 <div class="social-buttons-container">
-                    <div class="social-buttons">
-                        <ul>
-                            <li><a href="https://www.facebook.com/profile.php?id=100090318514723"><i class="fa-brands fa-facebook-f fa-lg"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-instagram fa-lg"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-telegram fa-lg"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-twitter fa-lg"></i></a></li>
+                <div class="social-buttons">
+    <!-- <ul>
+        <li><a href="https://www.facebook.com/profile.php?id=100090318514723"><i class="fa-brands fa-facebook-f fa-2x"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-telegram fa-2x"></i></a></li>
 
-                        </ul>
-                    </div>
+    </ul> -->
+</div>
+
                 </div>
 
             </div>
@@ -76,12 +94,16 @@
             <div class="header_bottom">
                 <div class="container-fluid">
                     <nav class="navbar navbar-expand-lg custom_nav-container">
-                        <a class="navbar-brand" href="/">
-                            <img src="images/logo-removebg-preview.png" alt="Logo"
-                                style="height: 100px; margin-right: 10px;">
-                            {{-- <span>Abic Manpower Service Corp</span> --}}
-                        </a>
+                    <div class="navbar-brand-container">
+    <a class="navbar-brand" href="/">
+        <img src="images/logo-removebg-preview.png" alt="Logo" style="height: 100px; margin-right: 10px;">
+        <span>ABIC Manpower Service Corp</span>
+    </a>
+    <div class="tagline">
+    <span style="margin-left: 106px; font-size: 14px;">CREATING FUTURE FOR FILIPINO PEOPLE</span>
 
+    </div>
+</div>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -96,18 +118,18 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="about"> About</a>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link" href="service"> Services </a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="" id="navbarDropdown"
                                         role="button" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
-                                        Job Seekers
+                                        For Job Seekers
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="careers">Careers</a>
-                                        <a class="dropdown-item" href="ojtform">OJT</a>
+                                        <a class="dropdown-item" href="ojtform">Internship</a>
                                         {{-- <a class="dropdown-item" href="#">Manpower Requisition</a>
                             <a class="dropdown-item" href="#">Labor Standard Checklist</a> --}}
                                     </div>
@@ -117,7 +139,7 @@
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                                         role="button" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
-                                        Corporate Partners
+                                       For Corporate Partners
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="profile">Profile</a>
@@ -126,7 +148,13 @@
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="award"> Awards & Achievements </a>
+                                    <a class="nav-link" href="awards"> Awards & Achievements </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="bulletin"> Bulletin Board </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="careers"> Apply Now </a>
                                 </li>
                                 {{-- <li class="nav-item">
                         <a class="nav-link" href="contact">Contact us</a>
@@ -138,11 +166,91 @@
             </div>
         </header>
 
+        <div class="wrapper">
+    <a class="social" href="https://www.facebook.com/profile.php?id=100090318514723"><i class="fa-brands fa-facebook-f fa-2x"></i></a>
+    <a class="social" href="#"> <i class="fab fa-telegram fa-2x"></i></i></a>
+    <a class="close-button" href="#">  <i class="fab fa-instagram fa-2x"></i></i></a>
+    <a class="social" href="#"> <i class="fab fa-viber fa-2x"> </i></a>
+</div>
+<style>
+ 
+
+
+
+.wrapper{
+    position:fixed;
+    top:500px;
+    right:20px;
+    z-index:1000;
+}
+
+.wrapper a:nth-child(1){
+    background-color:blue;
+}
+
+.wrapper a:nth-child(2){
+    background-color:#17BBFE;
+}
+.wrapper a:nth-child(4){
+    background-color:#8f5db7;
+}
+
+.wrapper a:nth-child(3) {
+        background: linear-gradient(to right, #ff8a00, #e52e71); /* Example gradient colors */
+        transition: all 0.3s;
+    }
+
+
+.wrapper a:hover:nth-child(3){
+
+    background-color:yellow;
+}
+
+
+@keyframes FadeIn {
+    0% {
+     transform:rotate(0deg);
+    }
+    100% {
+      transform:rotate(360deg);
+    }
+}
+
+
+.hide{
+    position:absolute;
+    bottom:0px !important;
+    z-index:-1;
+    transition:all 2s;
+
+}
+
+.social{
+
+}
+
+.wrapper a{
+    height:70px;
+    width:70px;
+    background:#000;
+    padding:10px;
+    display:flex;
+    flex-direction:row;
+    border-radius:50%;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    color:#fff;
+    margin:2px;
+}
+</style>
+
+
 
 
 <style>
   .about_section {
-    padding: 10px 0;
+    padding: 0px 0;
   }
 
   .about_section .container {
@@ -248,7 +356,7 @@
 <br>
 <section class="about_section layout_padding">
 
-  <h1 style="text-align: center;">LABOR STANDARD CHECKLIST</h1>
+  <h1 class="labor" style="text-align: center;">LABOR STANDARD CHECKLIST</h1>
   <p style="text-align: center;"><a
       href="http://alamid.dict.gov.ph/~s4govbwcdoleph/wp-content/uploads/2024/04/2023-11-30-Reprinted-2023-Handbook.pdf">Link
       to Handbook (PDF)</a></p>
@@ -262,8 +370,11 @@
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    margin-top:100px;
 }
-
+.labor{
+  margin-top:200px;
+}
 
     .tg td {
       background-color: #e8edff;
@@ -668,12 +779,14 @@
 
 
   <br>
-
+<br>
+<br>
   @include('Components.footer')
 
+
   <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="js/custom.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/custom.js"></script>
   </body>
 
   </html>

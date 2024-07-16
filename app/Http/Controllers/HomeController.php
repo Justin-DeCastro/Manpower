@@ -8,13 +8,16 @@ Use App\Models\Jobfair;
 Use App\Models\AdminJob;
 Use App\Models\Feedback;
 Use App\Models\Executives;
+Use App\Models\Bulletin;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
   public function home(){
+    $executives = Executives::all();
+    $awards = Award::all();
     $feedback = Feedback::all();
-    return view('User.home',compact('feedback'));
+    return view('User.home',compact('feedback','awards','executives'));
   }
   public function hiring(){
     $joboffer = AdminJob::all();
@@ -32,7 +35,8 @@ class HomeController extends Controller
     return view('User.manpower');
   }
   public function bulletin(){
-    return view('User.bulletin');
+    $bulletins = Bulletin::all();
+    return view('User.bulletin',compact('bulletins'));
   }
   public function profile(){
     return view('User.profile');

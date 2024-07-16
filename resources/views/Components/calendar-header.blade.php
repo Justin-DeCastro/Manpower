@@ -41,7 +41,7 @@
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
 
                             <span>
-                                Unit 403, Campos Rueda Building, 101 Urban Ave, Makati, 1206 Metro Manila
+                                Unit 403, Campos Rueda Building, 101 Urban Ave, Makati City, 1206, Metro Manila
 
                             </span>
                         </a>
@@ -49,7 +49,7 @@
                         <a href="" class="contact_link2">
                             <i class="fa fa-phone" aria-hidden="true"></i>
                             <span>
-                                Call: 0906-938-1261
+                                Call: +63 906-938-1261
                                 <br>
                                 (02)8240 5150
 

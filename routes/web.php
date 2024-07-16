@@ -15,6 +15,7 @@ use App\Http\Controllers\JobfairsController;
 use App\Http\Controllers\ContactMessageController;
 use App\Http\Controllers\ManpowerReqController;
 use App\Http\Controllers\AwardController;
+use App\Http\Controllers\BulletinController;
 use App\Http\Controllers\ExecutiveController;
 use App\Http\Controllers\FeedbackController;
 /*
@@ -111,6 +112,9 @@ Route::post('change-status/{id}', [HiringController::class,'changeStatus'])->nam
 //award
 Route::get('/award', [AwardController::class, 'index'])->name('award.index');
 Route::post('/award-store', [AwardController::class, 'store'])->name('award.store');
+//bulletin
+Route::get('/bulletinboard', [BulletinController::class, 'index'])->name('bulletin.index');
+Route::post('/bulletin-store', [BulletinController::class, 'store'])->name('bulletin.store');
 
 //
 Route::get('/executive', [ExecutiveController::class, 'index'])->name('executive.index');

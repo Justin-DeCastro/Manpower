@@ -16,7 +16,7 @@
         <div class="col-md-6 px-0">
 <div class="img_container">
             <div class="img-box">
-              <img src="images/logo.jpg" alt="" style="width: 90%; height: auto;" />
+              <img src="images/logo_cleanup.jpg" alt="" style="width: 90%; height: auto;" />
             </div>
           </div>
         </div>

@@ -45,16 +45,16 @@
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
 
                             <span>
-                                Unit 403, Campos Rueda Building, 101 Urban Ave, Makati, 1206 Metro Manila
+                                Unit 403, Campos Rueda Building, 101 Urban Ave, Makati City, 1206, Metro Manila
 
                             </span>
                         </a>
 
                         <div class="contact_links">
-                            <a href="tel:09069381261" class="contact_link2">
+                            <a href="tel:+639069381261" class="contact_link2">
                                 <i class="fa fa-mobile" aria-hidden="true"></i>
                                 <span>
-                                    Call: 0906-938-1261
+                                    Call: +63 906-938-1261
                                 </span>
                             </a>
                             <br>
@@ -167,7 +167,7 @@
     <a class="social" href="https://www.facebook.com/profile.php?id=100090318514723"><i class="fa-brands fa-facebook-f fa-2x"></i></a>
     <a class="social" href="#"> <i class="fab fa-telegram fa-2x"></i></i></a>
     <a class="close-button" href="#">  <i class="fab fa-instagram fa-2x"></i></i></a>
-    <a class="social" href="#"> <i class="fab fa-whatsapp fa-2x"> </i></a>
+    <a class="social" href="#"> <i class="fab fa-viber fa-2x"> </i></a>
 </div>
 <style>
     *{
@@ -197,7 +197,7 @@ body{
     background-color:#17BBFE;
 }
 .wrapper a:nth-child(4){
-    background-color:green;
+    background-color:#8f5db7;
 }
 
 .wrapper a:nth-child(3) {

@@ -401,7 +401,7 @@
                                         </div>
                                         <div class="col col-stats ms-3 ms-sm-0">
                                             <div class="numbers">
-                                                <p class="card-category">Manpower Requisition Total Applies</p>
+                                                <p class="card-category">Manpower Requisition Applicant</p>
                                                 <h4 class="card-title"><?php echo $totalApplies; ?></h4>
                                             </div>
                                         </div>
@@ -432,7 +432,7 @@
 
 
 
-                  
+
             <div class="row">
               <div class="col-md-8">
                 <div class="card card-round">
@@ -519,8 +519,8 @@
                 </div>
               </div>
             </div>
-           
-            
+
+
           </div>
         </div>
 

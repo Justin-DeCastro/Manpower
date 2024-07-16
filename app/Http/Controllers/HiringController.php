@@ -138,15 +138,15 @@ class HiringController extends Controller
             'status' => 'required|in:For Interview,For Pooling,Not Qualified,No Show,Failed',
             'date' => 'required|date_format:Y-m-d\TH:i'
         ]);
-        
+
         // Convert the datetime string to a format acceptable by your database (if needed)
         $date = date('Y-m-d H:i:s', strtotime($request->date));
-        
+
         $application = Application::findOrFail($id);
         $application->status = $request->status;
         $application->date = $date; // Assign the formatted date
         $application->save();
-        
+
 
         $application = Application::findOrFail($id);
         $application->status = $request->status;
@@ -159,7 +159,7 @@ class HiringController extends Controller
                 Mail::to($application->email)->send(new InterviewAssigned($application));
                 break;
             case 'For Pooling':
-                Mail::to($application->email)->send(new PoolingAssigned($application));
+                // Mail::to($application->email)->send(new PoolingAssigned($application));
                 break;
             case 'Not Qualified':
                 Mail::to($application->email)->send(new NotQualifiedAssigned($application));

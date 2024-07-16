@@ -11,7 +11,7 @@
                         <a class="navbar-brand" href="/">
                             <img src="images/logo-removebg-preview.png" alt="Logo"
                                 style="height: 100px; margin-right: 10px;">
-                            
+
                         </a>
 
                     </a>
@@ -123,7 +123,7 @@
         introMessage: "Hello, how can I help you?",
         title: "ABIC MANPOWER SERVICE CORP!",
         mainColor: "#575757",
-        bubbleAvatarUrl: "{{ asset('chatQA2.png') }}",
+        bubbleAvatarUrl: "{{ asset('cs.png') }}",
         headerTextColor: "#ffffff"
     };
 </script>

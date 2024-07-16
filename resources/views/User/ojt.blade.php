@@ -1,4 +1,4 @@
-@include('Components.header')
+@include('Components.ojtheader')
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
 <style>
@@ -29,13 +29,13 @@
     }
 </style>
 
-<div class="container">
+<div class="containers">
     <div class="text-center mt-5">
-        <h1>OJT Application Form</h1>
+        {{-- <h1>OJT Application Form</h1> --}}
     </div>
 
-    <div class="row">
-        <div class="col-lg-7 mx-auto">
+    <div class="rows justify-content-center">
+        <div class="col-lg-7">
             <div class="card mt-2 mx-auto p-4 bg-light">
                 <div class="card-body bg-light">
                     <form action="{{ route('ojt.store') }}" method="POST" enctype="multipart/form-data">
@@ -71,10 +71,10 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="form_course">Course/Program*</label>
+                                    <label for="form_course">Course/Program *</label>
                                     <input id="form_course" type="text" name="course" class="form-control"
-                                           placeholder="Please enter your course/program or phone number *"
-                                           required="required" data-error="Course/program or phone number is required.">
+                                           placeholder="Please enter your course/program *" required="required"
+                                           data-error="Course/program is required.">
                                 </div>
                             </div>
                         </div>
@@ -132,6 +132,7 @@
         </div>
     </div>
 </div>
+
 
 @include('Components.footer')
 

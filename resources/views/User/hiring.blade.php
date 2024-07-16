@@ -19,8 +19,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet">
 
     <!-- Custom Styles -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/career.css" rel="stylesheet">
+    {{-- <link href="css/responsive.css" rel="stylesheet"> --}}
 
     <style>
         .job-table {
@@ -69,6 +69,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            margin-top:200px;
         }
 
         .about_section .card {
@@ -157,7 +158,7 @@
 <body>
 
     <!-- Header Section -->
-    @include('Components.calendar-header')
+    @include('Components.careerheader')
 
     <!-- Main Content -->
     <section class="about_section layout_padding">
@@ -252,7 +253,7 @@
 
     <!-- Custom Scripts -->
     <script>
-       
+
 
         $(document).ready(function () {
             @if(session()->has('message'))

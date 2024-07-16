@@ -1,5 +1,5 @@
 
-    @include('Components.header')
+    @include('Components.profileheader')
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -8,8 +8,8 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row justify-content-center mt-5">
+    <div class="containers">
+        <div class="rows justify-content-center mt-5">
             <div class="col-lg-7">
                 <div class="card">
                     <div class="card-header">
@@ -56,7 +56,7 @@
                                         placeholder="Contact person" required>
                                 </div>
                             </div>
-                            <div class="row mb-3">
+                            {{-- <div class="row mb-3">
                             <div class="col-md-6">
     <label for="form_sec_certificate" class="form-label">Copy of SEC/DTI CERTIFICATE *</label>
     <input id="form_sec_certificate" type="file" name="sec_certificate" class="form-control" required>
@@ -74,7 +74,7 @@
                                     <input id="form_business_permit" type="file" name="business_permit"
                                         class="form-control" required>
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="row">
                                 <div class="col-md-12">
                                     <button type="submit" class="btn btn-success btn-block">Submit</button>

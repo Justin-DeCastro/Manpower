@@ -1,4 +1,4 @@
-@include('Components.header')
+@include('Components.homeheader')
 <!-- <style>
     .box {
   height: 100%;
@@ -171,7 +171,7 @@
                             <p>
                                 Providing temporary, permanent, or contract staff to meet short-term or long-term workforce needs of businesses
                             </p>
-                           
+
                         </div>
                     </div>
                 </div>
@@ -253,7 +253,7 @@
                             <p>
                                 Conducting candidate sourcing, screening, and selection processes to match qualified individuals with job openings
                             </p>
-                           
+
                         </div>
                     </div>
                 </div>
@@ -327,7 +327,7 @@
                             <p>
                                 Managing specific business functions or processes on behalf of clients, such as payroll administration or HR management.
                             </p>
-                          
+
                         </div>
                     </div>
                 </div>
@@ -354,7 +354,7 @@
             <div class="box">
                 <div class="img-box">
                     <img src="images/user.png" alt="">
-                </div>    
+                </div>
                 <div class="detail-box">
                     <h4>
                         {{ $message->name }}

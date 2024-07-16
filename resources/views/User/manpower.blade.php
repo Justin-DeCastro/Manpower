@@ -216,7 +216,7 @@
                 </div>
 
                 <div class="form-group-three">
-                    <label for="working_location">Working Location:</label>
+                    <label for="working_location">Work Location:</label>
                     <input type="text" id="working_location" name="working_location" class="form-control form-control-lg" placeholder="Working Location" required>
                 </div>
             </div>
@@ -224,7 +224,7 @@
             <!-- Third row -->
             <div class="form-row-three">
                 <div class="form-group-three">
-                    <label for="working_schedule">Working Schedule:</label>
+                    <label for="working_schedule">Work Schedule:</label>
                     <div class="side-by-side">
                         <input type="text" id="working_schedule_hours" name="working_schedule_hours" class="form-control" placeholder="Hours">
                         <input type="text" id="working_schedule_days" name="working_schedule_days" class="form-control" placeholder="Days">
@@ -232,7 +232,7 @@
                 </div>
 
                 <div class="form-group-three">
-                    <label for="payout">Payout:</label>
+                    <label for="payout">Payout Schedule:</label>
                     <div class="side-by-side">
                         <input type="text" id="payout_hours" name="payout_firstdate" class="form-control" placeholder="First Cut off">
                         <input type="text" id="payout_days" name="payout_seconddate" class="form-control" placeholder="Second Cut off">
@@ -257,19 +257,31 @@
                 </div>
 
                 <div class="form-group-three">
+                    <label for="job_requirements">Qualifications:</label>
                     <div class="checkbox-row">
                         <div class="checkbox-group">
-                            <label><input type="checkbox" name="qualifications[]" value="CPA License"> CPA LICENSE </label>
-                            <label><input type="checkbox" name="qualifications[]" value="National Certificate"> National Certificate</label>
-                            <label><input type="checkbox" name="qualifications[]" value="Licensed Professional"> Licensed Professional</label>
+                            <label>
+                                <input type="checkbox" name="qualifications[]" value="CPA License"> CPA LICENSE
+                            </label>
                         </div>
-
-
-
-
-
-                            <label>Others: <input type="text" name="other_qualification"></label>
-
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="qualifications[]" value="National Certificate"> National Certificate
+                            </label>
+                        </div>
+                        <div class="checkbox-group">
+                            Licensed Professional:
+                            <select name="qualifications[]">
+                            <option value="">-Click To Select-</option>
+                                <option value="Registered Nurse">Registered Nurse</option>
+                                <option value="Licensed Engineer">Licensed Engineer</option>
+                                <option value="Licensed Teacher">Licensed Teacher</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="checkbox-row">
+                        <label>Others: <input type="text" name="other_qualification"></label>
                     </div>
                 </div>
 

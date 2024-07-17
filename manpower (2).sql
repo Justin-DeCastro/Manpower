@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 15, 2024 at 10:44 PM
+-- Generation Time: Jul 17, 2024 at 12:13 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -74,14 +74,8 @@ CREATE TABLE `applications` (
 --
 
 INSERT INTO `applications` (`id`, `name`, `position`, `message`, `email`, `address`, `date`, `interview_date`, `date_of_interview`, `resume`, `status`, `attended`, `phone`, `created_at`, `updated_at`) VALUES
-(31, 'ABIC MANPOWER', 'Engineering', 'I would like to apply in any vacant position on engineering', 'decastrojustin321@gmail.com', 'Oriental Mindoro', '2024-07-18 15:41:00', NULL, NULL, 'hiring/1720923681_1720489237_1720429722_FOR HARD CODED (2).docx', 'No Show', NULL, '09456754591', '2024-07-14 09:21:21', '2024-07-16 05:43:19'),
-(32, 'Justin', 'Liaison', 'Default Message', 'decastrojustin321@gmail.com', 'Oriental Mindoro', NULL, NULL, NULL, 'hiring/1720923981_1720489237_1720429722_FOR HARD CODED (2).docx', 'Pending', NULL, '09456754591', '2024-07-14 09:26:21', '2024-07-14 09:26:21'),
-(33, 'Justin', 'ADMIN Staff', 'Default Message', 'decastrojustin321@gmail.com', 'pola', '2024-07-10 15:42:00', NULL, NULL, 'hiring/1720924570_1720489237_1720429722_FOR HARD CODED (3).docx', 'For Interview', NULL, '09456754591', '2024-07-14 09:36:10', '2024-07-16 05:42:45'),
-(34, 'ABIC MANPOWER', 'ADMIN', 'Default Message', 'decastrojustin321@gmail.com', 'pola', NULL, NULL, NULL, 'hiring/1720924743_1720489237_1720429722_FOR HARD CODED (3).docx', 'For Interview', NULL, '09456754591', '2024-07-14 09:39:03', '2024-07-16 05:35:07'),
-(35, 'ABIC MANPOWER', 'ADMIN', 'Default Message', 'decastrojustin321@gmail.com', 'pola', NULL, NULL, NULL, 'hiring/1720924758_1720489237_1720429722_FOR HARD CODED (3).docx', 'For Interview', NULL, '09456754591', '2024-07-14 09:39:18', '2024-07-16 05:22:26'),
-(36, 'ABIC MANPOWER111', 'ADMIN', 'Default Message', 'decastrojustin321@gmail.com', 'Oriental Mindoro', NULL, NULL, NULL, 'hiring/1720925002_1720489237_1720429722_FOR HARD CODED (3).docx', 'Pending', NULL, '09456754591', '2024-07-14 09:43:22', '2024-07-14 09:43:22'),
-(37, 'ABIC MANPOWER', 'ADMIN Staff', 'Default Message', 'inorganicdrake@gmail.com', 'Oriental Mindoro', NULL, NULL, NULL, 'hiring/1720925347_1720489237_1720429722_FOR HARD CODED (3).docx', 'Pending', NULL, '09456754591', '2024-07-14 09:49:07', '2024-07-14 09:49:07'),
-(38, 'Justin', 'Liaison', 'Default Message', 'inorganicdrake@gmail.com', 'Oriental Mindoro', NULL, NULL, NULL, 'hiring/1720925611_1720489237_1720429722_FOR HARD CODED (3).docx', 'For Interview', NULL, '09456754591', '2024-07-14 09:53:31', '2024-07-16 04:33:01');
+(39, 'Justin De', 'ADMIN', 'Default Message', 'decastrojustin321@gmail.com', 'Oriental Mindoro', '2024-07-12 08:41:00', NULL, NULL, 'hiring/1721144410_1720924743_1720489237_1720429722_FOR HARD CODED (3).docx', 'For Pooling', NULL, '09456754591', '2024-07-16 22:40:10', '2024-07-16 22:43:35'),
+(40, 'moses', 'ADMIN Staff', 'Default Message', 'decastrojustin321@gmail.com', 'Oriental Mindoro', '2024-06-07 08:41:00', NULL, NULL, 'hiring/1721144452_1720924743_1720489237_1720429722_FOR HARD CODED (3).docx', 'For Pooling', NULL, '09456754591', '2024-07-16 22:40:53', '2024-07-16 22:42:25');
 
 -- --------------------------------------------------------
 
@@ -113,6 +107,32 @@ INSERT INTO `awards` (`id`, `companyname`, `companyimage`, `created_at`, `update
 (9, 'Certificate of Accreditation', '1720810656.jpg', '2024-07-13 01:57:36', '2024-07-13 01:57:36'),
 (10, 'Certificate of Accreditation', '1720810701.jpg', '2024-07-13 01:58:21', '2024-07-13 01:58:21'),
 (11, 'Certificate of Participation', '1720810730.jpg', '2024-07-13 01:58:50', '2024-07-13 01:58:50');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bulletins`
+--
+
+CREATE TABLE `bulletins` (
+  `id` bigint UNSIGNED NOT NULL,
+  `title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `link` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `bulletins`
+--
+
+INSERT INTO `bulletins` (`id`, `title`, `description`, `link`, `created_at`, `updated_at`) VALUES
+(1, 'DOUBLE PAY FOR EMPLOYEES WHO WILL WORK ON JUNE 12 – DOLE', 'MANILA – Private sector workers who will report for work on June 12, Independence Day, a regular holiday, are entitled to receive double pay or 200 percent of their salary for the day. In a labor advisory issued on May 29, Department of Labor and Employment (DOLE) Secretary Bienvenido Laguesma reminded employers to follow the pay rules for holidays under Proclamation 368, series of 2023, signed by President Ferdinand R. Marcos Jr.', 'https://beta.pna.gov.ph/articles/1226507', '2024-07-17 03:22:06', '2024-07-17 03:22:06'),
+(2, 'DEPARTMENT OF LABOR AND EMPLOYMENT STATEMENT ON WAGE INCREASES', 'In the current system, Congress delegated the power to adjust minimum wages at the regional level with the participation of representatives of workers and employers to the Regional Tripartite Wages and Productivity Boards (RTWPBs). The process is under the supervision of the National Wages and Productivity Commission (NWPC), which is an agency attached to the Department of Labor and Employment (DOLE). In 2013, Congress passed Republic Act No. 10361, otherwise known as the Batas Kasambahay. Under this law, the RTWPBs now have the mandate to set minimum wages for domestic or household workers.', 'https://ils.dole.gov.ph/policy-advocacies/media-resources/news/department-of-labor-and-employment-statement-on-wage-increases', '2024-07-17 03:38:43', '2024-07-17 03:38:43'),
+(3, 'CHANGES TO PHL STATUTORY CONTRIBUTIONS IN 2024', 'As the year draws to a close, employees and employers closely monitor the statutory contributions landscape that includes government agencies, such as the Social Security System (SSS), Philippine Health Insurance Corp. (PhilHealth) and Home Development Mutual Fund (Pag-IBIG), especially when it comes to changes in contribution rates and premiums.', 'https://kpmg.com/ph/en/home/insights/2023/12/changes-to-phl-statutory-contributions-in-2024.html', '2024-07-17 03:43:54', '2024-07-17 03:43:54'),
+(4, 'COMPUTING OVERTIME PAY IN THE PHILIPPINES', 'Overtime pay is the compensation employers pay for any work beyond eight (8) hours a day or over 40 hours a week. However, work may be performed beyond the required hours. But employees who render more than 40 hours of work a week are entitled to a premium pay rate for the extra work.', 'https://www.eezi.com/calculating-overtime-pay-in-the-philippines/', '2024-07-17 03:44:15', '2024-07-17 03:44:15'),
+(5, 'SCHEDULE OF SOCIAL SECURITY (SS), EMPLOYEES’ COMPENSATION (EC), AND WORKERS’ INVESTMENT AND SAVINGS PROGRAMS (WISP) CONTRIBUTIONS EFFECTIVE JANUARY 2023', 'Employer (ER) refers to the entity or individual who hires employees and is responsible for deducting SSS contributions from their employees’ salaries. Employee (EE) refers to the individual hired by an employer who contributes a portion of their salary to the SSS.', 'https://www.sss.gov.ph/sss/DownloadContent?fileName=2023-Schedule-of-Contributions.pdf', '2024-07-17 03:44:35', '2024-07-17 03:44:35');
 
 -- --------------------------------------------------------
 
@@ -169,7 +189,8 @@ INSERT INTO `contact_messages` (`id`, `name`, `email`, `contact_number`, `countr
 (5, 'Justin De Castro', 'decastrojustin321@gmail.com', '09456754591', 'Philippines', 'Applicant-Inquiries', 'Omanfil Int\'l Manpower Dev\'t Corp. Rodeo Bldg.\r\n802 km 18 West Service Road South Super Highway\r\nParanaque City 1700 Metro Manila Philippines', '2024-07-08 05:02:52', '2024-07-08 05:02:52'),
 (6, 'justin mangubat decastro', 'decastrojustin321@gmail.com', '09456754591', 'Philippines', 'Applicant-Inquiries', 'Hello i am applying for this job', '2024-07-08 23:40:49', '2024-07-08 23:40:49'),
 (7, 'justin mangubat decastro', 'decastrojustin321@gmail.com', '09456754591', 'Philippines', 'Applicant-Follow Up', 'hello', '2024-07-08 23:45:47', '2024-07-08 23:45:47'),
-(8, 'justin mangubat decastro', 'decastrojustin321@gmail.com', '09456754591', 'Philippines', 'Applicant-Follow Up', 'hello', '2024-07-08 23:48:40', '2024-07-08 23:48:40');
+(8, 'justin mangubat decastro', 'decastrojustin321@gmail.com', '09456754591', 'Philippines', 'Applicant-Follow Up', 'hello', '2024-07-08 23:48:40', '2024-07-08 23:48:40'),
+(9, 'Justin', 'decastrojustin321@gmail.com', '09456754591', 'Philippines', 'Applicant-Inquiries', 'asd', '2024-07-17 07:10:19', '2024-07-17 07:10:19');
 
 -- --------------------------------------------------------
 
@@ -229,8 +250,8 @@ CREATE TABLE `feedback` (
 
 INSERT INTO `feedback` (`id`, `name`, `message`, `created_at`, `updated_at`) VALUES
 (1, 'Justin', 'I recently interacted with Customer Service Representative\'s regarding some issue. I was impressed by their professionalism and quick response. They handled my concern efficiently and provided a clear solution.', '2024-07-14 08:26:43', '2024-07-14 08:26:43'),
-(2, 'Moses', 'I wanted to take a moment to express my gratitude for the outstanding service I received. My recent experience was exceptional, and I am genuinely impressed. I am very satisfied with my experience and will definitely recommend your company to friends and family. Keep up the excellent work!', '2024-07-14 08:29:53', '2024-07-14 08:29:53'),
-(3, 'GIO', 'I can\'t say enough about the incredible service I received from Manpower. They truly went above and beyond to match me with a job that fits my skills and career goals perfectly. The entire process was smooth and efficient, and their team was so supportive throughout. I\'m grateful for their expertise and dedication in helping me land a position where I can thrive. Thank you, Manpower, for making my job search not just successful but also enjoyable!', '2024-07-15 23:24:19', '2024-07-15 23:24:19');
+(2, 'Moses', 'I wanted to take a moment to express my gratitude for the outstanding service I received. My recent experience was exceptional, and I am genuinely impressed. I am very satisfied with my experience and will definitely recommend your company.', '2024-07-14 08:29:53', '2024-07-14 08:29:53'),
+(3, 'GIO', 'I can\'t say enough about the incredible service I received from Manpower. They truly went above and beyond to match me with a job that fits my skills and career goals perfectly. The entire process was smooth and efficient, and their team was so supportive throughout. ', '2024-07-15 23:24:19', '2024-07-15 23:24:19');
 
 -- --------------------------------------------------------
 
@@ -242,6 +263,7 @@ CREATE TABLE `jobfairs` (
   `id` bigint UNSIGNED NOT NULL,
   `companyname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `link` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `place` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `companyimage` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -251,9 +273,16 @@ CREATE TABLE `jobfairs` (
 -- Dumping data for table `jobfairs`
 --
 
-INSERT INTO `jobfairs` (`id`, `companyname`, `link`, `companyimage`, `created_at`, `updated_at`) VALUES
-(2, 'Kalayaan Job Fair', 'https://www.facebook.com/photo.php?fbid=165598909794059&set=pb.100090318514723.-2207520000&type=3', '1720736208.jpg', '2024-07-12 05:16:48', '2024-07-12 05:16:48'),
-(3, 'Manila City Job Fair', 'https://www.facebook.com/photo.php?fbid=165598899794060&set=pb.100090318514723.-2207520000&type=3', '1720683042.jpg', '2024-07-10 23:30:42', '2024-07-10 23:30:42');
+INSERT INTO `jobfairs` (`id`, `companyname`, `link`, `place`, `companyimage`, `created_at`, `updated_at`) VALUES
+(2, 'Manila City Job Fair', 'https://www.facebook.com/photo.php?fbid=165598909794059&set=pb.100090318514723.-2207520000&type=3', 'manila', '1720736208.jpg', '2024-07-12 05:16:48', '2024-07-12 05:16:48'),
+(4, 'TIP JOB FAIR', 'https://www.facebook.com/profile.php?id=100090318514723', 'tip', '1721174273.jpg', '2024-07-17 06:57:53', '2024-07-17 06:57:53'),
+(5, 'TIP JOB FAIR', 'https://www.facebook.com/profile.php?id=100090318514723', 'tip', '1721174460.jpg', '2024-07-17 07:01:00', '2024-07-17 07:01:00'),
+(6, 'TIP JOB FAIR', 'https://www.facebook.com/profile.php?id=100090318514723', 'tip', '1721174470.jpg', '2024-07-17 07:01:10', '2024-07-17 07:01:10'),
+(7, 'TIP JOB FAIR', 'https://www.facebook.com/profile.php?id=100090318514723', 'tip', '1721174480.jpg', '2024-07-17 07:01:20', '2024-07-17 07:01:20'),
+(8, 'TIP JOB FAIR', 'https://www.facebook.com/profile.php?id=100090318514723', 'tip', '1721174489.jpg', '2024-07-17 07:01:29', '2024-07-17 07:01:29'),
+(9, 'Letran Job Fair', 'https://www.facebook.com/profile.php?id=100090318514723', 'letran', '1721174624.jpg', '2024-07-17 07:03:44', '2024-07-17 07:03:44'),
+(10, 'Letran Job Fair', 'https://www.facebook.com/profile.php?id=100090318514723', 'letran', '1721174640.jpg', '2024-07-17 07:04:00', '2024-07-17 07:04:00'),
+(11, 'Letran Job Fair', 'https://www.facebook.com/profile.php?id=100090318514723', 'letran', '1721174650.jpg', '2024-07-17 07:04:10', '2024-07-17 07:04:10');
 
 -- --------------------------------------------------------
 
@@ -311,7 +340,9 @@ CREATE TABLE `manpower_reqs` (
 INSERT INTO `manpower_reqs` (`id`, `work_type`, `vacant_position`, `job_category`, `no_of_vacancy`, `years_experience`, `working_location`, `working_schedule_hours`, `working_schedule_days`, `preferred_gender`, `job_requirements`, `cpa`, `payout_firstdate`, `payout_seconddate`, `nationalcertificate`, `license`, `other_qualification`, `qualifications`, `other_requirements`, `salary_from`, `salary_to`, `target_date`, `screening_method`, `job_description`, `created_at`, `updated_at`) VALUES
 (4, 'Contractual', 'Admin Staff', 'Electrical Engineer', 2, '2', 'Calamba', '8', '5', 'Male', 'Resume', NULL, '5 of the month', '20 of the month', 'National Certificate', NULL, NULL, '', 'picture', '10000', '20000', '2024-07-13', 'Virtual', 'Hello', '2024-07-11 04:34:26', '2024-07-11 04:34:26'),
 (5, 'Project Based', 'Laborer', 'Machine Operators', 3, '2', 'Manila', '8', '5', 'Male', 'Resume and government id', NULL, '5 of the month', '20 of the month', NULL, NULL, NULL, '', 'picture', '10000', '20000', '2024-07-20', 'Virtual', 'hi', '2024-07-11 04:53:53', '2024-07-11 04:53:53'),
-(6, 'Project Based', 'Admin Staff', 'Machine Operators', 3, '2', 'Laguna', '8', '5', 'Female', 'no', NULL, '5 of the month', '20 of the month', NULL, NULL, NULL, 'CPA License', 'no', '10000', '20000', '2024-07-24', 'Virtual', 'no', '2024-07-11 05:01:52', '2024-07-11 05:01:52');
+(6, 'Project Based', 'Admin Staff', 'Machine Operators', 3, '2', 'Laguna', '8', '5', 'Female', 'no', NULL, '5 of the month', '20 of the month', NULL, NULL, NULL, 'CPA License', 'no', '10000', '20000', '2024-07-24', 'Virtual', 'no', '2024-07-11 05:01:52', '2024-07-11 05:01:52'),
+(7, 'Full Time', 'Vacant', 'Electrical Engineer', 3, '2', 'Taguig', '5', '8', 'Female', 'JOB REQ', NULL, '5', '20', NULL, NULL, NULL, 'National Certificate, ', 'Req', '10000', '20000', '2024-07-13', 'Face-to-Face', 'Job Desc', '2024-07-16 22:56:53', '2024-07-16 22:56:53'),
+(8, 'Part Time', 'Vacant', 'Electrical Engineer', 5, '5', 'Batangas', '5', '8', 'Female', 'Requirements', NULL, '5', '20', NULL, NULL, NULL, 'Registered Nurse', 'Req', '10000', '20000', '2024-07-26', 'Face-to-Face', 'DESC', '2024-07-16 22:57:57', '2024-07-16 22:57:57');
 
 -- --------------------------------------------------------
 
@@ -346,7 +377,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (14, '2024_07_11_121045_create_manpower_reqs_table', 11),
 (15, '2024_07_12_183252_create_awards_table', 12),
 (16, '2024_07_12_065408_create_executives_table', 13),
-(17, '2024_07_14_010709_create_feedback_table', 13);
+(17, '2024_07_14_010709_create_feedback_table', 13),
+(18, '2024_07_16_201023_create_bulletins_table', 14);
 
 -- --------------------------------------------------------
 
@@ -498,6 +530,12 @@ ALTER TABLE `awards`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `bulletins`
+--
+ALTER TABLE `bulletins`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `companies`
 --
 ALTER TABLE `companies`
@@ -606,13 +644,19 @@ ALTER TABLE `admin_jobs`
 -- AUTO_INCREMENT for table `applications`
 --
 ALTER TABLE `applications`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `awards`
 --
 ALTER TABLE `awards`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `bulletins`
+--
+ALTER TABLE `bulletins`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `companies`
@@ -624,7 +668,7 @@ ALTER TABLE `companies`
 -- AUTO_INCREMENT for table `contact_messages`
 --
 ALTER TABLE `contact_messages`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `executives`
@@ -648,7 +692,7 @@ ALTER TABLE `feedback`
 -- AUTO_INCREMENT for table `jobfairs`
 --
 ALTER TABLE `jobfairs`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `jobs`
@@ -660,13 +704,13 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `manpower_reqs`
 --
 ALTER TABLE `manpower_reqs`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `ojts`

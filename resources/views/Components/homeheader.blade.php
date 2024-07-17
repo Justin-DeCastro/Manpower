@@ -29,11 +29,7 @@
 <body>
     <div class="hero_area">
         <!-- header section strats -->
-        <div class="hero_bg_box">
-            <div class="img-box">
-                <img src='front.jpg' alt="">
-            </div>
-        </div>
+       
         <header class="header_section">
             <div class="header_top">
 

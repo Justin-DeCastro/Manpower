@@ -38,7 +38,7 @@
 <body>
 
   <!-- ======= Header ======= -->
- @include('Components.homeheader')<!-- End Header -->
+ <!-- @include('Components.homeheader') -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
@@ -51,7 +51,7 @@
   <main id="main">
 
     <!-- ======= What We Do Section ======= -->
-    <section id="what-we-do" class="what-we-do">
+    <section id="what-we-do" class="what-we-do" style="background-color: white;">
       <div class="container">
 
         <div class="section-title">
@@ -79,15 +79,18 @@
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Values</a></h4>
-              <p style="line-height: 1.5; align-items: flex-start;">
-    <span style="font-size: 20px; margin-right: 10px;"><b>A</b></span>ccountability – We are committed in taking accountability professionally to our clients and;<br>
-    <span style="font-size: 20px; margin-right: 10px;"><b>B</b></span>eyond – Dedicated to exert extra mile to cater client’s manpower specifications while ensuring to deploy competent talents.<br>
-    <span style="font-size: 20px; margin-right: 10px;"><b>I</b></span>ntegrity – Driven to uphold honesty, fairness and decency<br>
-    <span style="font-size: 20px; margin-right: 10px;"><b>C</b></span>ustomized Client Oriented – Always determined to tailored exceptional service to meet client’s need.
-</p>
+    <div class="icon-box">
+        <div class="icon"><i class="bx bx-file"></i></div>
+        <h4><a href="">Values</a></h4>
+        <p style="line-height: 1.5; display: block; text-align:left;">
+            <span style="font-size: 20px; margin-right: 10px;"><strong>A</strong></span>ccountability – We are committed in taking accountability professionally to our clients and;<br>
+            <span style="font-size: 20px; margin-right: 10px;"><strong>B</strong></span>eyond – Dedicated to exert extra mile to cater client’s manpower specifications while ensuring to deploy competent talents.<br>
+            <span style="font-size: 20px; margin-right: 10px;"><strong>I</strong></span>ntegrity – Driven to uphold honesty, fairness and decency<br>
+            <span style="font-size: 20px; margin-right: 10px;"><strong>C</strong></span>ustomized Client Oriented – Always determined to tailored exceptional service to meet client’s need.
+        </p>
+    </div>
+</div>
+
 
 
 
@@ -101,7 +104,7 @@
     </section><!-- End What We Do Section -->
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="about" class="about" style="background-color: white;">
       <div class="container">
 
         <div class="row">
@@ -171,7 +174,7 @@
     </section><!-- End Counts Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
+    <section id="services" class="services"  style="background-color: white;">
       <div class="container">
 
         <div class="section-title">
@@ -214,7 +217,7 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio" style="background-color:#F7FBFE;">
       <div class="container">
 
         <div class="section-title">
@@ -293,11 +296,11 @@
     </section><!-- End Testimonials Section -->
 
     <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
+    <section id="team" class="team" style="background-color: white;">
       <div class="container">
 
         <div class="section-title">
-          <h2>Team</h2>
+          <h2> Our Team</h2>
           <p></p>
         </div>
 

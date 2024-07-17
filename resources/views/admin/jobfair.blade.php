@@ -168,6 +168,7 @@
                         <thead>
                             <tr>
                                 <th>Event Name</th>
+								<th>Event Place</th>
 								<th>Event Link  </th>
                                 <th>Company Image</th>
                             </tr>
@@ -175,7 +176,9 @@
 						<tbody>
 						@foreach($Jobs as $company)
     <tr>
-        <td>{{ $company->companyname }}</td>
+	<td>{{ $company->companyname }}</td>
+	<td>{{ $company->place }}</td>
+        
 		<td>{{ $company->link }}</td>
         <td>
             @if ($company->companyimage)
@@ -214,6 +217,10 @@
                         <div class="mb-3">
                             <label for="companyName" class="form-label">Description Name</label>
                             <input type="text" class="form-control" id="companyName" name="companyname" placeholder="Enter description name">
+                        </div>
+						<div class="mb-3">
+                            <label for="place" class="form-label">Place</label>
+                            <input type="text" class="form-control" id="place" name="place" placeholder="place">
                         </div>
 						<div class="mb-3">
                             <label for="companyName" class="form-label">Link</label>

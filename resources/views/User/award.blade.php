@@ -74,7 +74,7 @@
 
     </style>
 </head>
-<div class="row justify-content-center text-center" style="color: white; background-color: #343a40; padding: 50px 0;">
+<!-- <div class="row justify-content-center text-center" style="color: white; background-color: #343a40; padding: 50px 0;">
     <div class="col-lg-10">
         <h2 class="title">Our JOB FAIRS</h2>
     </div>
@@ -98,12 +98,12 @@
                     @else
                     <p>No image available</p>
                     @endif
-                    <!-- Additional job details here -->
+                 
                 </div>
             </div>
         @endforeach
     </div>
-</div>
+</div> -->
 
 
 <body>

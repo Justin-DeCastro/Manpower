@@ -13,6 +13,7 @@ class JobfairsController extends Controller
         $validatedData = $request->validate([
             'companyname' => 'required|string|max:255',
             'link' => 'required',
+            'place' => 'required',
             'companyimage' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // adjust max size as per your needs
         ]);
 

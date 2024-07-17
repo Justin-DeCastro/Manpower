@@ -13,5 +13,6 @@ class Jobfair extends Model
         'companyname',
         'link',
         'companyimage',
+        'place',
     ];
 }

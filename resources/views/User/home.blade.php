@@ -214,166 +214,48 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <!-- <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="container">
 
         <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit</p>
+          <h2>Our Job Fair</h2>
+          <p></p>
         </div>
 
         <div class="row">
           <div class="col-lg-12">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-manila">Manila Job Fair</li>
+              <li data-filter=".filter-tip">TIP Job Fair</li>
+              <li data-filter=".filter-letran">Letran Job Fair</li>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+@foreach ($Jobs as $job)
+          <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $job->place }} wow fadeInUp">
             <div class="portfolio-wrap">
               <figure>
-                <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="link-preview portfolio-lightbox" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+              <img src="{{ asset('images/' . $job->companyimage) }}" class="img-fluid" alt="{{ $job->companyname }}">
+<a href="{{ asset('images/' . $job->companyimage) }}" data-gallery="portfolioGallery" class="link-preview portfolio-lightbox" title="Preview"><i class="bx bx-plus"></i></a>
+
+
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">App 1</a></h4>
-                <p>App</p>
+                <h4><a href="{{$job->link}}">{{$job->companyname}}</a></h4>
+               
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-2.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Web 3</a></h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-3.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">App 2</a></h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-4.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Card 2</a></h4>
-                <p>Card</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-5.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Web 2</a></h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-6.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">App 3</a></h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-7.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Card 1</a></h4>
-                <p>Card</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-8.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Card 3</a></h4>
-                <p>Card</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-9.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Web 1</a></h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
-
+@endforeach
+         
         </div>
 
       </div>
-    </section>End Portfolio Section -->
+    </section>
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials section-bg">
@@ -471,108 +353,98 @@
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact section-bg">
   <div class="container">
-
     <div class="section-title">
       <h2>Contact Us</h2>
       <p></p>
     </div>
 
     <div class="row mt-5 justify-content-center">
+      <form action="{{ route('contact.store') }}" method="POST" class="php-email-form">
+        @csrf
+        <div class="col-lg-10">
+          <div class="info-wrap">
+            <div class="row">
+              <div class="col-lg-4 info">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Unit 403, Campos Rueda Building, 101 Urban Ave, Makati City, 1206, Metro Manila</p>
+              </div>
 
-      <div class="col-lg-10">
+              <div class="col-lg-4 info mt-4 mt-lg-0">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>abic.talentteams@gmail.com</p>
+              </div>
 
-        <div class="info-wrap">
-          <div class="row">
-            <div class="col-lg-4 info">
-              <i class="bi bi-geo-alt"></i>
-              <h4>Location:</h4>
-              <p>
-              Unit 403, Campos Rueda Building, 101 Urban Ave, Makati City, 1206, Metro Manila</p>
-            </div>
-
-            <div class="col-lg-4 info mt-4 mt-lg-0">
-              <i class="bi bi-envelope"></i>
-              <h4>Email:</h4>
-              <p>
-              abic.talentteams@gmail.com</p>
-            </div>
-
-            <div class="col-lg-4 info mt-4 mt-lg-0">
-              <i class="bi bi-phone"></i>
-              <h4>Call:</h4>
-              <p>+63 906-938-1261<br>(02) 8240 5150</p>
+              <div class="col-lg-4 info mt-4 mt-lg-0">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+63 906-938-1261<br>(02) 8240 5150</p>
+              </div>
             </div>
           </div>
         </div>
 
-      </div>
-
-    </div>
-
-    <div class="row mt-5 justify-content-center">
-      <div class="col-lg-10">
-        <form action="{{ route('contact.store') }}" method="POST" role="form" class="php-email-form">
-          @csrf
-          <div class="form-group position-relative">
-            <label for="formName" class="d-block">
-              <i class="icon" data-feather="user"></i>
-            </label>
-            <input type="text" name="name" id="name" class="form-control form-control-lg thick" placeholder="Full Name" required>
-          </div>
-
-          <div class="row">
-            <div class="form-group col-md-6 position-relative">
-              <label for="formEmail" class="d-block">
-                <i class="icon" data-feather="mail"></i>
+        <div class="row mt-5 justify-content-center">
+          <div class="col-lg-10">
+            <div class="form-group position-relative">
+              <label for="name" class="d-block">
+                <i class="icon" data-feather="user"></i>
               </label>
-              <input type="email" name="email" id="email" class="form-control form-control-lg thick" placeholder="E-mail" required>
+              <input type="text" name="name" id="name" class="form-control form-control-lg thick" placeholder="Full Name" required>
             </div>
 
-            <div class="form-group col-md-6 position-relative">
-              <label for="formContact" class="d-block">
-                <i class="icon" data-feather="phone"></i>
+            <div class="row">
+              <div class="form-group col-md-6 position-relative">
+                <label for="email" class="d-block">
+                  <i class="icon" data-feather="mail"></i>
+                </label>
+                <input type="email" name="email" id="email" class="form-control form-control-lg thick" placeholder="E-mail" required>
+              </div>
+
+              <div class="form-group col-md-6 position-relative">
+                <label for="contact_number" class="d-block">
+                  <i class="icon" data-feather="phone"></i>
+                </label>
+                <input type="tel" name="contact_number" id="contact_number" class="form-control form-control-lg thick" placeholder="Contact Number" required>
+              </div>
+            </div>
+
+            <div class="form-group position-relative">
+              <label for="country" class="d-block">
+                <i class="icon" data-feather="globe"></i>
               </label>
-              <input type="tel" name="contact_number" id="contact_number" class="form-control form-control-lg thick" placeholder="Contact Number" required>
+              <input type="text" name="country" id="country" class="form-control form-control-lg thick" placeholder="Country" required>
+            </div>
+
+            <div class="form-group position-relative">
+              <label for="subject" class="d-block">
+                <i class="icon" data-feather="tag"></i>
+              </label>
+              <select name="subject" id="subject" class="form-control form-control-lg thick" required>
+                <option value="" disabled selected>Select Subject</option>
+                <option value="Applicant-Inquiries">Applicant Inquiries</option>
+                <option value="Applicant-Follow Up">Applicant Follow Up</option>
+                <option value="Employer-Inquiries">Employer Inquiries</option>
+                <option value="Employer-Manpower Request">Employer Manpower Request</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group message">
+              <textarea name="message" id="message" class="form-control form-control-lg" rows="5" placeholder="Message" required></textarea>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Send Message</button>
             </div>
           </div>
-
-          <div class="form-group position-relative">
-            <label for="formCountry" class="d-block">
-              <i class="icon" data-feather="globe"></i>
-            </label>
-            <input type="text" name="country" id="country" class="form-control form-control-lg thick" placeholder="Country" required>
-          </div>
-
-          <div class="form-group position-relative">
-            <label for="formSubject" class="d-block">
-              <i class="icon" data-feather="tag"></i>
-            </label>
-            <select name="subject" id="subject" class="form-control form-control-lg thick" required>
-              <option value="" disabled selected>Select Subject</option>
-              <option value="Applicant-Inquiries">Applicant Inquiries</option>
-              <option value="Applicant-Follow Up">Applicant Follow Up</option>
-              <option value="Employer-Inquiries">Employer Inquiries</option>
-              <option value="Employer-Manpower Request">Employer Manpower Request</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <div class="form-group message">
-            <textarea name="message" id="message" class="form-control form-control-lg" rows="5" placeholder="Message" required></textarea>
-          </div>
-
-         
-
-          <div class="text-center">
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </div>
-        </form>
-      </div>
-
+        </div>
+      </form>
     </div>
-
   </div>
 </section>
+
 
 <!-- End Contact Section -->
 

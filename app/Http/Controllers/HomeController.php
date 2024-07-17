@@ -14,10 +14,11 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
   public function home(){
+    $Jobs = Jobfair::all();
     $executives = Executives::all();
     $awards = Award::all();
     $feedback = Feedback::all();
-    return view('User.home',compact('feedback','awards','executives'));
+    return view('User.home',compact('feedback','awards','executives','Jobs'));
   }
   public function hiring(){
     $joboffer = AdminJob::all();

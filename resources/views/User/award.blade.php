@@ -3,75 +3,29 @@
 
 <head>
     <!-- Include header -->
-    @include('Components.header')
+    @include('Components.aboutheader')
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
+<!-- Vendor CSS Files -->
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link href="assets/css/style.css" rel="stylesheet">
     <!-- Styles for modal and animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
         /* Modal Background */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0); /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        /* Modal Content */
-        .modal-content {
-            margin: 15% auto; /* 15% from the top and centered */
-            padding: 20px;
-            width: 80%; /* Could be more or less, depending on screen size */
-            max-width: 700px;
-            animation: zoomIn 0.5s; /* Animation when opening */
-        }
-
-        /* Close Button */
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        /* Animation for modal content */
-        @keyframes zoomIn {
-            from {
-                transform: scale(0.7);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .award-image {
-            width: 100%; /* Ensure the image takes the full width of the column */
-            height: 200px; /* Fixed height for consistency */
-            object-fit: cover; /* Cover the area and maintain aspect ratio */
-            border-radius: 8px; /* Optional: Add some border radius if you like */
-            cursor: pointer;
-        }
-        .uniform-image {
-    width: 100%; /* This makes the image take up the full width of its container */
-    height: 200px; /* Set a fixed height for uniformity */
-    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+       
+.row{
+    margin-top:100px;
 }
-
+.section-title{
+    margin-top:200px;
+}
     </style>
 </head>
 <!-- <div class="row justify-content-center text-center" style="color: white; background-color: #343a40; padding: 50px 0;">
@@ -104,75 +58,86 @@
         @endforeach
     </div>
 </div> -->
+<section id="portfolio" class="portfolio" style="background-color:#F7FBFE;">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Our Certificates</h2>
+          <p></p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-participation">Certificate of Participation</li>
+              <li data-filter=".filter-appreciation">Certificate of Appreciation</li>
+              <li data-filter=".filter-accreditation">Certificate of Accreditation</li>
+              <li data-filter=".filter-certification">Certification</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+@foreach ($awards as $award)
+          <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $award->description }} wow fadeInUp">
+            <div class="portfolio-wrap">
+              <figure>
+              <img src="{{ asset('images/' . $award->companyimage) }}" class="img-fluid" alt="{{ $award->companyname }}">
+<a href="{{ asset('images/' . $award->companyimage) }}" data-gallery="portfolioGallery" class="link-preview portfolio-lightbox" ><i class="bx bx-plus"></i></a>
+
+
+              </figure>
+
+              <div class="portfolio-info">
+                <!-- <h4><a href="{{$job->link}}">{{$job->companyname}}</a></h4> -->
+               
+              </div>
+            </div>
+          </div>
+@endforeach
+         
+        </div>
+
+      </div>
+    </section>
 
 
 <body>
-<div class="row justify-content-center text-center" style="color: white; background-color: #343a40; padding: 50px 0;">
-    <div class="col-lg-10">
-        <h2 class="title">Our Certifications</h2>
-    </div>
-</div>
-    <!-- Certification Section -->
-    <div class="text-box-one">
-        <div class="container">
-            @php
-                $itemsPerRow = 3; // Number of items per row
-                $totalAwards = count($awards);
-                $rows = ceil($totalAwards / $itemsPerRow); // Calculate number of rows needed
-            @endphp
+<!--  -->
+<section id="team" class="team" style="background-color: white;">
+      <div class="container">
 
-            @for ($row = 0; $row < $rows; $row++)
-                <div class="row">
-                    @for ($i = 0; $i < $itemsPerRow; $i++)
-                        @php
-                            $index = $row * $itemsPerRow + $i;
-                        @endphp
-                        @if ($index < $totalAwards)
-                            @php $award = $awards[$index]; @endphp
-                            <div class="col-lg-4 col-md-6">
-                                <div class="p-4 text-center hover-bg-white hover-shadow rounded mb-4 transition-3s">
-                                    @if ($award->companyimage)
-                                        <img src="{{ asset('images/' . $award->companyimage) }}"
-                                             alt="{{ $award->companyname }}"
-                                             class="img-fluid award-image"
-                                             onclick="openModal('{{ asset('images/' . $award->companyimage) }}', '{{ $award->companyname }}')" />
-                                        <h5 class="text-secondary hover-text-success py-3 m-0" style="background-color: white;">
-                                            {{ $award->companyname }}
-                                        </h5>
-                                    @else
-                                        <p>No image available</p>
-                                    @endif
-                                </div>
-                            </div>
-                        @endif
-                    @endfor
-                </div>
-            @endfor
+        <div class="section-title">
+          <h2> Our Team</h2>
+          <p></p>
         </div>
-    </div>
-    <section id="our-team">
-    <div class="row justify-content-center text-center" style="color: white; background-color: #343a40; padding: 50px 0;">
-        <div class="col-lg-10">
-            <h2 class="title">Our Team</h2>
-        </div>
-    </div>
+
+        <div class="row">
     @foreach($executives as $executive)
-    <div class="executive-card">
-        <img src="{{ asset('images/' . $executive->companyimage) }}" alt="{{ $executive->companyname }} Image" class="executive-image">
-        <h2>{{ $executive->companyname }}</h2>
-        <!-- Assuming awards are stored with commas -->
-        <div class="awards-popup">
-            Awards:<br>
-            @php
-                $awards = explode(',', $executive->awards);
-            @endphp
-            @foreach($awards as $award)
-                {{ $award }} <br>
-            @endforeach
+    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="executive-card">
+            <img src="{{ asset('images/' . $executive->companyimage) }}" alt="{{ $executive->companyname }} Image" class="executive-image">
+            <h4>{{ $executive->companyname }}</h4>
+            <span>{{ $executive->position }}</span>
+            <p>
+                <!-- Assuming you have a description field for executives -->
+                {{ $executive->description }}
+            </p>
+          
+            <div class="awards-popup">
+                Awards:<br>
+                @php
+                    $awards = explode(',', $executive->awards);
+                @endphp
+                @foreach($awards as $award)
+                    {{ $award }} <br>
+                @endforeach
+            </div>
         </div>
     </div>
-@endforeach
-
+    @endforeach
+</div>
 
 
 <style>
@@ -251,7 +216,16 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/custom.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>

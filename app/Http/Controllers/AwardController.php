@@ -11,7 +11,7 @@ class AwardController extends Controller
         // Validate the incoming request data
         $validatedData = $request->validate([
             'companyname' => 'required|string|max:255',
-      
+            'description' => 'required|string|max:255',
             'companyimage' => 'required|image|mimes:jpeg,png,jpg,gif|max:20480', // adjust max size as per your needs
         ]);
 

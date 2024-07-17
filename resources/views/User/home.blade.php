@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="images/favicon.png" rel="icon">
+  <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -26,24 +26,18 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Lumia
-  * Template URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
-  * Updated: Mar 17 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
 </head>
 
 <body>
 
   <!-- ======= Header ======= -->
- <!-- @include('Components.homeheader') -->
+ <!-- @include('Components.aboutheader') -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="container text-center text-md-left" data-aos="fade-up">
-      <h1>Welcome to <span>ABIC Manpower Service Corp</span></h1>
+      <h1>Welcome to ABIC Manpower Service Corp</span></h1>
     
     </div>
   </section>
@@ -242,7 +236,7 @@
             <div class="portfolio-wrap">
               <figure>
               <img src="{{ asset('images/' . $job->companyimage) }}" class="img-fluid" alt="{{ $job->companyname }}">
-<a href="{{ asset('images/' . $job->companyimage) }}" data-gallery="portfolioGallery" class="link-preview portfolio-lightbox" title="Preview"><i class="bx bx-plus"></i></a>
+<a href="{{ asset('images/' . $job->companyimage) }}" data-gallery="portfolioGallery" class="link-preview portfolio-lightbox" ><i class="bx bx-plus"></i></a>
 
 
               </figure>

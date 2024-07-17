@@ -92,14 +92,14 @@
                 <div class="container-fluid">
                     <nav class="navbar navbar-expand-lg custom_nav-container">
                     <div class="navbar-brand-container">
-    <a class="navbar-brand" href="/">
-        <img src="images/logo-removebg-preview.png" alt="Logo" style="height: 100px; margin-right: 10px;">
-        <span>ABIC Manpower Service Corp</span>
-    </a>
-    <div class="tagline">
-    <span style="margin-left: 106px; font-size: 14px;">CREATING FUTURE FOR FILIPINO PEOPLE</span>
-
+                    <a class="navbar-brands" href="/" style="display: flex; align-items: center;">
+    <img src="images/logo-removebg-preview.png" alt="Logo" style="height: 100px; margin-right: 20px;">
+    <div>
+        <span class="company-names">ABIC Manpower Service Corp</span>
+        <div class="taglines">CREATING FUTURE FOR FILIPINO PEOPLE</div>
     </div>
+</a>
+
 </div>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

@@ -25,7 +25,23 @@
     <link href="css/responsive.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+<style>
+    .navbar-brands {
+    display: flex;
+    align-items: center;
+}
 
+.company-names {
+    display: block;
+    font-size: 24px; /* Adjust as needed */
+}
+
+.taglines {
+    font-size: 14px;
+    margin-left: 2px; /* Adjust as needed */
+}
+
+</style>
 <body>
 
         <!-- header section strats -->
@@ -72,12 +88,7 @@
                 </div>
                 <div class="social-buttons-container">
                 <div class="social-buttons">
-    <ul>
-        <li><a href="https://www.facebook.com/profile.php?id=100090318514723"><i class="fa-brands fa-facebook-f fa-2x"></i></a></li>
-        <li><a href=""><i class="fa-brands fa-instagram fa-2x"></i></a></li>
-        <li><a href=""><i class="fa-brands fa-telegram fa-2x"></i></a></li>
-
-    </ul>
+    
 </div>
 
                 </div>
@@ -88,14 +99,14 @@
                 <div class="container-fluid">
                     <nav class="navbar navbar-expand-lg custom_nav-container">
                     <div class="navbar-brand-container">
-    <a class="navbar-brand" href="/">
-        <img src="images/logo-removebg-preview.png" alt="Logo" style="height: 100px; margin-right: 10px;">
-        <span>ABIC Manpower Service Corp</span>
-    </a>
-    <div class="tagline">
-    <span style="margin-left: 106px; font-size: 14px;">CREATING FUTURE FOR FILIPINO PEOPLE</span>
-
+                    <a class="navbar-brands" href="/" style="display: flex; align-items: center;">
+    <img src="images/logo-removebg-preview.png" alt="Logo" style="height: 100px; margin-right: 20px;">
+    <div>
+        <span class="company-names">ABIC Manpower Service Corp</span>
+        <div class="taglines">CREATING FUTURE FOR FILIPINO PEOPLE</div>
     </div>
+</a>
+
 </div>
 
                         <button class="navbar-toggler" type="button" data-toggle="collapse"

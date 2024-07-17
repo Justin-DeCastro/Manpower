@@ -168,7 +168,7 @@
                         <thead>
                             <tr>
                                 <th>Company Name</th>
-								
+								<th>Description</th>
                                 <th>Company Image</th>
                             </tr>
                         </thead>
@@ -176,7 +176,7 @@
 						@foreach($awards as $award)
     <tr>
         <td>{{ $award->companyname }}</td>
-		
+		<td>{{ $award->description }}</td>
         <td>
             @if ($award->companyimage)
                 <img src="{{ asset('images/' . $award->companyimage) }}" alt="{{ $award->companyname }}" width="220" height="120">
@@ -212,10 +212,13 @@
                     <form method="POST" action="{{ route('award.store') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
-                            <label for="companyName" class="form-label">Description Name</label>
-                            <input type="text" class="form-control" id="companyName" name="companyname" placeholder="Enter description name">
+                            <label for="companyName" class="form-label">Award Title</label>
+                            <input type="text" class="form-control" id="companyName" name="companyname" placeholder="Enter award title">
                         </div>
-						
+						<div class="mb-3">
+                            <label for="description" class="form-label">Description Name</label>
+                            <input type="text" class="form-control" id="description" name="description" placeholder="Enter description name">
+                        </div>
                         <div class="mb-3">
                             <label for="companyImage" class="form-label">Company Files</label>
                             <input type="file" class="form-control" id="companyImage" name="companyimage">

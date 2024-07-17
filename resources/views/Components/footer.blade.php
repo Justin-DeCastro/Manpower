@@ -49,23 +49,30 @@
                     <a href="https://maps.app.goo.gl/bTTnNxiMSqZHaS6EA" class="">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                         <span>
-                        403 CAMPOS RUEDA BLDG. URBAN AVENUE BRGY. PIO DEL PILAR, MAKATI, PHILIPPINES, 1224
+                        403 CAMPOS RUEDA BLDG. URBAN AVENUE BRGY. PIO DEL PILAR, MAKATI CITY, PHILIPPINES, 1224
                         </span>
                     </a>
-                    <a href="" class="">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                        <span>
-                            Call: 0906-938-1261
+                    <div class="contact_links">
+                            <a href="tel:09069381261" class="contact_link2">
+                                <i class="fa fa-mobile" aria-hidden="true"></i>
+                                <span>
+                                    Call: 0906-938-1261
+                                </span>
+                            </a>
                             <br>
-                            (02)8240 5150
-                        </span>
-                    </a>
-                    <a href="" class="">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <span>
-                            abic.talentteams@gmail.com
-                        </span>
-                    </a>
+                            <a href="tel:0282405150" class="contact_link2">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>
+                                    (02) 8240 5150
+                                </span>
+                            </a>
+                        </div>
+                        <a href="mailto:abic.talentteams@gmail.com" class="contact_link3">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <span>
+                                abic.talentteams@gmail.com
+                            </span>
+                        </a>
                 </div>
             </div>
             <!-- <div class="col-md-3">
@@ -120,7 +127,7 @@
 <script>
     var botmanWidget = {
         aboutText: "You're currently engaging with an AI",
-        introMessage: "Hello, how can I help you?",
+        introMessage: "Hello, How Can I Help You?",
         title: "ABIC MANPOWER SERVICE CORP!",
         mainColor: "#575757",
         bubbleAvatarUrl: "{{ asset('cs.png') }}",
